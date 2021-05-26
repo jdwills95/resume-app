@@ -12,7 +12,7 @@ import { AssignmentComponent } from './components/assignment/assignment.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

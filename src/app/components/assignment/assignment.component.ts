@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { IAssignment } from 'src/app/interfaces/assignment';
+
+import assignmentsJson from 'src/app/data/assignments.json';
 
 @Component({
   selector: 'app-assignment',
@@ -6,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./assignment.component.sass']
 })
 export class AssignmentComponent implements OnInit {
+  assignments: IAssignment[] = assignmentsJson;
 
   constructor() { }
 
