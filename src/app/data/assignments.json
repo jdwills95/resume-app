@@ -1,26 +1,26 @@
 [
     {
-        "endDate": "",
+        "endDate": "present",
         "startDate": "2021-01-01",
         "desc": "CGI Federal ReactJS Mobile WebApp Project: Worked remotely with team members to add new functionality to React Redux app. Implemented new Oracle Java backend services via REST API. Worked with security team to fix code vulnerabilities. Fixed reported REACT bugs; Participated in Scrum, Agile, and Kanban ceremonies.",
-        "environment": ["Angular", "ag-Grid", "ng-Bootstrap", "Oracle Java", "SQL", "REST", "GIT", "Bitbucket", "JIRA", "Confluence"]
+        "environments": ["Angular", "ag-Grid", "ng-Bootstrap", "Oracle Java", "SQL", "REST", "GIT", "Bitbucket", "JIRA", "Confluence"]
     },
     {
         "endDate": "2021-01-01",
         "startDate": "2020-03-01",
         "desc": "CGI Federal ReactJS Mobile WebApp Project: Worked remotely with team members to add new functionality to React Redux app. Implemented new Oracle Java backend services via REST API. Worked with security team to fix code vulnerabilities. Fixed reported REACT bugs; Participated in Scrum, Agile, and Kanban ceremonies.",
-        "environment": ["React", "Redux", "Oracle Java", "SQL", "REST", "GIT", "Bitbucket", "JIRA", "Confluence"]
+        "environments": ["React", "Redux", "Oracle Java", "SQL", "REST", "GIT", "Bitbucket", "JIRA", "Confluence"]
     },
     {
         "endDate": "2020-03-01",
         "startDate": "2019-08-01",
         "desc": "CGI Federal Cloud Hybrid Orchestration Platform: Worked with remote and local team members to create JAVA Unit Test, Angular Karma Test, add new functionally to existing JAVA and Angular code, and fixed reported JAVA and Angular bugs; Also used Clair Vulnerability Static Analysis tool in Jenkins to find security issues and update docker images based on findings. Helped implement automation trough bash scripting. Participated in Scrum, Agile, and Kanban ceremonies.",
-        "environment": ["Docker", "Angular", "Karma", "Java", "Junit", "Mockito", "REST", "Bash Scripting", "Spring Boot", "JSON", "GIT", "Bitbucket", "JIRA", "Confluence"]
+        "environments": ["Docker", "Angular", "Karma", "Java", "Junit", "Mockito", "REST", "Bash Scripting", "Spring Boot", "JSON", "GIT", "Bitbucket", "JIRA", "Confluence"]
     },
     {
         "endDate": "2029-04-01",
         "startDate": "2019-04-01",
         "desc": "IBM Full Stack Proof of Concept Project: Created a web application that allowed users to login, edit existing data, and add new data. Used Spring-boot and Hibernate in the backend to communicate with a provided MySQL database. Front-end was built with Angular 7.",
-        "environment": ["Java", "Spring Boot", "MySQL", "Postman", "JSON", "GIT", "Hibernate", "Angular", "JavaScript", "Typescript", "HTML", "CSS", "NodeJS", "Bootstrap"]
+        "environments": ["Java", "Spring Boot", "MySQL", "Postman", "JSON", "GIT", "Hibernate", "Angular", "JavaScript", "Typescript", "HTML", "CSS", "NodeJS", "Bootstrap"]
     }
 ]

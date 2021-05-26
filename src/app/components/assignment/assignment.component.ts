@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IAssignment } from 'src/app/interfaces/assignment';
+import { IAssignmentJSON, IAssignment } from 'src/app/interfaces/assignment';
 
 import assignmentsJson from 'src/app/data/assignments.json';
 
@@ -9,11 +9,37 @@ import assignmentsJson from 'src/app/data/assignments.json';
   styleUrls: ['./assignment.component.sass']
 })
 export class AssignmentComponent implements OnInit {
-  assignments: IAssignment[] = assignmentsJson;
+  assignments: IAssignment[] = this.getAssignments(assignmentsJson);
 
   constructor() { }
 
   ngOnInit(): void {
+
+  }
+
+  getAssignments(assignmentsJson: IAssignmentJSON[]): IAssignment[] {
+    return assignmentsJson.map(assignment => {
+      return {
+        endDate: assignment.endDate,
+        startDate: assignment.startDate,
+        desc: assignment.desc,
+        environments: this.getEnvironmentsString(assignment.environments),
+      }
+    });
+    
+  }
+
+  getEnvironmentsString(environments: string[]): string {
+    debugger;
+    let environmentsString: string = '';
+    environments.forEach((environment: string, index) => {
+      if (index !== 0) {
+        environmentsString = environmentsString + ', ' + environment;
+      } else {
+        environmentsString = environment;
+      }
+    })
+    return environmentsString;
   }
 
 }

@@ -1,7 +1,10 @@
+<h2>Assignment History</h2>
 <div *ngFor="let assignment of assignments;">
-    {{assignment.startDate}} - {{assignment.endDate}}
+    <h3>{{assignment.startDate}} - {{assignment.endDate}}</h3>
+    {{assignment.desc}}.
     <br>
-    {{assignment.desc}}
+    <br>
+    Environments: {{assignment.environments}}.
     <br>
     <br>
 </div>
