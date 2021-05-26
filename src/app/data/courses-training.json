@@ -1,0 +1,27 @@
+[
+    {
+        "badges": [
+                "IBM Cloud Garage Method Developer Bootcamp",
+                "IBM Cloud Innovate method Explorer",
+                "IBM Agile Explorer",
+                "Enterprise Design Thinking Practitioner",
+                "Interskill - Blockchain Foundations", 
+                "Big Data Foundations - Level 1" ,
+                "Data Science Foundations - Level 1" ,
+                "Watson and Cloud Foundations ",
+                "Cognitive Practitioner ",
+                "IBM Blockchain Essentials" 
+            ]
+    },
+    {
+        "training": [
+            "IBM - Garage Bootcamp",
+            "Cognixia - Developing on AWS",
+            "IBM - Agile training ",
+            "LearnQuest - Node.js",
+            "Pluralsight - Angular",
+            "Pluralsight - React",
+            "No Fluff Just Stuff – Angular/Typescript"
+        ]
+    }
+]
