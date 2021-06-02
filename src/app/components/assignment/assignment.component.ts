@@ -6,7 +6,7 @@ import assignmentsJson from 'src/app/data/assignments.json';
 @Component({
   selector: 'app-assignment',
   templateUrl: './assignment.component.html',
-  styleUrls: ['./assignment.component.sass']
+  styleUrls: ['./assignment.component.scss']
 })
 export class AssignmentComponent implements OnInit {
   assignments: IAssignment[] = this.getAssignments(assignmentsJson);
