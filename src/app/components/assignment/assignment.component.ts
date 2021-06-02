@@ -6,19 +6,17 @@ import assignmentsJson from 'src/app/data/assignments.json';
 @Component({
   selector: 'app-assignment',
   templateUrl: './assignment.component.html',
-  styleUrls: ['./assignment.component.scss']
+  styleUrls: ['./assignment.component.scss'],
 })
 export class AssignmentComponent implements OnInit {
   assignments: IAssignment[] = this.getAssignments(assignmentsJson);
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
   getAssignments(assignmentsJson: IAssignmentJSON[]): IAssignment[] {
-    return assignmentsJson.map(assignment => {
+    return assignmentsJson.map((assignment) => {
       return {
         endDate: assignment.endDate,
         startDate: assignment.startDate,
@@ -26,7 +24,6 @@ export class AssignmentComponent implements OnInit {
         environments: this.getEnvironmentsString(assignment.environments),
       };
     });
-
   }
 
   getEnvironmentsString(environments: string[]): string {
@@ -40,5 +37,4 @@ export class AssignmentComponent implements OnInit {
     });
     return environmentsString;
   }
-
 }

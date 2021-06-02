@@ -2,22 +2,21 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class CurrentScreenWidthService {
+  constructor() {}
 
-    constructor() {}
+  isScreenWidthPhoneOrBigger(): boolean {
+    return window.innerWidth >= 576;
+  }
 
-    isScreenWidthPhoneOrBigger(): boolean {
-        return window.innerWidth >= 576;
-    }
+  isScreenWidthTabletOrBigger(): boolean {
+    return window.innerWidth >= 768;
+  }
 
-    isScreenWidthTabletOrBigger(): boolean {
-        return window.innerWidth >= 768;
-    }
+  isScreenWidthDesktopOrBigger(): boolean {
+    return window.innerWidth >= 992;
+  }
 
-    isScreenWidthDesktopOrBigger(): boolean {
-        return window.innerWidth >= 992;
-    }
-
-    isScreenWidthLargeDesktopOrBigger(): boolean {
-        return window.innerWidth >= 1200;
-    }
+  isScreenWidthLargeDesktopOrBigger(): boolean {
+    return window.innerWidth >= 1200;
+  }
 }
