@@ -3,4 +3,11 @@
 .header {
     height: 3em;
     background-color: $primary-color;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    border-bottom: 3px #aaafb3
 }
