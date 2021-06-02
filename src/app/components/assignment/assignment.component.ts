@@ -30,7 +30,6 @@ export class AssignmentComponent implements OnInit {
   }
 
   getEnvironmentsString(environments: string[]): string {
-    debugger;
     let environmentsString: string = '';
     environments.forEach((environment: string, index) => {
       if (index !== 0) {
