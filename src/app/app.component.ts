@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { Component, HostListener } from '@angular/core';
+import { CurrentScreenWidthService } from 'src/app/services/current-screen-width/current-screen-width.service';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +8,12 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 })
 export class AppComponent {
   title = 'resume-app';
+  isDesktopOrBigger = true;
+
+  constructor(private currentScreenWidthService: CurrentScreenWidthService) {}
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.isDesktopOrBigger = this.currentScreenWidthService.isScreenWidthLargeDesktopOrBigger();
+  }
 }

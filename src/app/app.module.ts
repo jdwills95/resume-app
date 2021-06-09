@@ -10,6 +10,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavBarDesktopComponent } from './components/nav-bar-desktop/nav-bar-desktop.component';
 
+import { CurrentScreenWidthService } from 'src/app/services/current-screen-width/current-screen-width.service';
+import { NavBarService } from 'src/app/services/nav-bar/nav-bar.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,7 @@ import { NavBarDesktopComponent } from './components/nav-bar-desktop/nav-bar-des
     NavBarDesktopComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, FontAwesomeModule],
-  providers: [],
+  providers: [CurrentScreenWidthService, NavBarService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
