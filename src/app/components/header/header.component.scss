@@ -1,13 +1,16 @@
 @import "src/styles.scss";
 
 .header {
-  height: 4em;
+  height: 3em;
   background-color: $primary-color;
-  position: fixed;
-  left: 0;
-  top: 0;
+  padding-left: 2em;
   width: 100%;
   color: white;
-  text-align: center;
-  border-bottom: 3px #aaafb3;
+  border-bottom: solid 2px #aaafb3;
+}
+
+.contents {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }

@@ -8,6 +8,7 @@ import { AssignmentComponent } from './components/assignment/assignment.componen
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NavBarDesktopComponent } from './components/nav-bar-desktop/nav-bar-desktop.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AssignmentComponent,
     FooterComponent,
     HeaderComponent,
+    NavBarDesktopComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, FontAwesomeModule],
   providers: [],
