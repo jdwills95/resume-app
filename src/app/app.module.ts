@@ -13,6 +13,7 @@ import { NavBarDesktopComponent } from './components/nav-bar-desktop/nav-bar-des
 import { CurrentScreenWidthService } from 'src/app/services/current-screen-width/current-screen-width.service';
 import { NavBarService } from 'src/app/services/nav-bar/nav-bar.service';
 import { ScrollService } from 'src/app/services/scroll/scroll.service';
+import { NavBarMobileComponent } from './components/nav-bar-mobile/nav-bar-mobile.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +21,7 @@ import { ScrollService } from 'src/app/services/scroll/scroll.service';
     FooterComponent,
     HeaderComponent,
     NavBarDesktopComponent,
+    NavBarMobileComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, FontAwesomeModule],
   providers: [CurrentScreenWidthService, NavBarService, ScrollService],
