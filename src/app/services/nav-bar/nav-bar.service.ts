@@ -2,13 +2,13 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class NavBarService {
-  private isNavbarEnabled: boolean = false;
+  private isNavbarOpen: boolean = false;
 
-  navBarButtonIsClicked() {
-    this.isNavbarEnabled = !this.isNavbarEnabled;
+  onNavBarButtonClicked() {
+    this.isNavbarOpen = !this.isNavbarOpen;
   }
 
-  getIsNavbarEnabled() {
-    return this.isNavbarEnabled;
+  getIsNavbarOpen() {
+    return this.isNavbarOpen;
   }
 }

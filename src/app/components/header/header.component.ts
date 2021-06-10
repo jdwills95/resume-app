@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavBarService } from 'src/app/services/nav-bar/nav-bar.service';
 
 @Component({
   selector: 'app-header',
@@ -6,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  constructor() {}
+  constructor(private navBarService: NavBarService) {}
 
   ngOnInit(): void {}
 
-  onNavClicked() {}
+  onNavClicked() {
+    this.navBarService.onNavBarButtonClicked();
+  }
 }
