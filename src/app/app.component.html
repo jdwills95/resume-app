@@ -4,6 +4,9 @@
   <app-nav-bar-desktop
     *ngIf="isDesktopOrBigger && isNavbarOpen()"
   ></app-nav-bar-desktop>
+  <app-nav-bar-mobile
+    *ngIf="!isDesktopOrBigger && isNavbarOpen()"
+  ></app-nav-bar-mobile>
   <div class="main-content">
     <app-assignment></app-assignment>
   </div>
