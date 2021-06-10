@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, AfterViewInit } from '@angular/core';
 
 import { CurrentScreenWidthService } from 'src/app/services/current-screen-width/current-screen-width.service';
 import { NavBarService } from 'src/app/services/nav-bar/nav-bar.service';
@@ -9,15 +9,20 @@ import { ScrollService } from 'src/app/services/scroll/scroll.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   title = 'resume-app';
   isDesktopOrBigger = true;
+  scrollServiceCheckAllowed = false;
 
   constructor(
     private currentScreenWidthService: CurrentScreenWidthService,
     private navBarService: NavBarService,
     private scrollService: ScrollService
   ) {}
+
+  ngAfterViewInit() {
+    this.scrollServiceCheckAllowed = true;
+  }
 
   @HostListener('window:resize', ['$event'])
   onResize() {
@@ -26,10 +31,12 @@ export class AppComponent {
 
   isNavbarOpen(): boolean {
     const isNavOpen = this.navBarService.getIsNavbarOpen();
-    if (isNavOpen) {
-      this.scrollService.disable();
-    } else {
-      this.scrollService.enable();
+    if (this.scrollServiceCheckAllowed) {
+      if (isNavOpen) {
+        this.scrollService.disable();
+      } else {
+        this.scrollService.enable();
+      }
     }
     return isNavOpen;
   }
