@@ -2,7 +2,7 @@ import { Component, HostListener } from '@angular/core';
 
 import { CurrentScreenWidthService } from 'src/app/services/current-screen-width/current-screen-width.service';
 import { NavBarService } from 'src/app/services/nav-bar/nav-bar.service';
-import { ScrollService } from 'src/app/services/disable-scroll/disable-scroll.service';
+import { ScrollService } from 'src/app/services/scroll/scroll.service';
 
 @Component({
   selector: 'app-root',
