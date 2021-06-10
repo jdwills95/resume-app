@@ -12,6 +12,7 @@ import { NavBarDesktopComponent } from './components/nav-bar-desktop/nav-bar-des
 
 import { CurrentScreenWidthService } from 'src/app/services/current-screen-width/current-screen-width.service';
 import { NavBarService } from 'src/app/services/nav-bar/nav-bar.service';
+import { ScrollService } from 'src/app/services/disable-scroll/disable-scroll.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,7 @@ import { NavBarService } from 'src/app/services/nav-bar/nav-bar.service';
     NavBarDesktopComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, FontAwesomeModule],
-  providers: [CurrentScreenWidthService, NavBarService],
+  providers: [CurrentScreenWidthService, NavBarService, ScrollService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

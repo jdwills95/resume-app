@@ -1,6 +1,8 @@
 import { Component, HostListener } from '@angular/core';
+
 import { CurrentScreenWidthService } from 'src/app/services/current-screen-width/current-screen-width.service';
 import { NavBarService } from 'src/app/services/nav-bar/nav-bar.service';
+import { ScrollService } from 'src/app/services/disable-scroll/disable-scroll.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +15,8 @@ export class AppComponent {
 
   constructor(
     private currentScreenWidthService: CurrentScreenWidthService,
-    private navBarService: NavBarService
+    private navBarService: NavBarService,
+    private scrollService: ScrollService
   ) {}
 
   @HostListener('window:resize', ['$event'])
@@ -22,6 +25,12 @@ export class AppComponent {
   }
 
   isNavbarOpen(): boolean {
-    return this.navBarService.getIsNavbarOpen();
+    const isNavOpen = this.navBarService.getIsNavbarOpen();
+    if (isNavOpen) {
+      this.scrollService.disable();
+    } else {
+      this.scrollService.enable();
+    }
+    return isNavOpen;
   }
 }

@@ -2,7 +2,7 @@
     {
         "endDate": "present",
         "startDate": "2021-01-01",
-        "desc": "CGI Federal ReactJS Mobile WebApp Project: Worked remotely with team members to add new functionality to React Redux app. Implemented new Oracle Java backend services via REST API. Worked with security team to fix code vulnerabilities. Fixed reported REACT bugs; Participated in Scrum, Agile, and Kanban ceremonies.",
+        "desc": "CGI Federal Angular TypeScript Mobile WebApp Project: Worked remotely with team members to convert ReactJS Redux WebApp and add new functionality to Angular TypeScript WebApp. Took part in breakout and design meetings. Help ensure conversion was designed to spec of company’s DPL (Design Patten Library). Participated in Scrum, Agile, and Kanban ceremonies.",
         "environments": ["Angular", "ag-Grid", "ng-Bootstrap", "Oracle Java", "SQL", "REST", "GIT", "Bitbucket", "JIRA", "Confluence"]
     },
     {
