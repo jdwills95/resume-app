@@ -1,9 +1,13 @@
-<h5>Assignment History</h5>
+<h5 class="sec-title">Assignment History</h5>
+<hr class="hor" />
 <div *ngFor="let assignment of assignments">
-  <strong>{{ assignment.startDate }} - {{ assignment.endDate }}</strong>
-  <p>
-    {{ assignment.desc }}
-  </p>
-  <p>Environments: {{ assignment.environments }}</p>
-  <br />
+  <div class="card">
+    <div class="container">
+      <strong>{{ assignment.startDate }} - {{ assignment.endDate }}</strong>
+      <p>
+        {{ assignment.desc }}
+      </p>
+      <p>Environments: {{ assignment.environments }}</p>
+    </div>
+  </div>
 </div>
