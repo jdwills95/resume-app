@@ -13,6 +13,7 @@ import { NavBarDesktopComponent } from './components/nav-bar-desktop/nav-bar-des
 import { CurrentScreenWidthService } from 'src/app/services/current-screen-width/current-screen-width.service';
 import { NavBarService } from 'src/app/services/nav-bar/nav-bar.service';
 import { ScrollService } from 'src/app/services/scroll/scroll.service';
+import { ArrayToStringService } from 'src/app/services/array-to-string/array-to-string.service';
 import { NavBarMobileComponent } from './components/nav-bar-mobile/nav-bar-mobile.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { EmployerHistoryComponent } from './components/employer-history/employer-history.component';
@@ -30,7 +31,12 @@ import { SkillsComponent } from './components/skills/skills.component';
     SkillsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, FontAwesomeModule],
-  providers: [CurrentScreenWidthService, NavBarService, ScrollService],
+  providers: [
+    CurrentScreenWidthService,
+    NavBarService,
+    ScrollService,
+    ArrayToStringService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
