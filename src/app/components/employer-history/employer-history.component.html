@@ -3,11 +3,17 @@
 <div *ngFor="let employer of employers">
   <div class="card">
     <div class="container">
-      <strong>{{ employer.startDate }} - {{ employer.endDate }}</strong> <br />
-      {{ employer.jobTitle }} <br />
-      {{ employer.location }} <br />
-      <p>Description: {{ employer.desc.desct }}</p>
-      <p>Tasks: {{ employer.desc.task }}</p>
+      <strong>{{ employer.jobTitle }}</strong> <br />
+      <strong class="date-loc"
+        >{{ employer.startDate }} - {{ employer.endDate }}</strong
+      >
+      <br />
+      <strong class="date-loc">{{ employer.location }}</strong> <br />
+      <p class="desc">
+        <strong class="sub-title">Description: </strong>
+        {{ employer.desc.desct }}
+      </p>
+      <p><strong class="sub-title">Tasks: </strong>{{ employer.desc.task }}</p>
     </div>
   </div>
 </div>
