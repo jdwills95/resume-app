@@ -24,7 +24,7 @@
         "environments": ["Docker", "Angular", "Karma", "Java", "Junit", "Mockito", "REST", "Bash Scripting", "Spring Boot", "JSON", "GIT", "Bitbucket", "JIRA", "Confluence"]
     },
     {
-        "endDate": "2029-04-01",
+        "endDate": "2019-04-30",
         "startDate": "2019-04-01",
         "title": "Full Stack Proof of Concept Project",
         "employer": "IBM",
