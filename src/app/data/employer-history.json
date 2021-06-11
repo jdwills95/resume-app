@@ -3,12 +3,11 @@
         "employer": "CGI Federal",
         "jobTitle": "Application Development Specialist",
         "location": "Lafayette, LA",
-        "desc": [
+        "desc":
             {
-                "desc": "Work as a team to translate business requirements into workable programming code.",
+                "desct": "Work as a team to translate business requirements into workable programming code.",
                 "task": ["Frontend Developer-Angular/React", "Application Developer-Java Core"]
-            }
-        ],
+            },
         "startDate": "2019-08-12",
         "endDate": "present"
     },
@@ -16,12 +15,11 @@
         "employer": "IBM CIC",
         "jobTitle": "Application Development Specialist",
         "location": "Baton Rouge, LA",
-        "desc": [
+        "desc":
             {
-                "desc": "Work as a team to solve challenging project work designing, building, testing and supporting technical solutions.",
+                "desct": "Work as a team to solve challenging project work designing, building, testing and supporting technical solutions.",
                 "task": ["Application Developer-Java & Web Technologies", "Application Developer-Java Core"]
-            }
-        ],
+            },
         "startDate": "2019-02-01",
         "endDate": "2019-08-12"
     },
@@ -29,12 +27,11 @@
         "employer": "Cyber Innovation Center",
         "jobTitle": "Intern",
         "location": "Bossier City, LA",
-        "desc": [
+        "desc":
             {
-                "desc": "Conducted cyber security related policy review research. Worked in small teams. Presented findings in both oral and written form.",
+                "desct": "Conducted cyber security related policy review research. Worked in small teams. Presented findings in both oral and written form.",
                 "task": ["Studied title authorities and government policy effecting cybersecurity", "Authored 4, 8 to 13-page short topical papers.", "Worked as a team of 4 to produce and summarize our findings in a 10-page document."]
-            }
-        ],
+            },
         "startDate": "2017-05-01",
         "endDate": "2017-08-01"
     }
