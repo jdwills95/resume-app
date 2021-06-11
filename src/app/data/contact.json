@@ -1,0 +1,14 @@
+{
+    "firstName": "Joey",
+    "middleNamhe": "Douglas",
+    "lastName": "Wills",
+    "profession": "Application Developer",
+    "address": {
+        "street": "14222 Hubbs Acres Rd",
+        "city": "Pride",
+        "state": "LA",
+        "country": "USA"
+    },
+    "email": "jdwills95@gmail.com",
+    "mobile": "12258065574"
+}
