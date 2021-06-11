@@ -1,0 +1,24 @@
+.contents {
+  padding-bottom: 1.5em;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0.5em;
+}
+
+.profile-pic {
+  max-width: 18em;
+  max-height: 18em;
+  border-radius: 50%;
+}
+
+.name {
+  margin: 0;
+}
+
+.phone-email {
+  color: black;
+}
