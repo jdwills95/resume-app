@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ISkill } from 'src/app/interfaces/skills';
+import { ISkill, ISkillJson } from 'src/app/interfaces/skills';
+import { ArrayToStringService } from 'src/app/services/array-to-string/array-to-string.service';
 
 import skillsJson from 'src/app/data/skills.json';
 
@@ -9,24 +10,22 @@ import skillsJson from 'src/app/data/skills.json';
   styleUrls: ['./skills.component.scss'],
 })
 export class SkillsComponent implements OnInit {
-  skills: ISkill[] = this.getAssignments(skillsJson);
-  languages = 0;
-  frameworks = 1;
-  softwareTools = 2;
-  methods = 3;
+  skills: ISkill = this.getAssignments(skillsJson);
 
-  constructor() {}
+  constructor(private arrayToStringService: ArrayToStringService) {}
 
   ngOnInit(): void {}
 
-  getAssignments(skillsJson: ISkill[]): ISkill[] {
-    return skillsJson.map((skill) => {
-      return {
-        languages: skill.languages,
-        frameworks: skill.frameworks,
-        softwareTools: skill.softwareTools,
-        methods: skill.methods,
-      };
-    });
+  getAssignments(skillsJson: ISkillJson): ISkill {
+    return {
+      languages: this.arrayToStringService.arrayToString(skillsJson.languages),
+      frameworks: this.arrayToStringService.arrayToString(
+        skillsJson.frameworks
+      ),
+      softwareTools: this.arrayToStringService.arrayToString(
+        skillsJson.softwareTools
+      ),
+      methods: this.arrayToStringService.arrayToString(skillsJson.methods),
+    };
   }
 }

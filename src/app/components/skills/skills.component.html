@@ -3,10 +3,12 @@
 <div>
   <div class="card">
     <div class="container">
-      {{ skills[languages].languages }}
-      {{ skills[frameworks].frameworks }}
-      {{ skills[softwareTools].softwareTools }}
-      {{ skills[methods].methods }}
+      <div class="content">
+        <strong>Languages: </strong> {{ skills.languages }}. <br />
+        <strong>Frameworks: </strong> {{ skills.frameworks }}. <br />
+        <strong>Software/Tools: </strong> {{ skills.softwareTools }}. <br />
+        <strong>Methodologies: </strong> {{ skills.methods }}. <br />
+      </div>
     </div>
   </div>
 </div>
