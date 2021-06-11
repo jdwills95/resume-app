@@ -3,11 +3,19 @@
 <div *ngFor="let assignment of assignments">
   <div class="card">
     <div class="container">
-      <strong>{{ assignment.startDate }} - {{ assignment.endDate }}</strong>
+      <strong>{{ assignment.title }}</strong>
+      <strong class="date-loc"> - {{ assignment.employer }} </strong>
+      <br />
+      <strong class="date-loc">
+        {{ assignment.startDate }} - {{ assignment.endDate }}
+      </strong>
       <p>
         {{ assignment.desc }}
       </p>
-      <p>Environments: {{ assignment.environments }}</p>
+      <p>
+        <strong class="sub-title">Environments: </strong>
+        {{ assignment.environments }}
+      </p>
     </div>
   </div>
 </div>

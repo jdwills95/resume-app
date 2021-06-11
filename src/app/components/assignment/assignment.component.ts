@@ -20,6 +20,8 @@ export class AssignmentComponent implements OnInit {
       return {
         endDate: assignment.endDate,
         startDate: assignment.startDate,
+        title: assignment.title,
+        employer: assignment.employer,
         desc: assignment.desc,
         environments: this.getEnvironmentsString(assignment.environments),
       };
