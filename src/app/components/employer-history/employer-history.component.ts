@@ -12,7 +12,7 @@ import employerHistory from 'src/app/data/employer-history.json';
   styleUrls: ['./employer-history.component.scss'],
 })
 export class EmployerHistoryComponent implements OnInit {
-  employers: IEmployerHistory[] = this.getEmployers(employerHistory);
+  employers: IEmployerHistoryJSON[] = this.getEmployers(employerHistory);
 
   constructor() {}
 
@@ -20,7 +20,7 @@ export class EmployerHistoryComponent implements OnInit {
 
   getEmployers(
     employerHistoryJson: IEmployerHistoryJSON[]
-  ): IEmployerHistory[] {
+  ): IEmployerHistoryJSON[] {
     return employerHistoryJson.map((employer) => {
       return {
         endDate: employer.endDate,
@@ -30,7 +30,7 @@ export class EmployerHistoryComponent implements OnInit {
         location: employer.location,
         desc: {
           desct: employer.desc.desct,
-          task: this.getTasksString(employer.desc.task),
+          task: employer.desc.task,
         },
       };
     });
