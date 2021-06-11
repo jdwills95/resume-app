@@ -1,1 +1,13 @@
-<p>employer-history works!</p>
+<h5 class="sec-title">Employer History</h5>
+<hr class="hor" />
+<div *ngFor="let employer of employers">
+  <div class="card">
+    <div class="container">
+      <strong>{{ employer.startDate }} - {{ employer.endDate }}</strong> <br />
+      {{ employer.jobTitle }} <br />
+      {{ employer.location }} <br />
+      <p>Description: {{ employer.desc.desct }}</p>
+      <p>Tasks: {{ employer.desc.task }}</p>
+    </div>
+  </div>
+</div>

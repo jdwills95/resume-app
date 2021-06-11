@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { IEmployerHistoryJSON } from 'src/app/interfaces/employerHistory';
+import {
+  IEmployerHistoryJSON,
+  IEmployerHistory,
+} from 'src/app/interfaces/employerHistory';
 
 import employerHistory from 'src/app/data/employer-history.json';
 
@@ -9,7 +12,7 @@ import employerHistory from 'src/app/data/employer-history.json';
   styleUrls: ['./employer-history.component.scss'],
 })
 export class EmployerHistoryComponent implements OnInit {
-  employerHistory: IEmployerHistoryJSON[] = this.getEmployers(employerHistory);
+  employers: IEmployerHistory[] = this.getEmployers(employerHistory);
 
   constructor() {}
 
@@ -17,7 +20,7 @@ export class EmployerHistoryComponent implements OnInit {
 
   getEmployers(
     employerHistoryJson: IEmployerHistoryJSON[]
-  ): IEmployerHistoryJSON[] {
+  ): IEmployerHistory[] {
     return employerHistoryJson.map((employer) => {
       return {
         endDate: employer.endDate,
@@ -27,21 +30,21 @@ export class EmployerHistoryComponent implements OnInit {
         location: employer.location,
         desc: {
           desct: employer.desc.desct,
-          task: employer.desc.task,
+          task: this.getTasksString(employer.desc.task),
         },
       };
     });
   }
 
-  getEnvironmentsString(environments: string[]): string {
-    let environmentsString = '';
-    environments.forEach((environment: string, index) => {
+  getTasksString(tasks: string[]): string {
+    let tasksString = '';
+    tasks.forEach((task: string, index) => {
       if (index !== 0) {
-        environmentsString = environmentsString + ', ' + environment;
+        tasksString = tasksString + ', ' + task;
       } else {
-        environmentsString = environment;
+        tasksString = task;
       }
     });
-    return environmentsString;
+    return tasksString;
   }
 }
