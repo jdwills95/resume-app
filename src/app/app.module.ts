@@ -14,6 +14,7 @@ import { CurrentScreenWidthService } from 'src/app/services/current-screen-width
 import { NavBarService } from 'src/app/services/nav-bar/nav-bar.service';
 import { ScrollService } from 'src/app/services/scroll/scroll.service';
 import { NavBarMobileComponent } from './components/nav-bar-mobile/nav-bar-mobile.component';
+import { ContactComponent } from './components/contact/contact.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +23,7 @@ import { NavBarMobileComponent } from './components/nav-bar-mobile/nav-bar-mobil
     HeaderComponent,
     NavBarDesktopComponent,
     NavBarMobileComponent,
+    ContactComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, FontAwesomeModule],
   providers: [CurrentScreenWidthService, NavBarService, ScrollService],
