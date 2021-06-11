@@ -15,6 +15,7 @@ import { NavBarService } from 'src/app/services/nav-bar/nav-bar.service';
 import { ScrollService } from 'src/app/services/scroll/scroll.service';
 import { NavBarMobileComponent } from './components/nav-bar-mobile/nav-bar-mobile.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { EmployerHistoryComponent } from './components/employer-history/employer-history.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +25,7 @@ import { ContactComponent } from './components/contact/contact.component';
     NavBarDesktopComponent,
     NavBarMobileComponent,
     ContactComponent,
+    EmployerHistoryComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, FontAwesomeModule],
   providers: [CurrentScreenWidthService, NavBarService, ScrollService],
