@@ -16,6 +16,7 @@
 /* Add some padding inside the card container */
 .container {
   padding: 2px 16px;
+  text-align: center;
 }
 
 .hor {
@@ -26,4 +27,8 @@
 .sec-title {
   text-align: center;
   padding-top: 1.5em;
+}
+
+.sub-title {
+  padding-bottom: 0.75em;
 }
