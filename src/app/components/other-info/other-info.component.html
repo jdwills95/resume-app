@@ -1,18 +1,129 @@
 <h5 class="sec-title">OTHER INFORMATION AND SKILLS</h5>
 <hr class="hor" />
-<div class="card">
-  <div class="container row">
-    <div class="col-12 col-sm-3 sub-title">
-      <strong>Operating Systems</strong>
+<div class="row">
+  <div class="col-12 col-sm-4 sub-title">
+    <div class="card">
+      <div class="container">
+        <strong>Operating Systems</strong> <br />
+        <div class="row">
+          <div
+            *ngIf="otherInfoSkills.operatingSystems.advanced"
+            class="col col-sm-12 skill-sec"
+          >
+            <div class="adv">
+              ADVANCED
+              <hr class="divider" />
+            </div>
+            <div
+              *ngFor="
+                let advSkillOS of otherInfoSkills.operatingSystems.advanced
+              "
+            >
+              {{ advSkillOS }}
+            </div>
+          </div>
+          <div
+            *ngIf="otherInfoSkills.operatingSystems.intermediate"
+            class="col col-sm-12 skill-sec"
+          >
+            <div class="int">
+              INTERMEDIATE
+              <hr class="divider" />
+            </div>
+            <div
+              *ngFor="
+                let intSkillOS of otherInfoSkills.operatingSystems.intermediate
+              "
+            >
+              {{ intSkillOS }}
+            </div>
+          </div>
+          <div
+            *ngIf="otherInfoSkills.operatingSystems.beginner"
+            class="col col-sm-12 skill-sec"
+          >
+            <div class="beg">
+              BEGINNER
+              <hr class="divider" />
+            </div>
+            <div
+              *ngFor="
+                let begSkillOS of otherInfoSkills.operatingSystems.beginner
+              "
+            >
+              {{ begSkillOS }}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-12 col-sm-3 sub-title">
-      <strong>Software</strong>
+  </div>
+  <div class="col-12 col-sm-4 sub-title">
+    <div class="card">
+      <div class="container">
+        <strong>Software</strong>
+        <div class="row">
+          <div
+            *ngIf="otherInfoSkills.software.advanced"
+            class="col col-sm-12 skill-sec"
+          >
+            <div class="adv">
+              ADVANCED
+              <hr class="divider" />
+            </div>
+            <div *ngFor="let advSkillSoft of otherInfoSkills.software.advanced">
+              {{ advSkillSoft }}
+            </div>
+          </div>
+          <div
+            *ngIf="otherInfoSkills.software.intermediate"
+            class="col col-sm-12 skill-sec"
+          >
+            <div class="int">
+              INTERMEDIATE
+              <hr class="divider" />
+            </div>
+            <div
+              *ngFor="let intSkillSoft of otherInfoSkills.software.intermediate"
+            >
+              {{ intSkillSoft }}
+            </div>
+          </div>
+          <div
+            *ngIf="otherInfoSkills.software.beginner"
+            class="col col-sm-12 skill-sec"
+          >
+            <div class="beg">
+              BEGINNER
+              <hr class="divider" />
+            </div>
+            <div *ngFor="let begSkillSoft of otherInfoSkills.software.beginner">
+              {{ begSkillSoft }}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="col-12 col-sm-3 sub-title">
-      <strong>Certifications</strong>
+  </div>
+  <!--Disabled because not that impressive/redundant-->
+  <!--<div class="col-12 col-sm-3 sub-title">
+    <div class="card">
+      <div class="container">
+        <strong>Certifications</strong>
+        <div *ngFor="let cert of otherInfoSkills.certifications">
+          {{ cert }}
+        </div>
+      </div>
     </div>
-    <div class="col-12 col-sm-3 sub-title">
-      <strong>Business Knowledge</strong>
+  </div>-->
+  <div class="col-12 col-sm-4 sub-title">
+    <div class="card">
+      <div class="container">
+        <strong>Business Knowledge</strong>
+        <div *ngFor="let knowledge of otherInfoSkills.businessKnowledge">
+          {{ knowledge }}
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -4,7 +4,7 @@ import { IOther } from 'src/app/interfaces/other';
 import otherJson from 'src/app/data/other.json';
 
 export type otherFields = 'operatingSystems' | 'software';
-export type otherFieldsSecondary = 'advance' | 'intermediate' | 'beginner';
+export type otherFieldsSecondary = 'advanced' | 'intermediate' | 'beginner';
 
 @Component({
   selector: 'app-other-info',
@@ -21,7 +21,7 @@ export class OtherInfoComponent implements OnInit {
   getOtherInfoSkills(otherJson: IOther): IOther {
     return {
       operatingSystems: {
-        advance: this.existCheck(otherJson, 'operatingSystems', 'advance'),
+        advanced: this.existCheck(otherJson, 'operatingSystems', 'advanced'),
         intermediate: this.existCheck(
           otherJson,
           'operatingSystems',
@@ -30,7 +30,7 @@ export class OtherInfoComponent implements OnInit {
         beginner: this.existCheck(otherJson, 'operatingSystems', 'beginner'),
       },
       software: {
-        advance: this.existCheck(otherJson, 'software', 'advance'),
+        advanced: this.existCheck(otherJson, 'software', 'advanced'),
         intermediate: this.existCheck(otherJson, 'software', 'intermediate'),
         beginner: this.existCheck(otherJson, 'software', 'beginner'),
       },

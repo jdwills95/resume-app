@@ -6,7 +6,7 @@ export interface IOther {
 }
 
 export interface ISkill {
-  advance?: string[];
+  advanced?: string[];
   intermediate?: string[];
   beginner?: string[];
 }

@@ -1,13 +1,13 @@
 {
-    "Operating Systems": {
-        "Advanced": ["Windows XP", "7", "8", "10"],
-        "Intermediate": ["Fedora", "Ubuntu", "PoP!_Os", "VMware", "pfSense"],
-        "Beginner": ["OSX"]
+    "operatingSystems": {
+        "advanced": ["Windows XP", "Windows 7", "Windows 8", "Windows 10"],
+        "intermediate": ["Fedora", "Ubuntu", "PoP!_Os", "VMware", "pfSense"],
+        "beginner": ["OSX"]
     },
-    "Software": {
-        "Advance": ["Word", "Excel", "PowerPoint", "Outlook", "Access"],
-        "Intermediate": ["Portainer"]
+    "software": {
+        "advanced": ["Word", "Excel", "PowerPoint", "Outlook", "Access"],
+        "intermediate": ["Portainer"]
     },
-    "Certifications": ["Word 2013", "Excel 2013"],
-    "Business Knowledge": ["Communication", "Management", "Cyber Business Law"]
+    "certifications": ["Word 2013", "Excel 2013"],
+    "businessKnowledge": ["Cyber Business Law", "Communication", "Management"]
 }
