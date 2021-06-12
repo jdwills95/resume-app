@@ -1,7 +1,6 @@
-{
-    "education": [
+[
         {
-            "degree": "Bachelor's of Science",
+            "degree": "Bachelor of Science",
             "field": "Computer Information Systems",
             "school": {
                 "name": "Northwestern State University of Louisiana",
@@ -10,4 +9,3 @@
             "graduationYear": "2018"
         }
     ]
-}
