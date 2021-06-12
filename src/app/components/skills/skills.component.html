@@ -1,13 +1,67 @@
 <h5 class="sec-title">KEY SKILLS</h5>
 <hr class="hor" />
-<div>
-  <div class="card">
-    <div class="container">
-      <div class="content">
-        <strong>Languages: </strong> {{ skills.languages }}. <br />
-        <strong>Frameworks: </strong> {{ skills.frameworks }}. <br />
-        <strong>Software/Tools: </strong> {{ skills.softwareTools }}. <br />
-        <strong>Methodologies: </strong> {{ skills.methods }}. <br />
+<div class="row">
+  <div class="col-12 col-sm-4 skill-sec">
+    <div class="card">
+      <div class="container lg-scr">
+        <div *ngIf="!isDesktopOrBigger" class="content">
+          <strong>Languages</strong>
+          <hr class="divider" />
+          {{ skills.languages }}.
+        </div>
+        <div *ngIf="isDesktopOrBigger" class="content">
+          <strong>Languages</strong>
+          <hr class="divider" />
+          {{ skills.languages }}.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-sm-4 skill-sec">
+    <div class="card">
+      <div class="container lg-scr">
+        <div *ngIf="!isDesktopOrBigger" class="content">
+          <strong>Frameworks</strong>
+          <hr class="divider" />
+          {{ skills.frameworks }}.
+        </div>
+        <div *ngIf="isDesktopOrBigger" class="content">
+          <strong>Frameworks</strong>
+          <hr class="divider" />
+          {{ skills.frameworks }}.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-sm-4 skill-sec">
+    <div class="card">
+      <div class="container lg-scr">
+        <div *ngIf="!isDesktopOrBigger" class="content">
+          <strong>Software/Tools</strong>
+          <hr class="divider" />
+          {{ skills.softwareTools }}.
+        </div>
+        <div *ngIf="isDesktopOrBigger" class="content">
+          <strong>Software/Tools</strong>
+          <hr class="divider" />
+          {{ skills.softwareTools }}.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-sm-12 skill-sec">
+    <div class="card">
+      <div class="container lg-scr">
+        <div *ngIf="!isDesktopOrBigger" class="content">
+          <strong>Methodologies</strong>
+          <hr class="divider" />
+          {{ skills.methods }}.
+        </div>
+        <div *ngIf="isDesktopOrBigger" class="content">
+          <strong>Methodologies</strong>
+          <hr class="divider" />
+          {{ skills.methods }}.
+        </div>
       </div>
     </div>
   </div>

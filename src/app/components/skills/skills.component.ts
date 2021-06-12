@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { ISkill, ISkillJson } from 'src/app/interfaces/skills';
 import { ArrayToStringService } from 'src/app/services/array-to-string/array-to-string.service';
+import { CurrentScreenWidthService } from 'src/app/services/current-screen-width/current-screen-width.service';
 
 import skillsJson from 'src/app/data/skills.json';
 
@@ -10,11 +11,20 @@ import skillsJson from 'src/app/data/skills.json';
   styleUrls: ['./skills.component.scss'],
 })
 export class SkillsComponent implements OnInit {
+  isDesktopOrBigger = true;
   skills: ISkill = this.getAssignments(skillsJson);
 
-  constructor(private arrayToStringService: ArrayToStringService) {}
+  constructor(
+    private arrayToStringService: ArrayToStringService,
+    private currentScreenWidthService: CurrentScreenWidthService
+  ) {}
 
   ngOnInit(): void {}
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.isDesktopOrBigger = this.currentScreenWidthService.isScreenWidthLargeDesktopOrBigger();
+  }
 
   getAssignments(skillsJson: ISkillJson): ISkill {
     return {
