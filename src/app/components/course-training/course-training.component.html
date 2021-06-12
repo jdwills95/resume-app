@@ -1,16 +1,22 @@
 <h5 class="sec-title">COURSES AND TRAINING</h5>
 <hr class="hor" />
-<div>
-  <div class="card">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-sm-6 train-badge">
+<div class="row row-row">
+  <div class="col-12 col-sm-6">
+    <div class="card">
+      <div class="container">
+        <div class="train-badge">
           <strong>TRAINING</strong> <br />
           <div *ngFor="let trainingItem of courseTraining.training">
             {{ trainingItem }}
           </div>
         </div>
-        <div class="col-12 col-sm-6 train-badge">
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 colum">
+    <div class="card">
+      <div class="container">
+        <div class="train-badge">
           <strong>BADGES</strong> <br />
           <div *ngFor="let badge of courseTraining.badges">{{ badge }}</div>
         </div>
