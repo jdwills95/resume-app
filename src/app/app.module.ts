@@ -18,6 +18,9 @@ import { NavBarMobileComponent } from './components/nav-bar-mobile/nav-bar-mobil
 import { ContactComponent } from './components/contact/contact.component';
 import { EmployerHistoryComponent } from './components/employer-history/employer-history.component';
 import { SkillsComponent } from './components/skills/skills.component';
+import { CourseTrainingComponent } from './components/course-training/course-training.component';
+import { EducationComponent } from './components/education/education.component';
+import { OtherInfoComponent } from './components/other-info/other-info.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +32,9 @@ import { SkillsComponent } from './components/skills/skills.component';
     ContactComponent,
     EmployerHistoryComponent,
     SkillsComponent,
+    CourseTrainingComponent,
+    EducationComponent,
+    OtherInfoComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, FontAwesomeModule],
   providers: [

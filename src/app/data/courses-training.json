@@ -15,13 +15,13 @@
     },
     {
         "training": [
-            "IBM - Garage Bootcamp",
-            "Cognixia - Developing on AWS",
-            "IBM - Agile training ",
-            "LearnQuest - Node.js",
-            "Pluralsight - Angular",
-            "Pluralsight - React",
-            "No Fluff Just Stuff – Angular/Typescript"
+            "Garage Bootcamp - IBM",
+            "Developing on AWS - Cognixia",
+            "Agile training - IBM",
+            "Node.js - LearnQuest",
+            "Angular - Pluralsight",
+            "React - Pluralsight",
+            "Angular/Typescript - No Fluff Just Stuff"
         ]
     }
 ]
