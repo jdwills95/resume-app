@@ -29,13 +29,17 @@ export class SkillsComponent implements OnInit {
   getAssignments(skillsJson: ISkillJson): ISkill {
     return {
       languages: this.arrayToStringService.arrayToString(skillsJson.languages),
+      languagesAry: skillsJson.languages,
       frameworks: this.arrayToStringService.arrayToString(
         skillsJson.frameworks
       ),
+      frameworksAry: skillsJson.frameworks,
       softwareTools: this.arrayToStringService.arrayToString(
         skillsJson.softwareTools
       ),
+      softwareToolsAry: skillsJson.softwareTools,
       methods: this.arrayToStringService.arrayToString(skillsJson.methods),
+      methodsAry: skillsJson.methods,
     };
   }
 }
