@@ -1,3 +1,5 @@
 <div class="navItem" *ngFor="let navItem of navItems">
-  <strong>{{ navItem.title }}</strong>
+  <div (click)="scrollTo(navItem.target)">
+    <strong>{{ navItem.title }}</strong>
+  </div>
 </div>

@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar-mobile',
   templateUrl: './nav-bar-mobile.component.html',
-  styleUrls: ['./nav-bar-mobile.component.scss']
+  styleUrls: ['./nav-bar-mobile.component.scss'],
 })
 export class NavBarMobileComponent implements OnInit {
+  @Output() navItemSendToApp = new EventEmitter();
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  navItemClickedReceived() {
+    this.navItemSendToApp.emit();
   }
-
 }

@@ -8,6 +8,10 @@ export class NavBarService {
     this.isNavbarOpen = !this.isNavbarOpen;
   }
 
+  closeNavBar() {
+    this.isNavbarOpen = false;
+  }
+
   getIsNavbarOpen() {
     return this.isNavbarOpen;
   }

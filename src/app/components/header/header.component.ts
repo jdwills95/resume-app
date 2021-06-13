@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { NavBarService } from 'src/app/services/nav-bar/nav-bar.service';
 
 @Component({
@@ -7,11 +7,14 @@ import { NavBarService } from 'src/app/services/nav-bar/nav-bar.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  @Output() navBarButtonClicked = new EventEmitter();
+
   constructor(private navBarService: NavBarService) {}
 
   ngOnInit(): void {}
 
   onNavClicked() {
+    this.navBarButtonClicked.emit();
     this.navBarService.onNavBarButtonClicked();
   }
 }

@@ -13,6 +13,7 @@ export class AppComponent implements AfterViewInit {
   title = 'resume-app';
   isDesktopOrBigger = true;
   scrollServiceCheckAllowed = false;
+  isNavbarOpen = false;
 
   constructor(
     private currentScreenWidthService: CurrentScreenWidthService,
@@ -29,7 +30,24 @@ export class AppComponent implements AfterViewInit {
     this.isDesktopOrBigger = this.currentScreenWidthService.isScreenWidthLargeDesktopOrBigger();
   }
 
-  isNavbarOpen(): boolean {
+  navBarButtonClickedRev() {
+    this.isNavbarOpen = !this.isNavbarOpen;
+    if (this.scrollServiceCheckAllowed) {
+      if (this.isNavbarOpen) {
+        this.scrollService.disable();
+      } else {
+        this.scrollService.enable();
+      }
+    }
+  }
+
+  closeNavBar() {
+    this.scrollService.enable();
+    this.navBarService.closeNavBar();
+    this.isNavbarOpen = false;
+  }
+
+  checkNavbarOpen(): boolean {
     const isNavOpen = this.navBarService.getIsNavbarOpen();
     if (this.scrollServiceCheckAllowed) {
       if (isNavOpen) {

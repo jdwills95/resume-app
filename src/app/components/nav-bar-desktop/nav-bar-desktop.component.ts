@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-nav-bar-desktop',
@@ -6,7 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-bar-desktop.component.scss'],
 })
 export class NavBarDesktopComponent implements OnInit {
+  @Output() navItemSendToApp = new EventEmitter();
+
   constructor() {}
 
   ngOnInit(): void {}
+
+  navItemClickedReceived() {
+    this.navItemSendToApp.emit();
+  }
 }
