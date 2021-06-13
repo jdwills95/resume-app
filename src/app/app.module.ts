@@ -21,6 +21,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { CourseTrainingComponent } from './components/course-training/course-training.component';
 import { EducationComponent } from './components/education/education.component';
 import { OtherInfoComponent } from './components/other-info/other-info.component';
+import { NavBarContentComponent } from './components/nav-bar-content/nav-bar-content.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +36,7 @@ import { OtherInfoComponent } from './components/other-info/other-info.component
     CourseTrainingComponent,
     EducationComponent,
     OtherInfoComponent,
+    NavBarContentComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, FontAwesomeModule],
   providers: [
