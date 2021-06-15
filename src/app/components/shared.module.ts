@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
-import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -25,7 +24,7 @@ import { RemoveSpacingAndCapFirstLetter } from 'src/app/services/remove-spacing-
 import { RemoveSpacingCapFirstLetterPipe } from 'src/app/pipes/remove-spacing-cap-first-letter/remove-spacing-cap-first-letter.pipe';
 
 @NgModule({
-  imports: [CommonModule, BrowserModule, NgbModule, FontAwesomeModule],
+  imports: [CommonModule, NgbModule, FontAwesomeModule],
   declarations: [
     AssignmentComponent,
     FooterComponent,
@@ -43,7 +42,6 @@ import { RemoveSpacingCapFirstLetterPipe } from 'src/app/pipes/remove-spacing-ca
   ],
   exports: [
     CommonModule,
-    BrowserModule,
     NgbModule,
     FontAwesomeModule,
     AssignmentComponent,

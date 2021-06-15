@@ -1,0 +1,17 @@
+<div class="page-container">
+  <!-- header -->
+  <app-header (navBarButtonClicked)="navBarButtonClickedRev()"></app-header>
+  <app-nav-bar-desktop
+    *ngIf="isDesktopOrBigger && isNavbarOpen"
+    (navItemSendToApp)="closeNavBar()"
+  >
+  </app-nav-bar-desktop>
+  <app-nav-bar-mobile
+    *ngIf="!isDesktopOrBigger && isNavbarOpen"
+    (navItemSendToApp)="closeNavBar()"
+  >
+  </app-nav-bar-mobile>
+  <router-outlet></router-outlet>
+  <!-- footer -->
+  <app-footer></app-footer>
+</div>
