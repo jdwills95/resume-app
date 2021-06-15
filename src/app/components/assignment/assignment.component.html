@@ -1,19 +1,48 @@
-<h5 class="sec-title">ASSIGNMENT HISTORY</h5>
+<h5
+  id="assignmentHistorySecTitle"
+  name="assignmentHistorySecTitle"
+  aria-label="Assignment History Section Title"
+  class="sec-title"
+>
+  ASSIGNMENT HISTORY
+</h5>
 <hr class="hor" />
 <div *ngFor="let assignment of assignments">
   <div class="card">
     <div class="container">
-      <strong>{{ assignment.title }}</strong> <br />
-      <strong class="date-loc">{{ assignment.employer }} </strong>
+      <strong
+        [id]="'assignmenttitle' + assignment.title"
+        aria-label="Assignment Title"
+        >{{ assignment.title }}</strong
+      >
       <br />
-      <strong class="date-loc">
+      <strong
+        [id]="'assignment' + assignment.title + assignment.employer"
+        aria-label="Assignment Employer"
+        class="date-loc"
+        >{{ assignment.employer }}
+      </strong>
+      <br />
+      <strong
+        [id]="'assignment' + assignment.title + assignment.startDate"
+        aria-label="Dates Assigned"
+        class="date-loc"
+      >
         {{ assignment.startDate }} - {{ assignment.endDate }}
       </strong>
-      <p>
+      <p
+        [id]="'assignment' + assignment.title + 'Desc'"
+        aria-label="Assignment Description"
+      >
         {{ assignment.desc }}
       </p>
       <p>
-        <strong class="sub-title">Environments: </strong>
+        <strong
+          [id]="'assignment' + assignment.title + 'Environments'"
+          aria-label="Environments used during assignment"
+          class="sub-title"
+          >Environments:
+        </strong>
         {{ assignment.environments }}
       </p>
     </div>
