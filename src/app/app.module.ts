@@ -23,6 +23,7 @@ import { EducationComponent } from './components/education/education.component';
 import { OtherInfoComponent } from './components/other-info/other-info.component';
 import { NavBarContentComponent } from './components/nav-bar-content/nav-bar-content.component';
 import { RemoveSpacingAndCapFirstLetter } from 'src/app/services/remove-spacing-cap-first-letter/remove-spacing-cap-first-letter.service';
+import { LandingPageComponent } from './features/landing-page/landing-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,6 +39,7 @@ import { RemoveSpacingAndCapFirstLetter } from 'src/app/services/remove-spacing-
     EducationComponent,
     OtherInfoComponent,
     NavBarContentComponent,
+    LandingPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, FontAwesomeModule],
   providers: [
