@@ -11,17 +11,31 @@
   <div class="col-12 col-sm-4 sub-title">
     <div class="card">
       <div class="container">
-        <strong>Operating Systems</strong> <br />
+        <strong
+          id="oSSubSecTitleId"
+          name="oSSubSecTitle"
+          aria-label="Sub Section Title"
+          >Operating Systems</strong
+        >
+        <br />
         <div class="row">
           <div
             *ngIf="otherInfoSkills.operatingSystems.advanced"
             class="col col-sm-12 skill-sec"
           >
-            <div class="adv">
+            <div
+              id="oSSubSecAdvTitleId"
+              name="oSSubSecAdvTitle"
+              aria-label="Skill level"
+              class="adv"
+            >
               ADVANCED
               <hr class="divider" />
             </div>
             <div
+              [id]="'skill' + 'OS' + advSkillOS + 'Id'"
+              name="'skill' + 'OS' + advSkillOS"
+              aria-label="Operating System"
               *ngFor="
                 let advSkillOS of otherInfoSkills.operatingSystems.advanced
               "
@@ -33,11 +47,19 @@
             *ngIf="otherInfoSkills.operatingSystems.intermediate"
             class="col col-sm-12 skill-sec"
           >
-            <div class="int">
+            <div
+              id="oSSubSecIntTitleId"
+              name="oSSubSecIntTitle"
+              aria-label="Skill level"
+              class="int"
+            >
               INTERMEDIATE
               <hr class="divider" />
             </div>
             <div
+              [id]="'skill' + 'OS' + intSkillOS + 'Id'"
+              name="'skill' + 'OS' + intSkillOS"
+              aria-label="Operating System"
               *ngFor="
                 let intSkillOS of otherInfoSkills.operatingSystems.intermediate
               "
@@ -49,11 +71,19 @@
             *ngIf="otherInfoSkills.operatingSystems.beginner"
             class="col col-sm-12 skill-sec"
           >
-            <div class="beg">
+            <div
+              id="oSSubSecBegTitleId"
+              name="oSSubSecBegTitle"
+              aria-label="Skill level"
+              class="beg"
+            >
               BEGINNER
               <hr class="divider" />
             </div>
             <div
+              [id]="'skill' + 'OS' + begSkillOS + 'Id'"
+              name="'skill' + 'OS' + begSkillOS"
+              aria-label="Operating System"
               *ngFor="
                 let begSkillOS of otherInfoSkills.operatingSystems.beginner
               "
@@ -68,17 +98,32 @@
   <div class="col-12 col-sm-4 sub-title">
     <div class="card">
       <div class="container">
-        <strong>Software</strong>
+        <strong
+          id="softwareSubSecTitleId"
+          name="softwareSubSecTitle"
+          aria-label="Sub Section Title"
+          >Software</strong
+        >
         <div class="row">
           <div
             *ngIf="otherInfoSkills.software.advanced"
             class="col col-sm-12 skill-sec"
           >
-            <div class="adv">
+            <div
+              id="softwareSubSecAdvTitleId"
+              name="softwareSubSecAdvTitle"
+              aria-label="Skill level"
+              class="adv"
+            >
               ADVANCED
               <hr class="divider" />
             </div>
-            <div *ngFor="let advSkillSoft of otherInfoSkills.software.advanced">
+            <div
+              [id]="'skill' + 'Software' + advSkillSoft + 'Id'"
+              name="'skill' + 'Software' + advSkillSoft"
+              aria-label="Operating System"
+              *ngFor="let advSkillSoft of otherInfoSkills.software.advanced"
+            >
               {{ advSkillSoft }}
             </div>
           </div>
@@ -86,11 +131,19 @@
             *ngIf="otherInfoSkills.software.intermediate"
             class="col col-sm-12 skill-sec"
           >
-            <div class="int">
+            <div
+              id="softwareSubSecIntTitleId"
+              name="softwareSubSecIntTitle"
+              aria-label="Skill level"
+              class="int"
+            >
               INTERMEDIATE
               <hr class="divider" />
             </div>
             <div
+              [id]="'skill' + 'Software' + intSkillSoft + 'Id'"
+              name="'skill' + 'Software' + intSkillSoft"
+              aria-label="Operating System"
               *ngFor="let intSkillSoft of otherInfoSkills.software.intermediate"
             >
               {{ intSkillSoft }}
@@ -100,11 +153,21 @@
             *ngIf="otherInfoSkills.software.beginner"
             class="col col-sm-12 skill-sec"
           >
-            <div class="beg">
+            <div
+              id="softwareSubSecBegTitleId"
+              name="softwareSubSecBegTitle"
+              aria-label="Skill level"
+              class="beg"
+            >
               BEGINNER
               <hr class="divider" />
             </div>
-            <div *ngFor="let begSkillSoft of otherInfoSkills.software.beginner">
+            <div
+              [id]="'skill' + 'Software' + begSkillSoft + 'Id'"
+              name="'skill' + 'Software' + begSkillSoft"
+              aria-label="Operating System"
+              *ngFor="let begSkillSoft of otherInfoSkills.software.beginner"
+            >
               {{ begSkillSoft }}
             </div>
           </div>
@@ -112,22 +175,21 @@
       </div>
     </div>
   </div>
-  <!--Disabled because not that impressive/redundant-->
-  <!--<div class="col-12 col-sm-3 sub-title">
-    <div class="card">
-      <div class="container">
-        <strong>Certifications</strong>
-        <div *ngFor="let cert of otherInfoSkills.certifications">
-          {{ cert }}
-        </div>
-      </div>
-    </div>
-  </div>-->
   <div class="col-12 col-sm-4 sub-title">
     <div class="card">
       <div class="container">
-        <strong>Business Knowledge</strong>
-        <div *ngFor="let knowledge of otherInfoSkills.businessKnowledge">
+        <strong
+          id="busKnowSubSecTitleId"
+          name="busKnowSubSecTitle"
+          aria-label="Sub Section Title"
+          >Business Knowledge</strong
+        >
+        <div
+          [id]="'skill' + 'Business' + knowledge + 'Id'"
+          name="'skill' + 'Business' + knowledge"
+          aria-label="Business Knowledge"
+          *ngFor="let knowledge of otherInfoSkills.businessKnowledge"
+        >
           {{ knowledge }}
         </div>
       </div>
