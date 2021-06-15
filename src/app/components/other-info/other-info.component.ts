@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IOther } from 'src/app/interfaces/other';
 
-import otherJson from 'src/app/data/other.json';
+import otherJson from 'src/assets/data/other.json';
 
 export type otherFields = 'operatingSystems' | 'software';
 export type otherFieldsSecondary = 'advanced' | 'intermediate' | 'beginner';

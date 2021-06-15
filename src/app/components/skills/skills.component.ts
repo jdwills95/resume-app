@@ -3,7 +3,7 @@ import { ISkill, ISkillJson } from 'src/app/interfaces/skills';
 import { ArrayToStringService } from 'src/app/services/array-to-string/array-to-string.service';
 import { CurrentScreenWidthService } from 'src/app/services/current-screen-width/current-screen-width.service';
 
-import skillsJson from 'src/app/data/skills.json';
+import skillsJson from 'src/assets/data/skills.json';
 
 @Component({
   selector: 'app-skills',
@@ -23,7 +23,8 @@ export class SkillsComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   onResize() {
-    this.isDesktopOrBigger = this.currentScreenWidthService.isScreenWidthLargeDesktopOrBigger();
+    this.isDesktopOrBigger =
+      this.currentScreenWidthService.isScreenWidthLargeDesktopOrBigger();
   }
 
   getAssignments(skillsJson: ISkillJson): ISkill {

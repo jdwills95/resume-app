@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IEducation } from 'src/app/interfaces/education';
 
-import educationJSON from 'src/app/data/education.json';
+import educationJSON from 'src/assets/data/education.json';
 
 @Component({
   selector: 'app-education',

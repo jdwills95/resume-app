@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ICourseTrainingItem } from 'src/app/interfaces/courseTraining';
 
-import courseTrainingJSON from 'src/app/data/courses-training.json';
+import courseTrainingJSON from 'src/assets/data/courses-training.json';
 
 @Component({
   selector: 'app-course-training',
@@ -9,9 +9,8 @@ import courseTrainingJSON from 'src/app/data/courses-training.json';
   styleUrls: ['./course-training.component.scss'],
 })
 export class CourseTrainingComponent implements OnInit {
-  courseTraining: ICourseTrainingItem = this.getCoursesTraining(
-    courseTrainingJSON
-  );
+  courseTraining: ICourseTrainingItem =
+    this.getCoursesTraining(courseTrainingJSON);
 
   constructor() {}
 

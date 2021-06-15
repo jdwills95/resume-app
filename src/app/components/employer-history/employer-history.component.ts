@@ -4,7 +4,7 @@ import {
   IEmployerHistory,
 } from 'src/app/interfaces/employerHistory';
 
-import employerHistory from 'src/app/data/employer-history.json';
+import employerHistory from 'src/assets/data/employer-history.json';
 
 @Component({
   selector: 'app-employer-history',
