@@ -1,12 +1,26 @@
-<h5 class="sec-title">COURSES AND TRAINING</h5>
+<h5
+  id="coursesAndTrainingSecTitleId"
+  name="coursesAndTrainingSecTitle"
+  aria-label="Assignment History Section Title"
+  class="sec-title"
+>
+  COURSES AND TRAINING
+</h5>
 <hr class="hor" />
 <div class="row row-row">
   <div class="col-12 col-sm-6">
     <div class="card">
       <div class="container">
         <div class="train-badge">
-          <strong>TRAINING</strong> <br />
-          <div *ngFor="let trainingItem of courseTraining.training">
+          <strong id="trainingSecTitleId" aria-label="Training List Title"
+            >TRAINING</strong
+          >
+          <br />
+          <div
+            [id]="'trainingItem' + trainingItem + 'Id'"
+            aria-label="Training Item"
+            *ngFor="let trainingItem of courseTraining.training"
+          >
             {{ trainingItem }}
           </div>
         </div>
@@ -17,8 +31,17 @@
     <div class="card">
       <div class="container">
         <div class="train-badge">
-          <strong>BADGES</strong> <br />
-          <div *ngFor="let badge of courseTraining.badges">{{ badge }}</div>
+          <strong id="badgesSecTitleId" aria-label="Badges List Title"
+            >BADGES</strong
+          >
+          <br />
+          <div
+            [id]="'badge' + badge + 'Id'"
+            aria-label="Badge"
+            *ngFor="let badge of courseTraining.badges"
+          >
+            {{ badge }}
+          </div>
         </div>
       </div>
     </div>

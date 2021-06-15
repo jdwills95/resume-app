@@ -1,5 +1,5 @@
 <h5
-  id="assignmentHistorySecTitle"
+  id="assignmentHistorySecTitleId"
   name="assignmentHistorySecTitle"
   aria-label="Assignment History Section Title"
   class="sec-title"
@@ -11,34 +11,34 @@
   <div class="card">
     <div class="container">
       <strong
-        [id]="'assignmenttitle' + assignment.title"
+        [id]="'assignmenttitle' + assignment.title + 'Id'"
         aria-label="Assignment Title"
         >{{ assignment.title }}</strong
       >
       <br />
       <strong
-        [id]="'assignment' + assignment.title + assignment.employer"
+        [id]="'assignment' + assignment.title + assignment.employer + 'Id'"
         aria-label="Assignment Employer"
         class="date-loc"
         >{{ assignment.employer }}
       </strong>
       <br />
       <strong
-        [id]="'assignment' + assignment.title + assignment.startDate"
+        [id]="'assignment' + assignment.title + assignment.startDate + 'Id'"
         aria-label="Dates Assigned"
         class="date-loc"
       >
         {{ assignment.startDate }} - {{ assignment.endDate }}
       </strong>
       <p
-        [id]="'assignment' + assignment.title + 'Desc'"
+        [id]="'assignment' + assignment.title + 'Desc' + 'Id'"
         aria-label="Assignment Description"
       >
         {{ assignment.desc }}
       </p>
       <p>
         <strong
-          [id]="'assignment' + assignment.title + 'Environments'"
+          [id]="'assignment' + assignment.title + 'Environments' + 'Id'"
           aria-label="Environments used during assignment"
           class="sub-title"
           >Environments:
