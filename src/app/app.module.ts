@@ -22,6 +22,7 @@ import { CourseTrainingComponent } from './components/course-training/course-tra
 import { EducationComponent } from './components/education/education.component';
 import { OtherInfoComponent } from './components/other-info/other-info.component';
 import { NavBarContentComponent } from './components/nav-bar-content/nav-bar-content.component';
+import { RemoveSpacingAndCapFirstLetter } from 'src/app/services/remove-spacing-cap-first-letter/remove-spacing-cap-first-letter.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +45,7 @@ import { NavBarContentComponent } from './components/nav-bar-content/nav-bar-con
     NavBarService,
     ScrollService,
     ArrayToStringService,
+    RemoveSpacingAndCapFirstLetter,
   ],
   bootstrap: [AppComponent],
 })

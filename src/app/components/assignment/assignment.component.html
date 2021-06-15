@@ -11,34 +11,61 @@
   <div class="card">
     <div class="container">
       <strong
-        [id]="'assignmenttitle' + assignment.title + 'Id'"
+        [id]="
+          'assignmenttitle' +
+          removeSpacingCapEachLetter(assignment.title) +
+          'Id'
+        "
         aria-label="Assignment Title"
         >{{ assignment.title }}</strong
       >
       <br />
       <strong
-        [id]="'assignment' + assignment.title + assignment.employer + 'Id'"
+        [id]="
+          'assignment' +
+          removeSpacingCapEachLetter(assignment.title) +
+          removeSpacingCapEachLetter(assignment.employer) +
+          'Id'
+        "
         aria-label="Assignment Employer"
         class="date-loc"
         >{{ assignment.employer }}
       </strong>
       <br />
       <strong
-        [id]="'assignment' + assignment.title + assignment.startDate + 'Id'"
+        [id]="
+          'assignment' +
+          removeSpacingCapEachLetter(assignment.title) +
+          removeSpacingCapEachLetter(assignment.employer) +
+          'Dates' +
+          'Id'
+        "
         aria-label="Dates Assigned"
         class="date-loc"
       >
         {{ assignment.startDate }} - {{ assignment.endDate }}
       </strong>
       <p
-        [id]="'assignment' + assignment.title + 'Desc' + 'Id'"
+        [id]="
+          'assignment' +
+          removeSpacingCapEachLetter(assignment.title) +
+          removeSpacingCapEachLetter(assignment.employer) +
+          'Desc' +
+          'Id'
+        "
         aria-label="Assignment Description"
       >
         {{ assignment.desc }}
       </p>
       <p>
         <strong
-          [id]="'assignment' + assignment.title + 'Environments' + 'Id'"
+          [id]="
+            'assignment' +
+            removeSpacingCapEachLetter(assignment.title) +
+            removeSpacingCapEachLetter(assignment.employer) +
+            'Environments' +
+            'Id'
+          "
           aria-label="Environments used during assignment"
           class="sub-title"
           >Environments:

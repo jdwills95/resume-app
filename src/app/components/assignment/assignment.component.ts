@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { IAssignmentJSON, IAssignment } from 'src/app/interfaces/assignment';
 
+import { RemoveSpacingAndCapFirstLetter } from 'src/app/services/remove-spacing-cap-first-letter/remove-spacing-cap-first-letter.service';
+
 import assignmentsJson from 'src/app/data/assignments.json';
 
 @Component({
@@ -11,7 +13,9 @@ import assignmentsJson from 'src/app/data/assignments.json';
 export class AssignmentComponent implements OnInit {
   assignments: IAssignment[] = this.getAssignments(assignmentsJson);
 
-  constructor() {}
+  constructor(
+    private removeSpacingAndCapFirstLetter: RemoveSpacingAndCapFirstLetter
+  ) {}
 
   ngOnInit(): void {}
 
@@ -38,5 +42,9 @@ export class AssignmentComponent implements OnInit {
       }
     });
     return environmentsString;
+  }
+
+  removeSpacingCapEachLetter(str: string) {
+    return this.removeSpacingAndCapFirstLetter.removeSpacesAndCapEachWord(str);
   }
 }
