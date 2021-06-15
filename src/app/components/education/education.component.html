@@ -1,9 +1,21 @@
-<h5 class="sec-title">EDUCATION</h5>
+<h5
+  id="educationSecTitleId"
+  name="educationSecTitle"
+  aria-label="Assignment History Section Title"
+  class="sec-title"
+>
+  EDUCATION
+</h5>
 <hr class="hor" />
 <div>
   <div class="card">
     <div class="container">
-      <div class="degree" *ngFor="let degree of education">
+      <div
+        [id]="'degree' + degree + 'Id'"
+        aria-label="degree"
+        class="degree"
+        *ngFor="let degree of education"
+      >
         <strong>{{ degree.degree }} - {{ degree.field }}</strong> <br />
         {{ degree.school.name }} - {{ degree.school.location }}
       </div>
