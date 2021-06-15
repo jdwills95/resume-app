@@ -1,21 +1,49 @@
-<h5 class="sec-title">EMPLOYER HISTORY</h5>
+<h5
+  id="employmentHisSecTitleId"
+  name="employmentHisSecTitle"
+  aria-label="Employment History Section Title"
+  class="sec-title"
+>
+  EMPLOYER HISTORY
+</h5>
 <hr class="hor" />
 <div *ngFor="let employer of employers">
   <div class="card">
     <div class="container">
-      <strong>{{ employer.jobTitle }}</strong> <br />
-      <strong class="date-loc">{{ employer.location }}</strong>
+      <strong
+        [id]="'employment' + employer.jobTitle + 'Id'"
+        aria-label="Job Title"
+        >{{ employer.jobTitle }}</strong
+      >
       <br />
-      <strong class="date-loc">
+      <strong
+        [id]="'employment' + employer.location + 'Id'"
+        aria-label="Employer Location"
+        class="date-loc"
+        >{{ employer.location }}</strong
+      >
+      <br />
+      <strong
+        [id]="'employment' + employer.jobTitle + 'Date' + 'Id'"
+        aria-label="Employer dates"
+        class="date-loc"
+      >
         {{ employer.startDate }} - {{ employer.endDate }}
       </strong>
       <br />
 
-      <p class="desc">
+      <p
+        [id]="'employment' + employer.jobTitle + 'Description' + 'Id'"
+        aria-label="Employer Description"
+        class="desc"
+      >
         <strong class="sub-title">Description: </strong>
         {{ employer.desc.desct }}
       </p>
-      <ul>
+      <ul
+        [id]="'employment' + employer.jobTitle + 'Task' + 'Id'"
+        aria-label="List of tasks"
+      >
         <li *ngFor="let task of employer.desc.task">{{ task }}</li>
       </ul>
     </div>
