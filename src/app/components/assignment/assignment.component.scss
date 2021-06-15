@@ -5,7 +5,6 @@
   margin-left: 1.5em;
   margin-right: 1.5em;
   margin-bottom: 0.5em;
-  padding-top: 0.5em;
 }
 
 /* On mouse-over, add a deeper shadow */
@@ -25,7 +24,7 @@
 
 .sec-title {
   text-align: center;
-  padding-top: 1.5em;
+  padding-top: 3em;
 }
 
 .sub-title {
@@ -35,3 +34,8 @@
 .date-loc {
   color: gray;
 }
+
+/*.spacer-scroll {
+  height: 1.25em;
+  min-width: 100vh;
+}*/

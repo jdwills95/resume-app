@@ -1,9 +1,6 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { INavItem } from 'src/app/interfaces/nav-item';
 
-import { NavBarService } from 'src/app/services/nav-bar/nav-bar.service';
-import { ScrollService } from 'src/app/services/scroll/scroll.service';
-
 @Component({
   selector: 'app-nav-bar-content',
   templateUrl: './nav-bar-content.component.html',
@@ -38,10 +35,7 @@ export class NavBarContentComponent implements OnInit {
       target: 'other',
     },
   ];
-  constructor(
-    private navBarService: NavBarService,
-    private scrollService: ScrollService
-  ) {}
+  constructor() {}
 
   ngOnInit(): void {}
 
