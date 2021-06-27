@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IOther } from 'src/app/interfaces/other';
 
-import otherJson from 'src/assets/data/other.json';
+import _otherJson from 'src/assets/data/other.json';
 
 export type otherFields = 'operatingSystems' | 'software';
 export type otherFieldsSecondary = 'advanced' | 'intermediate' | 'beginner';
@@ -12,7 +12,8 @@ export type otherFieldsSecondary = 'advanced' | 'intermediate' | 'beginner';
   styleUrls: ['./other-info.component.scss'],
 })
 export class OtherInfoComponent implements OnInit {
-  otherInfoSkills: IOther = this.getOtherInfoSkills(otherJson);
+  otherJson = _otherJson as IOther;
+  otherInfoSkills: IOther = this.getOtherInfoSkills(this.otherJson);
 
   constructor() {}
 

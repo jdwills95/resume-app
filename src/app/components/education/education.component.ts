@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IEducation } from 'src/app/interfaces/education';
 
-import educationJSON from 'src/assets/data/education.json';
+import _educationJSON from 'src/assets/data/education.json';
 
 @Component({
   selector: 'app-education',
@@ -9,7 +9,8 @@ import educationJSON from 'src/assets/data/education.json';
   styleUrls: ['./education.component.scss'],
 })
 export class EducationComponent implements OnInit {
-  education: IEducation[] = this.getEducation(educationJSON);
+  educationJSON = _educationJSON as IEducation[];
+  education: IEducation[] = this.getEducation(this.educationJSON);
 
   constructor() {}
 

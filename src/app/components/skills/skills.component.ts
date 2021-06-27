@@ -3,7 +3,7 @@ import { ISkill, ISkillJson } from 'src/app/interfaces/skills';
 import { ArrayToStringService } from 'src/app/services/array-to-string/array-to-string.service';
 import { CurrentScreenWidthService } from 'src/app/services/current-screen-width/current-screen-width.service';
 
-import skillsJson from 'src/assets/data/skills.json';
+import _skillsJson from 'src/assets/data/skills.json';
 
 @Component({
   selector: 'app-skills',
@@ -11,8 +11,9 @@ import skillsJson from 'src/assets/data/skills.json';
   styleUrls: ['./skills.component.scss'],
 })
 export class SkillsComponent implements OnInit {
+  skillsJson = _skillsJson as ISkillJson;
   isDesktopOrBigger = true;
-  skills: ISkill = this.getAssignments(skillsJson);
+  skills: ISkill = this.getAssignments(this.skillsJson);
 
   constructor(
     private arrayToStringService: ArrayToStringService,
