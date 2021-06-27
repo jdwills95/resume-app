@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  onNavClicked() {
+  onNavClicked(): void {
     this.navBarButtonClicked.emit();
     this.navBarService.onNavBarButtonClicked();
   }

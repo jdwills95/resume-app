@@ -47,7 +47,7 @@ export class OtherInfoComponent implements OnInit {
     if (otherJson[field]) {
       const skillLvl = otherJson[field];
       if (skillLvl[fieldSecordary]) {
-        //@ts-ignore
+        // @ts-ignore
         const skill: string[] = skillLvl[fieldSecordary];
         return skill;
       }

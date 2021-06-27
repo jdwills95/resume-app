@@ -22,9 +22,8 @@ export class SkillsComponent implements OnInit {
   ngOnInit(): void {}
 
   @HostListener('window:resize', ['$event'])
-  onResize() {
-    this.isDesktopOrBigger =
-      this.currentScreenWidthService.isScreenWidthLargeDesktopOrBigger();
+  onResize(): void {
+    this.isDesktopOrBigger = this.currentScreenWidthService.isScreenWidthLargeDesktopOrBigger();
   }
 
   getAssignments(skillsJson: ISkillJson): ISkill {

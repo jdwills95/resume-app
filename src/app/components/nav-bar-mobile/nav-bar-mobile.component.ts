@@ -12,7 +12,7 @@ export class NavBarMobileComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  navItemClickedReceived() {
+  navItemClickedReceived(): void {
     this.navItemSendToApp.emit();
   }
 }

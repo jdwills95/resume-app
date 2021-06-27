@@ -44,7 +44,7 @@ export class AssignmentComponent implements OnInit {
     return environmentsString;
   }
 
-  removeSpacingCapEachLetter(str: string) {
+  removeSpacingCapEachLetter(str: string): string {
     return this.removeSpacingAndCapFirstLetter.removeSpacesAndCapEachWord(str);
   }
 }

@@ -21,16 +21,16 @@ export class AppComponent implements AfterViewInit {
     private scrollService: ScrollService
   ) {}
 
-  ngAfterViewInit() {
+  ngAfterViewInit(): void {
     this.scrollServiceCheckAllowed = true;
   }
 
   @HostListener('window:resize', ['$event'])
-  onResize() {
+  onResize(): void {
     this.isDesktopOrBigger = this.currentScreenWidthService.isScreenWidthLargeDesktopOrBigger();
   }
 
-  navBarButtonClickedRev() {
+  navBarButtonClickedRev(): void {
     this.isNavbarOpen = !this.isNavbarOpen;
     if (this.scrollServiceCheckAllowed) {
       if (this.isNavbarOpen) {
@@ -41,7 +41,7 @@ export class AppComponent implements AfterViewInit {
     }
   }
 
-  closeNavBar() {
+  closeNavBar(): void {
     this.scrollService.enable();
     this.navBarService.closeNavBar();
     this.isNavbarOpen = false;

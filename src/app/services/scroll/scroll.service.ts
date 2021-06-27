@@ -16,7 +16,7 @@ export class ScrollService {
   }
 
   private buildStyleElement(): HTMLStyleElement {
-    var style = document.createElement('style');
+    const style = document.createElement('style');
 
     style.type = 'text/css';
     style.setAttribute('data-debug', 'Injected by WindowScrolling service.');

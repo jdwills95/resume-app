@@ -10,8 +10,8 @@ export class ContactComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  downloadResume() {
-    let link = document.createElement('a');
+  downloadResume(): void {
+    const link = document.createElement('a');
     link.download = 'Resume_Joey_Wills';
     link.href = 'assets/resume/Resume_Wills_Joey.pdf';
     link.click();
