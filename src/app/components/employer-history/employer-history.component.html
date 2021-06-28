@@ -4,7 +4,7 @@
   aria-label="Section Title"
   class="sec-title"
 >
-  EMPLOYER HISTORY
+  EMPLOYMENT HISTORY
 </h5>
 <hr class="hor" />
 <div *ngFor="let employer of employers">
@@ -20,7 +20,7 @@
         [id]="'employment' + employer.location + 'Id'"
         aria-label="Employer Location"
         class="date-loc"
-        >{{ employer.location }}</strong
+        >{{ employer.employer }} - {{ employer.location }}</strong
       >
       <br />
       <strong
