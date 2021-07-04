@@ -46,23 +46,23 @@ describe('AssignmentComponent', () => {
       },
     ];
 
-    const getAssignmentsResults = component.getAssignments(testAssignmentJSON);
+    component.setAssignments(testAssignmentJSON);
 
-    expect(getAssignmentsResults[0].endDate).toBe('test01EndDate');
-    expect(getAssignmentsResults[0].startDate).toBe('test01StartDate');
-    expect(getAssignmentsResults[0].title).toBe('test01Title');
-    expect(getAssignmentsResults[0].employer).toBe('test01Employer');
-    expect(getAssignmentsResults[0].desc).toBe('test01Desc');
-    expect(getAssignmentsResults[0].environments).toBe(
+    expect(component.assignments[0].endDate).toBe('test01EndDate');
+    expect(component.assignments[0].startDate).toBe('test01StartDate');
+    expect(component.assignments[0].title).toBe('test01Title');
+    expect(component.assignments[0].employer).toBe('test01Employer');
+    expect(component.assignments[0].desc).toBe('test01Desc');
+    expect(component.assignments[0].environments).toBe(
       'test01Evn01, test01Evn02'
     );
 
-    expect(getAssignmentsResults[1].endDate).toBe('test02EndDate');
-    expect(getAssignmentsResults[1].startDate).toBe('test02StartDate');
-    expect(getAssignmentsResults[1].title).toBe('test02Title');
-    expect(getAssignmentsResults[1].employer).toBe('test02Employer');
-    expect(getAssignmentsResults[1].desc).toBe('test02Desc');
-    expect(getAssignmentsResults[1].environments).toBe(
+    expect(component.assignments[1].endDate).toBe('test02EndDate');
+    expect(component.assignments[1].startDate).toBe('test02StartDate');
+    expect(component.assignments[1].title).toBe('test02Title');
+    expect(component.assignments[1].employer).toBe('test02Employer');
+    expect(component.assignments[1].desc).toBe('test02Desc');
+    expect(component.assignments[1].environments).toBe(
       'test02Evn01, test02Evn02'
     );
   });
@@ -82,6 +82,20 @@ describe('AssignmentComponent', () => {
       expect(h5.textContent).toEqual('ASSIGNMENT HISTORY');
     } else {
       fail('h5 is null');
+    }
+  });
+
+  it('should have <strong> with "test01Title"', () => {
+    /*const obj = { mustBeTrue: () => false };
+    spyOn(obj, 'mustBeTrue').and.returnValue(true);
+    expect(obj.mustBeTrue()).toBe(true);*/
+
+    const assignmentElement: HTMLElement = fixture.nativeElement;
+    const strong = assignmentElement.querySelector('strong');
+    if (strong != null) {
+      expect(strong.textContent).toEqual('test01Title');
+    } else {
+      fail('strong is null');
     }
   });
 });

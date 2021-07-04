@@ -13,17 +13,19 @@ import _assignmentsJson from 'src/assets/data/assignments.json';
 })
 export class AssignmentComponent implements OnInit {
   assignmentsJson = _assignmentsJson as IAssignmentJSON[];
-  assignments: IAssignment[] = this.getAssignments(this.assignmentsJson);
+  assignments: IAssignment[] = [];
 
   constructor(
     private removeSpacingAndCapFirstLetter: RemoveSpacingAndCapFirstLetter,
     private arrayToStringService: ArrayToStringService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.setAssignments(this.assignmentsJson);
+  }
 
-  getAssignments(assignmentsJson: IAssignmentJSON[]): IAssignment[] {
-    return assignmentsJson.map((assignment) => {
+  setAssignments(assignmentsJson: IAssignmentJSON[]): void {
+    this.assignments = assignmentsJson.map((assignment) => {
       return {
         endDate: assignment.endDate,
         startDate: assignment.startDate,
