@@ -10,12 +10,37 @@ describe('AssignmentComponent', () => {
   let component: AssignmentComponent;
   let fixture: ComponentFixture<AssignmentComponent>;
 
+  let mockGetDataService;
+
+  const mockAssignmentData = [
+    {
+      endDate: 'test01EndDate',
+      startDate: 'test01StartDate',
+      title: 'test01Title',
+      employer: 'test01Employer',
+      desc: 'test01Desc',
+      environments: ['test01Evn01', 'test01Evn02'],
+    },
+    {
+      endDate: 'test02EndDate',
+      startDate: 'test02StartDate',
+      title: 'test02Title',
+      employer: 'test02Employer',
+      desc: 'test02Desc',
+      environments: ['test02Evn01', 'test02Evn02'],
+    },
+  ];
+
   beforeEach(async () => {
+    mockGetDataService = jasmine.createSpyObj(['getAssignmentData']);
+    mockGetDataService.getAssignmentData.and.returnValue(mockAssignmentData);
+
     await TestBed.configureTestingModule({
       providers: [
         RemoveSpacingAndCapFirstLetter,
         ArrayToStringService,
         GetDataService,
+        { provide: GetDataService, useValue: mockGetDataService },
       ],
       declarations: [AssignmentComponent],
     }).compileComponents();
@@ -32,26 +57,7 @@ describe('AssignmentComponent', () => {
   });
 
   it('should map abd return IAssignmentJSON array to IAssignment array', () => {
-    const testAssignmentJSON = [
-      {
-        endDate: 'test01EndDate',
-        startDate: 'test01StartDate',
-        title: 'test01Title',
-        employer: 'test01Employer',
-        desc: 'test01Desc',
-        environments: ['test01Evn01', 'test01Evn02'],
-      },
-      {
-        endDate: 'test02EndDate',
-        startDate: 'test02StartDate',
-        title: 'test02Title',
-        employer: 'test02Employer',
-        desc: 'test02Desc',
-        environments: ['test02Evn01', 'test02Evn02'],
-      },
-    ];
-
-    component.setAssignments(testAssignmentJSON);
+    component.setAssignments(mockAssignmentData);
 
     expect(component.assignments[0].endDate).toBe('test01EndDate');
     expect(component.assignments[0].startDate).toBe('test01StartDate');
