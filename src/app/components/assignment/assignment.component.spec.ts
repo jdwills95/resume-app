@@ -88,21 +88,131 @@ describe('AssignmentComponent', () => {
 
   it('should have <h5> with "ASSIGNMENT HISTORY"', () => {
     const assignmentElement: HTMLElement = fixture.nativeElement;
-    const h5 = assignmentElement.querySelector('h5');
+    const h5 = assignmentElement.querySelector('#assignmentHistorySecTitleId');
     if (h5 != null) {
       expect(h5.textContent).toEqual('ASSIGNMENT HISTORY');
     } else {
-      fail('h5 is null');
+      fail('h5 with "ASSIGNMENT HISTORY" not found');
     }
   });
 
   it('should have <strong> with "test01Title"', () => {
     const assignmentElement: HTMLElement = fixture.nativeElement;
-    const strong = assignmentElement.querySelector('strong');
+    const strong = assignmentElement.querySelector(
+      '#assignmenttitleTest01titleId'
+    );
     if (strong != null) {
       expect(strong.textContent).toEqual('test01Title');
     } else {
-      fail('strong is null');
+      fail('strong with "test01Title" not found');
+    }
+  });
+
+  it('should have <strong> with "test01Employer"', () => {
+    const assignmentElement: HTMLElement = fixture.nativeElement;
+    const strong = assignmentElement.querySelector(
+      '#assignmentTest01titleTest01employerId'
+    );
+    if (strong != null) {
+      expect(strong.textContent).toEqual('test01Employer ');
+    } else {
+      fail('strong with "test01Employer" not found');
+    }
+  });
+
+  it('should have <strong> with "test01StartDate - test01EndDate"', () => {
+    const assignmentElement: HTMLElement = fixture.nativeElement;
+    const strong = assignmentElement.querySelector(
+      '#assignmentTest01titleTest01employerDatesId'
+    );
+    if (strong != null) {
+      expect(strong.textContent).toEqual(' test01StartDate - test01EndDate ');
+    } else {
+      fail('strong with "test01StartDate - test01EndDate" not found');
+    }
+  });
+
+  it('should have <p> with "test01Desc"', () => {
+    const assignmentElement: HTMLElement = fixture.nativeElement;
+    const p = assignmentElement.querySelector(
+      '#assignmentTest01titleTest01employerDescId'
+    );
+    if (p != null) {
+      expect(p.textContent).toEqual(' test01Desc ');
+    } else {
+      fail('p with "test01Desc" not found');
+    }
+  });
+
+  it('should have <p> with "Environments:  test01Evn01, test01Evn02 ', () => {
+    const assignmentElement: HTMLElement = fixture.nativeElement;
+    const p = assignmentElement.querySelector(
+      '#assignmentTest01titleTest01employerEnvironmentsId'
+    );
+    if (p != null) {
+      expect(p.textContent).toEqual('Environments:  test01Evn01, test01Evn02 ');
+    } else {
+      fail('p with "Environments:  test01Evn01, test01Evn02" not found');
+    }
+  });
+
+  it('should have <strong> with "test02Title"', () => {
+    const assignmentElement: HTMLElement = fixture.nativeElement;
+    const strong = assignmentElement.querySelector(
+      '#assignmenttitleTest02titleId'
+    );
+    if (strong != null) {
+      expect(strong.textContent).toEqual('test02Title');
+    } else {
+      fail('strong with "test02Title" not found');
+    }
+  });
+
+  it('should have <strong> with "test02Employer"', () => {
+    const assignmentElement: HTMLElement = fixture.nativeElement;
+    const strong = assignmentElement.querySelector(
+      '#assignmentTest02titleTest02employerId'
+    );
+    if (strong != null) {
+      expect(strong.textContent).toEqual('test02Employer ');
+    } else {
+      fail('strong with "test02Employer" not found');
+    }
+  });
+
+  it('should have <strong> with "test02StartDate - test02EndDate"', () => {
+    const assignmentElement: HTMLElement = fixture.nativeElement;
+    const strong = assignmentElement.querySelector(
+      '#assignmentTest02titleTest02employerDatesId'
+    );
+    if (strong != null) {
+      expect(strong.textContent).toEqual(' test02StartDate - test02EndDate ');
+    } else {
+      fail('strong with "test02StartDate - test02EndDate" not found');
+    }
+  });
+
+  it('should have <p> with "test02Desc"', () => {
+    const assignmentElement: HTMLElement = fixture.nativeElement;
+    const p = assignmentElement.querySelector(
+      '#assignmentTest02titleTest02employerDescId'
+    );
+    if (p != null) {
+      expect(p.textContent).toEqual(' test02Desc ');
+    } else {
+      fail('p with "test02Desc" not found');
+    }
+  });
+
+  it('should have <p> with "Environments:  test02Evn01, test02Evn02 ', () => {
+    const assignmentElement: HTMLElement = fixture.nativeElement;
+    const p = assignmentElement.querySelector(
+      '#assignmentTest02titleTest02employerEnvironmentsId'
+    );
+    if (p != null) {
+      expect(p.textContent).toEqual('Environments:  test02Evn01, test02Evn02 ');
+    } else {
+      fail('p with "Environments:  test02Evn01, test02Evn02" not found');
     }
   });
 });

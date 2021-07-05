@@ -58,13 +58,21 @@
       >
         {{ assignment.desc }}
       </p>
-      <p>
+      <p
+        [id]="
+          'assignment' +
+          removeSpacingCapEachLetter(assignment.title) +
+          removeSpacingCapEachLetter(assignment.employer) +
+          'Environments' +
+          'Id'
+        "
+      >
         <strong
           [id]="
             'assignment' +
             removeSpacingCapEachLetter(assignment.title) +
             removeSpacingCapEachLetter(assignment.employer) +
-            'Environments' +
+            'EnvironmentsLabel' +
             'Id'
           "
           aria-label="Environments used during assignment"
