@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ICourseTrainingItem } from 'src/app/interfaces/courseTraining';
 
-import _courseTrainingJSON from 'src/assets/data/courses-training.json';
+import { GetDataService } from 'src/app/services/get-data/get-data.service';
 
 @Component({
   selector: 'app-course-training',
@@ -9,19 +9,16 @@ import _courseTrainingJSON from 'src/assets/data/courses-training.json';
   styleUrls: ['./course-training.component.scss'],
 })
 export class CourseTrainingComponent implements OnInit {
-  courseTrainingJSON = _courseTrainingJSON as ICourseTrainingItem;
-  courseTraining: ICourseTrainingItem = this.getCoursesTraining(
-    this.courseTrainingJSON
-  );
+  courseTraining: ICourseTrainingItem = { badges: [], training: [] };
 
-  constructor() {}
+  constructor(private getDataService: GetDataService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.setCoursesTraining(this.getDataService.getCourseTrainingData());
+  }
 
-  getCoursesTraining(
-    courseTrainingJSON: ICourseTrainingItem
-  ): ICourseTrainingItem {
-    return {
+  setCoursesTraining(courseTrainingJSON: ICourseTrainingItem): void {
+    this.courseTraining = {
       badges: courseTrainingJSON.badges,
       training: courseTrainingJSON.training,
     };

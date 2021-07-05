@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IOther } from 'src/app/interfaces/other';
 
-import _otherJson from 'src/assets/data/other.json';
+import { GetDataService } from 'src/app/services/get-data/get-data.service';
 
 export type otherFields = 'operatingSystems' | 'software';
 export type otherFieldsSecondary = 'advanced' | 'intermediate' | 'beginner';
@@ -12,15 +12,21 @@ export type otherFieldsSecondary = 'advanced' | 'intermediate' | 'beginner';
   styleUrls: ['./other-info.component.scss'],
 })
 export class OtherInfoComponent implements OnInit {
-  otherJson = _otherJson as IOther;
-  otherInfoSkills: IOther = this.getOtherInfoSkills(this.otherJson);
+  otherInfoSkills: IOther = {
+    operatingSystems: {},
+    software: {},
+    certifications: [],
+    businessKnowledge: [],
+  };
 
-  constructor() {}
+  constructor(private getDataService: GetDataService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.setOtherInfoSkills(this.getDataService.getOtherData());
+  }
 
-  getOtherInfoSkills(otherJson: IOther): IOther {
-    return {
+  setOtherInfoSkills(otherJson: IOther): void {
+    this.otherInfoSkills = {
       operatingSystems: {
         advanced: this.existCheck(otherJson, 'operatingSystems', 'advanced'),
         intermediate: this.existCheck(

@@ -3,7 +3,7 @@ import { ISkill, ISkillJson } from 'src/app/interfaces/skills';
 import { ArrayToStringService } from 'src/app/services/array-to-string/array-to-string.service';
 import { CurrentScreenWidthService } from 'src/app/services/current-screen-width/current-screen-width.service';
 
-import _skillsJson from 'src/assets/data/skills.json';
+import { GetDataService } from 'src/app/services/get-data/get-data.service';
 
 @Component({
   selector: 'app-skills',
@@ -11,24 +11,35 @@ import _skillsJson from 'src/assets/data/skills.json';
   styleUrls: ['./skills.component.scss'],
 })
 export class SkillsComponent implements OnInit {
-  skillsJson = _skillsJson as ISkillJson;
   isDesktopOrBigger = true;
-  skills: ISkill = this.getAssignments(this.skillsJson);
+  skills: ISkill = {
+    languages: '',
+    languagesAry: [],
+    frameworks: '',
+    frameworksAry: [],
+    softwareTools: '',
+    softwareToolsAry: [],
+    methods: '',
+    methodsAry: [],
+  };
 
   constructor(
     private arrayToStringService: ArrayToStringService,
-    private currentScreenWidthService: CurrentScreenWidthService
+    private currentScreenWidthService: CurrentScreenWidthService,
+    private getDataService: GetDataService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.setSkills(this.getDataService.getSkillsData());
+  }
 
   @HostListener('window:resize', ['$event'])
   onResize(): void {
     this.isDesktopOrBigger = this.currentScreenWidthService.isScreenWidthLargeDesktopOrBigger();
   }
 
-  getAssignments(skillsJson: ISkillJson): ISkill {
-    return {
+  setSkills(skillsJson: ISkillJson): void {
+    this.skills = {
       languages: this.arrayToStringService.arrayToString(skillsJson.languages),
       languagesAry: skillsJson.languages,
       frameworks: this.arrayToStringService.arrayToString(

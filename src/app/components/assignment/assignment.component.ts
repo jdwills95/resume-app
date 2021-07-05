@@ -3,8 +3,7 @@ import { IAssignmentJSON, IAssignment } from 'src/app/interfaces/assignment';
 
 import { RemoveSpacingAndCapFirstLetter } from 'src/app/services/remove-spacing-cap-first-letter/remove-spacing-cap-first-letter.service';
 import { ArrayToStringService } from 'src/app/services//array-to-string/array-to-string.service';
-
-import _assignmentsJson from 'src/assets/data/assignments.json';
+import { GetDataService } from 'src/app/services/get-data/get-data.service';
 
 @Component({
   selector: 'app-assignment',
@@ -12,16 +11,16 @@ import _assignmentsJson from 'src/assets/data/assignments.json';
   styleUrls: ['./assignment.component.scss'],
 })
 export class AssignmentComponent implements OnInit {
-  assignmentsJson = _assignmentsJson as IAssignmentJSON[];
   assignments: IAssignment[] = [];
 
   constructor(
     private removeSpacingAndCapFirstLetter: RemoveSpacingAndCapFirstLetter,
-    private arrayToStringService: ArrayToStringService
+    private arrayToStringService: ArrayToStringService,
+    private getDataService: GetDataService
   ) {}
 
   ngOnInit(): void {
-    this.setAssignments(this.assignmentsJson);
+    this.setAssignments(this.getDataService.getAssignmentData());
   }
 
   setAssignments(assignmentsJson: IAssignmentJSON[]): void {

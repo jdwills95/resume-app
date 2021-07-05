@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IEducation } from 'src/app/interfaces/education';
 
-import _educationJSON from 'src/assets/data/education.json';
+import { GetDataService } from 'src/app/services/get-data/get-data.service';
 
 @Component({
   selector: 'app-education',
@@ -9,15 +9,16 @@ import _educationJSON from 'src/assets/data/education.json';
   styleUrls: ['./education.component.scss'],
 })
 export class EducationComponent implements OnInit {
-  educationJSON = _educationJSON as IEducation[];
-  education: IEducation[] = this.getEducation(this.educationJSON);
+  education: IEducation[] = [];
 
-  constructor() {}
+  constructor(private getDataService: GetDataService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.setEducation(this.getDataService.getEducationData());
+  }
 
-  getEducation(educationJSON: IEducation[]): IEducation[] {
-    return educationJSON.map((degree) => {
+  setEducation(educationJSON: IEducation[]): void {
+    this.education = educationJSON.map((degree) => {
       return {
         degree: degree.degree,
         field: degree.field,

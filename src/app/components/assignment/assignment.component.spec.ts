@@ -4,6 +4,7 @@ import { AssignmentComponent } from './assignment.component';
 
 import { RemoveSpacingAndCapFirstLetter } from 'src/app/services/remove-spacing-cap-first-letter/remove-spacing-cap-first-letter.service';
 import { ArrayToStringService } from 'src/app/services//array-to-string/array-to-string.service';
+import { GetDataService } from 'src/app/services/get-data/get-data.service';
 
 describe('AssignmentComponent', () => {
   let component: AssignmentComponent;
@@ -11,7 +12,11 @@ describe('AssignmentComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      providers: [RemoveSpacingAndCapFirstLetter, ArrayToStringService],
+      providers: [
+        RemoveSpacingAndCapFirstLetter,
+        ArrayToStringService,
+        GetDataService,
+      ],
       declarations: [AssignmentComponent],
     }).compileComponents();
   });
@@ -86,10 +91,6 @@ describe('AssignmentComponent', () => {
   });
 
   it('should have <strong> with "test01Title"', () => {
-    /*const obj = { mustBeTrue: () => false };
-    spyOn(obj, 'mustBeTrue').and.returnValue(true);
-    expect(obj.mustBeTrue()).toBe(true);*/
-
     const assignmentElement: HTMLElement = fixture.nativeElement;
     const strong = assignmentElement.querySelector('strong');
     if (strong != null) {
