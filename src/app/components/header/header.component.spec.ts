@@ -24,4 +24,21 @@ describe('HeaderComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should have <strong> with "Joey Wills - Developer"', () => {
+    const employmentElement: HTMLElement = fixture.nativeElement;
+    const strong = employmentElement.querySelector('#siteHeaderId');
+    if (strong != null) {
+      expect(strong.textContent).toEqual('Joey Wills - Developer ');
+    } else {
+      fail('strong with "Joey Wills - Developer" not found');
+    }
+  });
+
+  it('should have <img>', () => {
+    const employmentElement: HTMLElement = fixture.nativeElement;
+    const img = employmentElement.querySelector('#navIconId');
+
+    expect(img != null).toBe(true);
+  });
 });
