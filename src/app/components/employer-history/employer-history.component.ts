@@ -32,16 +32,4 @@ export class EmployerHistoryComponent implements OnInit {
       };
     });
   }
-
-  getTasksString(tasks: string[]): string {
-    let tasksString = '';
-    tasks.forEach((task: string, index) => {
-      if (index !== 0) {
-        tasksString = tasksString + ', ' + task;
-      } else {
-        tasksString = task;
-      }
-    });
-    return tasksString;
-  }
 }
