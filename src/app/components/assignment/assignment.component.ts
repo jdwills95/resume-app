@@ -23,6 +23,11 @@ export class AssignmentComponent implements OnInit {
     this.setAssignments(this.getDataService.getAssignmentData());
   }
 
+  /**
+   * Sets assignments with data from assignmentsJson.
+   *
+   * @param assignmentsJson {IAssignmentJSON[]} data to set assignments with.
+   */
   setAssignments(assignmentsJson: IAssignmentJSON[]): void {
     this.assignments = assignmentsJson.map((assignment) => {
       return {
