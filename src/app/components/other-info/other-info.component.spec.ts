@@ -139,4 +139,146 @@ describe('OtherInfoComponent', () => {
       fail('div with "testOperatingSystemsAdvanced01" not found');
     }
   });
+
+  it('should have <div> with "INTERMEDIATE"', () => {
+    const assignmentElement: HTMLElement = fixture.nativeElement;
+    const div = assignmentElement.querySelector('#oSSubSecIntTitleId');
+    if (div != null) {
+      expect(div.textContent).toEqual(' INTERMEDIATE ');
+    } else {
+      fail('div with "INTERMEDIATE" not found');
+    }
+  });
+
+  it('should have <div> with "testOperatingSystemsIntermediate01"', () => {
+    const assignmentElement: HTMLElement = fixture.nativeElement;
+    const div = assignmentElement.querySelector(
+      '#skillOStestOperatingSystemsIntermediate01Id'
+    );
+    if (div != null) {
+      expect(div.textContent).toEqual(' testOperatingSystemsIntermediate01 ');
+    } else {
+      fail('div with "testOperatingSystemsIntermediate01" not found');
+    }
+  });
+
+  it('should have <div> with "BEGINNER"', () => {
+    const assignmentElement: HTMLElement = fixture.nativeElement;
+    const div = assignmentElement.querySelector('#oSSubSecBegTitleId');
+    if (div != null) {
+      expect(div.textContent).toEqual(' BEGINNER ');
+    } else {
+      fail('div with "BEGINNER" not found');
+    }
+  });
+
+  it('should have <div> with "testOperatingSystemsBeginner01"', () => {
+    const assignmentElement: HTMLElement = fixture.nativeElement;
+    const div = assignmentElement.querySelector(
+      '#skillOStestOperatingSystemsBeginner01Id'
+    );
+    if (div != null) {
+      expect(div.textContent).toEqual(' testOperatingSystemsBeginner01 ');
+    } else {
+      fail('div with "testOperatingSystemsBeginner01" not found');
+    }
+  });
+
+  it('should have <strong> with "Software"', () => {
+    const assignmentElement: HTMLElement = fixture.nativeElement;
+    const strong = assignmentElement.querySelector('#softwareSubSecTitleId');
+    if (strong != null) {
+      expect(strong.textContent).toEqual('Software');
+    } else {
+      fail('strong with "Software" not found');
+    }
+  });
+
+  it('should have <div> with "ADVANCED"', () => {
+    const assignmentElement: HTMLElement = fixture.nativeElement;
+    const div = assignmentElement.querySelector('#softwareSubSecAdvTitleId');
+    if (div != null) {
+      expect(div.textContent).toEqual(' ADVANCED ');
+    } else {
+      fail('div with "ADVANCED" not found');
+    }
+  });
+
+  it('should have <div> with "testSoftwareAdvanced01"', () => {
+    const assignmentElement: HTMLElement = fixture.nativeElement;
+    const div = assignmentElement.querySelector(
+      '#skillSoftwaretestSoftwareAdvanced01Id'
+    );
+    if (div != null) {
+      expect(div.textContent).toEqual(' testSoftwareAdvanced01 ');
+    } else {
+      fail('div with "testSoftwareAdvanced01" not found');
+    }
+  });
+
+  it('should have <div> with "INTERMEDIATE"', () => {
+    const assignmentElement: HTMLElement = fixture.nativeElement;
+    const div = assignmentElement.querySelector('#softwareSubSecIntTitleId');
+    if (div != null) {
+      expect(div.textContent).toEqual(' INTERMEDIATE ');
+    } else {
+      fail('div with "INTERMEDIATE" not found');
+    }
+  });
+
+  it('should have <div> with "testSoftwareIntermediate01"', () => {
+    const assignmentElement: HTMLElement = fixture.nativeElement;
+    const div = assignmentElement.querySelector(
+      '#skillSoftwaretestSoftwareIntermediate01Id'
+    );
+    if (div != null) {
+      expect(div.textContent).toEqual(' testSoftwareIntermediate01 ');
+    } else {
+      fail('div with "testSoftwareIntermediate01" not found');
+    }
+  });
+
+  it('should have <div> with "BEGINNER"', () => {
+    const assignmentElement: HTMLElement = fixture.nativeElement;
+    const div = assignmentElement.querySelector('#softwareSubSecBegTitleId');
+    if (div != null) {
+      expect(div.textContent).toEqual(' BEGINNER ');
+    } else {
+      fail('div with "BEGINNER" not found');
+    }
+  });
+
+  it('should have <div> with "testSoftwareBeginner01"', () => {
+    const assignmentElement: HTMLElement = fixture.nativeElement;
+    const div = assignmentElement.querySelector(
+      '#skillSoftwaretestSoftwareBeginner01Id'
+    );
+    if (div != null) {
+      expect(div.textContent).toEqual(' testSoftwareBeginner01 ');
+    } else {
+      fail('div with "testSoftwareBeginner01" not found');
+    }
+  });
+
+  it('should have <strong> with "Business Knowledge"', () => {
+    const assignmentElement: HTMLElement = fixture.nativeElement;
+    const strong = assignmentElement.querySelector('#busKnowSubSecTitleId');
+    if (strong != null) {
+      expect(strong.textContent).toEqual('Business Knowledge');
+    } else {
+      fail('strong with "Business Knowledge" not found');
+    }
+  });
+
+  it('should have <div> with "testBusinessKnowledge01"', () => {
+    const assignmentElement: HTMLElement = fixture.nativeElement;
+    const div = assignmentElement.querySelector(
+      '#skillBusinesstestBusinessKnowledge01Id'
+    );
+    if (div != null) {
+      expect(div.textContent).toEqual(' testBusinessKnowledge01 ');
+    } else {
+      fail('div with "testBusinessKnowledge01" not found');
+    }
+  });
 });
