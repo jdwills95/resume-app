@@ -56,7 +56,7 @@ describe('AssignmentComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should map abd return IAssignmentJSON array to IAssignment array', () => {
+  it('should map and return IAssignmentJSON array to IAssignment array', () => {
     component.setAssignments(mockAssignmentData);
 
     expect(component.assignments[0].endDate).toBe('test01EndDate');
