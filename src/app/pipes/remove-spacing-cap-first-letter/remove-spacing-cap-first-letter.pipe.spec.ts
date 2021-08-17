@@ -3,6 +3,10 @@ import { RemoveSpacingCapFirstLetterPipe } from 'src/app/pipes/remove-spacing-ca
 describe('RemoveSpacingCapFirstLetterPipe', () => {
   const pipe = new RemoveSpacingCapFirstLetterPipe();
 
+  it('should create', () => {
+    expect(pipe).toBeTruthy();
+  });
+
   it('transforms "test" to "Test"', () => {
     expect(pipe.transform('test')).toBe('Test');
   });

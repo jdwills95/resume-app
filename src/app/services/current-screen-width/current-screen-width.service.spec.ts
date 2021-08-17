@@ -1,7 +1,11 @@
 import { CurrentScreenWidthService } from 'src/app/services/current-screen-width/current-screen-width.service';
 
-describe('RemoveSpacingCapFirstLetterPipe', () => {
+describe('CurrentScreenWidthService', () => {
   const service = new CurrentScreenWidthService();
+
+  it('should create', () => {
+    expect(service).toBeTruthy();
+  });
 
   it('should return true when set to window innerWidth is 576', () => {
     Object.defineProperty(window, 'innerWidth', {
