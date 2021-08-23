@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AssignmentComponent } from './assignment.component';
 
-import { RemoveSpacingAndCapFirstLetter } from 'src/app/services/remove-spacing-cap-first-letter/remove-spacing-cap-first-letter.service';
+import { RemoveSpacingCapFirstLetterPipe } from 'src/app/pipes/remove-spacing-cap-first-letter/remove-spacing-cap-first-letter.pipe';
 import { ArrayToStringService } from 'src/app/services//array-to-string/array-to-string.service';
 import { GetDataService } from 'src/app/services/get-data/get-data.service';
 
@@ -37,7 +37,7 @@ describe('AssignmentComponent', () => {
 
     await TestBed.configureTestingModule({
       providers: [
-        RemoveSpacingAndCapFirstLetter,
+        RemoveSpacingCapFirstLetterPipe,
         ArrayToStringService,
         GetDataService,
         { provide: GetDataService, useValue: mockGetDataService },

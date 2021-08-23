@@ -20,7 +20,6 @@ import { CourseTrainingComponent } from 'src/app/components/course-training/cour
 import { EducationComponent } from 'src/app/components/education/education.component';
 import { OtherInfoComponent } from 'src/app/components/other-info/other-info.component';
 import { NavBarContentComponent } from 'src/app/components/nav-bar-content/nav-bar-content.component';
-import { RemoveSpacingAndCapFirstLetter } from 'src/app/services/remove-spacing-cap-first-letter/remove-spacing-cap-first-letter.service';
 import { RemoveSpacingCapFirstLetterPipe } from 'src/app/pipes/remove-spacing-cap-first-letter/remove-spacing-cap-first-letter.pipe';
 import { GetDataService } from 'src/app/services/get-data/get-data.service';
 
@@ -64,8 +63,8 @@ import { GetDataService } from 'src/app/services/get-data/get-data.service';
     NavBarService,
     ScrollService,
     ArrayToStringService,
-    RemoveSpacingAndCapFirstLetter,
     GetDataService,
+    RemoveSpacingCapFirstLetterPipe,
   ],
   entryComponents: [],
 })

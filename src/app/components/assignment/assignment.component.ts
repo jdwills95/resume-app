@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { IAssignmentJSON, IAssignment } from 'src/app/interfaces/assignment';
 
-import { RemoveSpacingAndCapFirstLetter } from 'src/app/services/remove-spacing-cap-first-letter/remove-spacing-cap-first-letter.service';
 import { ArrayToStringService } from 'src/app/services//array-to-string/array-to-string.service';
 import { GetDataService } from 'src/app/services/get-data/get-data.service';
+import { RemoveSpacingCapFirstLetterPipe } from 'src/app/pipes/remove-spacing-cap-first-letter/remove-spacing-cap-first-letter.pipe';
 
 @Component({
   selector: 'app-assignment',
@@ -14,7 +14,7 @@ export class AssignmentComponent implements OnInit {
   assignments: IAssignment[] = [];
 
   constructor(
-    private removeSpacingAndCapFirstLetter: RemoveSpacingAndCapFirstLetter,
+    private removeSpacingAndCapFirstLetter: RemoveSpacingCapFirstLetterPipe,
     private arrayToStringService: ArrayToStringService,
     private getDataService: GetDataService
   ) {}
@@ -44,6 +44,6 @@ export class AssignmentComponent implements OnInit {
   }
 
   removeSpacingCapEachLetter(str: string): string {
-    return this.removeSpacingAndCapFirstLetter.removeSpacesAndCapEachWord(str);
+    return this.removeSpacingAndCapFirstLetter.transform(str);
   }
 }
