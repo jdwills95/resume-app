@@ -19,7 +19,7 @@ describe('AssignmentComponent', () => {
       title: 'test01Title',
       employer: 'test01Employer',
       desc: 'test01Desc',
-      environments: ['test01Evn01', 'test01Evn02'],
+      environments: 'test01Evn01, test01Evn02',
     },
     {
       endDate: 'test02EndDate',
@@ -27,7 +27,7 @@ describe('AssignmentComponent', () => {
       title: 'test02Title',
       employer: 'test02Employer',
       desc: 'test02Desc',
-      environments: ['test02Evn01', 'test02Evn02'],
+      environments: 'test02Evn01, test02Evn02',
     },
   ];
 
@@ -56,9 +56,7 @@ describe('AssignmentComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should map and return IAssignmentJSON array to IAssignment array', () => {
-    component.setAssignments(mockAssignmentData);
-
+  it('should assignments should be set on init', () => {
     expect(component.assignments[0].endDate).toBe('test01EndDate');
     expect(component.assignments[0].startDate).toBe('test01StartDate');
     expect(component.assignments[0].title).toBe('test01Title');

@@ -22,6 +22,7 @@ import { OtherInfoComponent } from 'src/app/components/other-info/other-info.com
 import { NavBarContentComponent } from 'src/app/components/nav-bar-content/nav-bar-content.component';
 import { RemoveSpacingCapFirstLetterPipe } from 'src/app/pipes/remove-spacing-cap-first-letter/remove-spacing-cap-first-letter.pipe';
 import { GetDataService } from 'src/app/services/get-data/get-data.service';
+import { ParseDataService } from 'src/app/services/parse-data/parse-data.service';
 
 @NgModule({
   imports: [CommonModule, NgbModule, FontAwesomeModule],
@@ -65,6 +66,7 @@ import { GetDataService } from 'src/app/services/get-data/get-data.service';
     ArrayToStringService,
     GetDataService,
     RemoveSpacingCapFirstLetterPipe,
+    ParseDataService,
   ],
   entryComponents: [],
 })
