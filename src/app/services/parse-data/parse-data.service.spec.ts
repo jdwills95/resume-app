@@ -22,7 +22,7 @@ describe('ParseDataService', () => {
     },
   ];
 
-  let arrayToStringService = new ArrayToStringService();
+  const arrayToStringService = new ArrayToStringService();
   let service = new ParseDataService(
     arrayToStringService as ArrayToStringService
   );

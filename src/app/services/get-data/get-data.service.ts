@@ -5,7 +5,7 @@ import { ParseDataService } from 'src/app/services/parse-data/parse-data.service
 import { IAssignment, IAssignmentJSON } from 'src/app/interfaces/assignment';
 import { ICourseTrainingItem } from 'src/app/interfaces/courseTraining';
 import { IEducation } from 'src/app/interfaces/education';
-import { IEmployerHistoryJSON } from 'src/app/interfaces/employerHistory';
+import { IEmployerHistory } from 'src/app/interfaces/employerHistory';
 import { IOther } from 'src/app/interfaces/other';
 import { ISkillJson } from 'src/app/interfaces/skills';
 
@@ -34,8 +34,8 @@ export class GetDataService {
     return _educationJSON as IEducation[];
   }
 
-  getEmployerHistoryData(): IEmployerHistoryJSON[] {
-    return _employerHistoryJSON as IEmployerHistoryJSON[];
+  getEmployerHistoryData(): IEmployerHistory[] {
+    return _employerHistoryJSON as IEmployerHistory[];
   }
 
   getOtherData(): IOther {

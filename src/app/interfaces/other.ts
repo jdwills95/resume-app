@@ -10,3 +10,6 @@ export interface ISkill {
   intermediate?: string[];
   beginner?: string[];
 }
+
+export type OtherFields = 'operatingSystems' | 'software';
+export type OtherFieldsSecondary = 'advanced' | 'intermediate' | 'beginner';

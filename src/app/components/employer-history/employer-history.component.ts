@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { IEmployerHistoryJSON } from 'src/app/interfaces/employerHistory';
+import { IEmployerHistory } from 'src/app/interfaces/employerHistory';
 
 import { GetDataService } from 'src/app/services/get-data/get-data.service';
 
@@ -9,7 +9,7 @@ import { GetDataService } from 'src/app/services/get-data/get-data.service';
   styleUrls: ['./employer-history.component.scss'],
 })
 export class EmployerHistoryComponent implements OnInit {
-  employers: IEmployerHistoryJSON[] = [];
+  employers: IEmployerHistory[] = [];
 
   constructor(private getDataService: GetDataService) {}
 
@@ -17,7 +17,7 @@ export class EmployerHistoryComponent implements OnInit {
     this.setEmployers(this.getDataService.getEmployerHistoryData());
   }
 
-  setEmployers(employerHistoryJson: IEmployerHistoryJSON[]): void {
+  setEmployers(employerHistoryJson: IEmployerHistory[]): void {
     this.employers = employerHistoryJson.map((employer) => {
       return {
         endDate: employer.endDate,
