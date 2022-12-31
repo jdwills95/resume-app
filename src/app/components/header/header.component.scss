@@ -1,0 +1,26 @@
+@import "src/styles.scss";
+
+.header {
+  height: 3em;
+  background-color: $primary-color;
+  padding-left: 0.5em;
+  width: 100%;
+  color: white;
+  border-bottom: solid 2px $secondary-color;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.contents {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.btn-nav {
+  max-width: 1.75em;
+  max-height: 1.75em;
+  padding-right: 0.5em;
+}

@@ -1,0 +1,13 @@
+{
+    "operatingSystems": {
+        "advanced": ["Windows XP", "Windows 7", "Windows 8", "Windows 10"],
+        "intermediate": ["Fedora", "Ubuntu", "PoP!_Os", "VMware", "pfSense"],
+        "beginner": ["OSX"]
+    },
+    "software": {
+        "advanced": ["Word", "Excel", "PowerPoint", "Outlook", "Access"],
+        "intermediate": ["Portainer"]
+    },
+    "certifications": ["Word 2013", "Excel 2013"],
+    "businessKnowledge": ["Cyber Business Law", "Communication", "Management"]
+}

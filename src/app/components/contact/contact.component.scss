@@ -1,0 +1,66 @@
+@import "src/styles.scss";
+
+.contents {
+  padding-bottom: 1.5em;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0.5em;
+}
+
+.profile-pic {
+  max-width: 18em;
+  max-height: 18em;
+  border-radius: 50%;
+}
+
+.name {
+  margin: 0;
+}
+
+.phone-email {
+  color: black;
+}
+
+.btn-res {
+  position: relative;
+  background-color: $primary-color;
+  border: none;
+  font-size: 1em;
+  color: #ffffff;
+  height: 3em;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.btn-res:after {
+  content: "";
+  background: lightblue;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.btn-res:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+.btn-res:hover {
+  background: rgb(0, 85, 125);
+}

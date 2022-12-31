@@ -1,0 +1,86 @@
+<div class="assignmentHistory spacer-scroll"></div>
+<div
+  id="assignmentHistorySecTitleId"
+  name="assignmentHistorySecTitle"
+  aria-label="Section Title"
+  class="sec-title"
+>
+  <h5>ASSIGNMENT HISTORY</h5>
+</div>
+<hr class="hor" />
+<div *ngFor="let assignment of assignments">
+  <div class="card">
+    <div class="container">
+      <strong
+        [id]="
+          'assignmenttitle' +
+          removeSpacingCapEachLetter(assignment.title) +
+          'Id'
+        "
+        aria-label="Assignment Title"
+        >{{ assignment.title }}</strong
+      >
+      <br />
+      <strong
+        [id]="
+          'assignment' +
+          removeSpacingCapEachLetter(assignment.title) +
+          removeSpacingCapEachLetter(assignment.employer) +
+          'Id'
+        "
+        aria-label="Assignment Employer"
+        class="date-loc"
+        >{{ assignment.employer }}
+      </strong>
+      <br />
+      <strong
+        [id]="
+          'assignment' +
+          removeSpacingCapEachLetter(assignment.title) +
+          removeSpacingCapEachLetter(assignment.employer) +
+          'Dates' +
+          'Id'
+        "
+        aria-label="Dates Assigned"
+        class="date-loc"
+      >
+        {{ assignment.startDate }} - {{ assignment.endDate }}
+      </strong>
+      <p
+        [id]="
+          'assignment' +
+          removeSpacingCapEachLetter(assignment.title) +
+          removeSpacingCapEachLetter(assignment.employer) +
+          'Desc' +
+          'Id'
+        "
+        aria-label="Assignment Description"
+      >
+        {{ assignment.desc }}
+      </p>
+      <p
+        [id]="
+          'assignment' +
+          removeSpacingCapEachLetter(assignment.title) +
+          removeSpacingCapEachLetter(assignment.employer) +
+          'Environments' +
+          'Id'
+        "
+      >
+        <strong
+          [id]="
+            'assignment' +
+            removeSpacingCapEachLetter(assignment.title) +
+            removeSpacingCapEachLetter(assignment.employer) +
+            'EnvironmentsLabel' +
+            'Id'
+          "
+          aria-label="Environments used during assignment"
+          class="sub-title"
+          >Environments:
+        </strong>
+        {{ assignment.environments }}
+      </p>
+    </div>
+  </div>
+</div>

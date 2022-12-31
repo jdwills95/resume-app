@@ -1,0 +1,15 @@
+<div
+  id="navBarId"
+  name="navBar"
+  aria-label="Navigation menu"
+  class="navItem"
+  *ngFor="let navItem of navItems"
+>
+  <div (click)="scrollTo(navItem.target)">
+    <strong
+      [id]="'navBarItem' + navItem.title + 'Id'"
+      aria-label="Assignment Title"
+      >{{ navItem.title }}</strong
+    >
+  </div>
+</div>

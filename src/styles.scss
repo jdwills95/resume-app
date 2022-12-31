@@ -1,0 +1,41 @@
+/* You can add global styles to this file, and also import other style files */
+
+$primary-color: rgb(0, 130, 190);
+$secondary-color: #aaafb3;
+
+/* Importing Bootstrap SCSS file. */
+@import "node_modules/bootstrap/scss/bootstrap";
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  margin-bottom: 0.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+
+.hor {
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+
+.sec-title {
+  text-align: center;
+  padding-top: 3em;
+}
+
+.sub-title {
+  color: darkgray;
+}
+
+.date-loc {
+  color: gray;
+}

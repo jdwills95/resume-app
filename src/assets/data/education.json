@@ -1,0 +1,11 @@
+[
+        {
+            "degree": "Bachelor of Science",
+            "field": "Computer Information Systems",
+            "school": {
+                "name": "Northwestern State University of Louisiana",
+                "location": "Natchitoches LA"
+            },
+            "graduationYear": "2018"
+        }
+    ]
