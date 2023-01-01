@@ -1,7 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 
-$primary-color: rgb(0, 130, 190);
-$secondary-color: #aaafb3;
+$primary-color: #0082be;
+$secondary-color: #ffffff;
+$background-color: #f3f3f3;
+$cards-dialogs: #ffffff;
+$text-color-darker: #000000;
+$text-color: #000000;
+$text-color-lighter: #000000;
+
+// $primary-color: #212121;
+// $secondary-color: #303030;
+// $background-color: #303030;
+// $cards-dialogs: #808080;
+// $text-color-darker: #f3f3f3;
+// $text-color: #ffffff;
+// $text-color-lighter: #ffffff;
 
 /* Importing Bootstrap SCSS file. */
 @import "node_modules/bootstrap/scss/bootstrap";
@@ -9,6 +22,7 @@ $secondary-color: #aaafb3;
 .card {
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: $cards-dialogs;
   transition: 0.3s;
   margin-left: 1.5em;
   margin-right: 1.5em;
@@ -25,17 +39,23 @@ $secondary-color: #aaafb3;
 .hor {
   margin-left: 1.5em;
   margin-right: 1.5em;
+  color: $text-color;
 }
 
 .sec-title {
   text-align: center;
   padding-top: 3em;
+  color: $text-color;
 }
 
 .sub-title {
-  color: darkgray;
+  color: #262626;
 }
 
 .date-loc {
-  color: gray;
+  color: #404040;
+}
+
+.sub-title {
+  color: #404040;
 }

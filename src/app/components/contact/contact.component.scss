@@ -19,10 +19,19 @@
 
 .name {
   margin: 0;
+  color: $text-color;
+}
+
+.title {
+  color: $text-color;
+}
+
+.address {
+  color: $text-color;
 }
 
 .phone-email {
-  color: black;
+  color: $text-color;
 }
 
 .btn-res {
