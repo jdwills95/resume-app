@@ -1,5 +1,17 @@
 [
     {
+        "employer": "Liquid Devs",
+        "jobTitle": "Software Developer",
+        "location": "Lufkin, TX",
+        "desc":
+            {
+                "desct": "Work as a team to implement and maintain new webapp features.",
+                "task": ["Full-Stack Developer-Angular/.Net/ Oracle-SQL"]
+            },
+        "startDate": "2021-10-28",
+        "endDate": "present"
+    },
+    {
         "employer": "CGI Federal",
         "jobTitle": "Application Development Specialist",
         "location": "Lafayette, LA",
@@ -9,7 +21,7 @@
                 "task": ["Frontend Developer-Angular/React", "Application Developer-Java Core"]
             },
         "startDate": "2019-08-12",
-        "endDate": "present"
+        "endDate": "2021-10-28"
     },
     {
         "employer": "IBM CIC",
