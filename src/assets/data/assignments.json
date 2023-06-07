@@ -1,6 +1,14 @@
 [
     {
         "endDate": "present",
+        "startDate": "2021-10-28",
+        "title": "Angular-Typescript, .Net, Oracle SQL WebApp Project",
+        "employer": "Liquid Devs",
+        "desc": "Worked remotely with team members to convert ReactJS Redux WebApp and add new functionality to Angular TypeScript WebApp. Took part in breakout and design meetings. Help ensure conversion was designed to spec of company’s DPL (Design Patten Library). Participated in Scrum, Agile, and Kanban ceremonies.",
+        "environments": ["Angular", ".Net Core", "Oracle", "SQL", "REST", "GIT", "GitLab", "JIRA", "Confluence"]
+    },
+    {
+        "endDate": "2021-10-28",
         "startDate": "2021-01-01",
         "title": "Angular TypeScript Mobile WebApp Project",
         "employer": "CGI Federal",
