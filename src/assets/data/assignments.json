@@ -1,6 +1,14 @@
 [
     {
         "endDate": "present",
+        "startDate": "2021-10-28",
+        "title": "Angular-Typescript, .Net, Oracle SQL WebApp Project",
+        "employer": "Liquid Devs",
+        "desc": "Liquid Devs Angular-Typescript, .Net, Oracle SQL WebApp Project: Worked remotely with team members to implement and maintain new Angular Typescript features and .Net API services. Modified existing database to support new features.",
+        "environments": ["Angular", ".Net Core", "Oracle", "SQL", "REST", "GIT", "GitLab", "JIRA", "Confluence"]
+    },
+    {
+        "endDate": "2021-10-28",
         "startDate": "2021-01-01",
         "title": "Angular TypeScript Mobile WebApp Project",
         "employer": "CGI Federal",
