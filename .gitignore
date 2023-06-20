@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
@@ -44,8 +43,8 @@ testem.log
 
 # System Files
 .DS_Store
-Thumbs.db
-=======
+Thumbs.debug
+
 # Logs
 logs
 *.log
@@ -150,4 +149,7 @@ dist
 
 # TernJS port file
 .tern-port
->>>>>>> main
+
+#angular cache directories
+.angular/cache
+.angular/
