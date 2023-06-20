@@ -2,15 +2,31 @@
 
 .header {
   height: 3em;
-  background-color: $primary-color;
+  background-color: var(--primary-color);
   padding-left: 0.5em;
   width: 100%;
   color: white;
-  border-bottom: solid 2px $secondary-color;
+  border-bottom: solid 2px var(--secondary-color);
   position: fixed;
   left: 0;
   top: 0;
   z-index: 2;
+}
+
+.icon-wrapper {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.btn-wrapper {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .contents {
@@ -23,4 +39,10 @@
   max-width: 1.75em;
   max-height: 1.75em;
   padding-right: 0.5em;
+}
+
+.theme-btn {
+  height: 1.5em;
+  margin-right: 0.75em;
+  width: 1.5em;
 }

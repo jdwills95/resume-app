@@ -2,7 +2,7 @@
 
 .footer {
   height: 3em;
-  background-color: $primary-color;
+  background-color: var(--primary-color);
   left: 0;
   bottom: 0;
   width: 100%;
@@ -11,6 +11,6 @@
   position: absolute;
   padding-left: 0.5em;
   padding-right: 0.5em;
-  border-top: solid 2px $secondary-color;
+  border-top: solid 2px var(--secondary-color);
   z-index: 2;
 }

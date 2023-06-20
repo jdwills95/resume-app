@@ -4,11 +4,11 @@
   text-align: center;
   padding-bottom: 0.5em;
   padding-top: 0.5em;
-  color: $text-color-darker;
+  color: var(--text-color-darker);
 }
 
 .navItem:hover {
   background-color: lightgray;
   cursor: pointer;
-  color: $secondary-color;
+  color: var(--secondary-color);
 }

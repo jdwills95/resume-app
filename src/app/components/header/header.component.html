@@ -4,16 +4,27 @@
   aria-label="Site Header"
   class="header contents"
 >
-  <img
-    id="navIconId"
-    name="navIcon"
-    aria-label="Nav Icon"
-    alt="Nav menu icon"
-    class="image btn-nav"
-    src="assets/icons/hamburger-icon.png"
-    (click)="onNavClicked()"
-  />
-  <div id="headerTitleId" aria-label="Header title">
-    <strong>Joey Wills</strong> - Developer
+  <div id="iconWrapperId" name="iconWrapper" class="icon-wrapper">
+    <img
+      id="navIconId"
+      name="navIcon"
+      aria-label="Nav Icon"
+      alt="Nav menu icon"
+      class="image btn-nav"
+      src="assets/icons/hamburger-icon.png"
+      (click)="onNavClicked()"
+    />
+    <div id="headerTitleId" aria-label="Header title">
+      <strong>Joey Wills</strong> - Developer
+    </div>
+  </div>
+  <div id="btnWrapperId" name="btnWrapper" class="btn-wrapper">
+    <button
+      id="ThemeBtnId"
+      name="ThemeBtn"
+      class="theme-btn"
+      aria-label="Theme Toggle Button"
+      (click)="toggleTheme()"
+    ></button>
   </div>
 </div>

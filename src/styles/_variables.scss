@@ -1,0 +1,37 @@
+$primary-color-lite: #0082be;
+$secondary-color-lite: #ffffff;
+$background-color-lite: #f3f3f3;
+$cards-dialogs-lite: #ffffff;
+$text-color-darker-lite: #000000;
+$text-color-lite: #000000;
+$text-color-lighter-lite: #000000;
+
+$primary-color-dark: #212121;
+$secondary-color-dark: #303030;
+$background-color-dark: #303030;
+$cards-dialogs-dark: #808080;
+$text-color-darker-dark: #f3f3f3;
+$text-color-dark: #ffffff;
+$text-color-lighter-dark: #ffffff;
+
+// mixin that enables css variables in light mode
+@mixin lighten() {
+    --primary-color: #{$primary-color-lite};
+    --secondary-color: #{$secondary-color-lite};
+    --background-color: #{$background-color-lite};
+    --cards-dialogs: #{$cards-dialogs-lite};
+    --text-color-darker: #{$text-color-darker-lite};
+    --text-color: #{$text-color-lite};
+    --text-color-lighter: #{$text-color-lighter-lite};
+  }
+  
+
+@mixin darken() {
+    --primary-color: #{$primary-color-dark};
+    --secondary-color: #{$secondary-color-dark};
+    --background-color: #{$background-color-dark};
+    --cards-dialogs: #{$cards-dialogs-dark};
+    --text-color-darker: #{$text-color-darker-dark};
+    --text-color: #{$text-color-dark};
+    --text-color-lighter: #{$text-color-lighter-dark};
+}

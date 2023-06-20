@@ -1,20 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
-$primary-color: #0082be;
-$secondary-color: #ffffff;
-$background-color: #f3f3f3;
-$cards-dialogs: #ffffff;
-$text-color-darker: #000000;
-$text-color: #000000;
-$text-color-lighter: #000000;
+@import "_variables";
 
-// $primary-color: #212121;
-// $secondary-color: #303030;
-// $background-color: #303030;
-// $cards-dialogs: #808080;
-// $text-color-darker: #f3f3f3;
-// $text-color: #ffffff;
-// $text-color-lighter: #ffffff;
+body.dark {
+  @include darken();
+}
+body.light {
+  @include lighten();
+}
 
 /* Importing Bootstrap SCSS file. */
 @import "node_modules/bootstrap/scss/bootstrap";
@@ -22,7 +15,7 @@ $text-color-lighter: #000000;
 .card {
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  background-color: $cards-dialogs;
+  background-color: var(--cards-dialogs);
   transition: 0.3s;
   margin-left: 1.5em;
   margin-right: 1.5em;
@@ -39,13 +32,13 @@ $text-color-lighter: #000000;
 .hor {
   margin-left: 1.5em;
   margin-right: 1.5em;
-  color: $text-color;
+  color: var(--text-color);
 }
 
 .sec-title {
   text-align: center;
   padding-top: 3em;
-  color: $text-color;
+  color: var(--text-color);
 }
 
 .sub-title {
