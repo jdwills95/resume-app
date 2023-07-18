@@ -23,6 +23,11 @@ import { NavBarContentComponent } from 'src/app/components/nav-bar-content/nav-b
 import { RemoveSpacingCapFirstLetterPipe } from 'src/app/pipes/remove-spacing-cap-first-letter/remove-spacing-cap-first-letter.pipe';
 import { GetDataService } from 'src/app/services/get-data/get-data.service';
 import { ParseDataService } from 'src/app/services/parse-data/parse-data.service';
+import { ThemeToggleService } from 'src/app/services/theme/theme.service';
+import {
+  THEME_STORAGE_SERVICE,
+  ThemeLocalStorageService,
+} from 'src/app/services/theme/theme-storage-service';
 
 @NgModule({
   imports: [CommonModule, NgbModule, FontAwesomeModule],
@@ -67,6 +72,11 @@ import { ParseDataService } from 'src/app/services/parse-data/parse-data.service
     GetDataService,
     RemoveSpacingCapFirstLetterPipe,
     ParseDataService,
+    ThemeToggleService,
+    {
+      provide: THEME_STORAGE_SERVICE,
+      useClass: ThemeLocalStorageService,
+    },
   ],
   entryComponents: [],
 })
