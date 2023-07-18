@@ -152,5 +152,4 @@ dist
 .tern-port
 
 #angular cache directories
-.angular/cache
-.angular/
+.angular/cache/
