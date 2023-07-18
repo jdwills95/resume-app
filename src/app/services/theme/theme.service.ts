@@ -18,6 +18,10 @@ export class ThemeToggleService {
     this.init();
   }
 
+  get themeIsLight(): boolean {
+    return this.currentTheme == Theme.LIGHT;
+  }
+
   private init() {
     const deviceTheme = window.matchMedia('(prefers-color-scheme: dark)');
     let initTheme = this.themeStorage.get();

@@ -25,6 +25,19 @@
       class="theme-btn"
       aria-label="Theme Toggle Button"
       (click)="toggleTheme()"
-    ></button>
+    >
+      <img
+        *ngIf="islightTheme"
+        id="lightThemeBtnImg"
+        class="theme-btn-img"
+        src="assets/theme-icons/light-mode.png"
+      />
+      <img
+        *ngIf="!islightTheme"
+        id="darkThemeBtnImg"
+        class="theme-btn-img"
+        src="assets/theme-icons/dark-mode.png"
+      />
+    </button>
   </div>
 </div>

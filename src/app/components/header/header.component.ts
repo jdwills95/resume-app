@@ -15,6 +15,10 @@ export class HeaderComponent implements OnInit {
     private themeToggleService: ThemeToggleService
   ) {}
 
+  get islightTheme(): boolean {
+    return this.themeToggleService.themeIsLight;
+  }
+
   ngOnInit(): void {}
 
   onNavClicked(): void {

@@ -6,7 +6,6 @@
   padding-left: 0.5em;
   width: 100%;
   color: white;
-  border-bottom: solid 2px var(--secondary-color);
   position: fixed;
   left: 0;
   top: 0;
@@ -42,7 +41,22 @@
 }
 
 .theme-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   height: 1.5em;
   margin-right: 0.75em;
   width: 1.5em;
+
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  overflow: hidden;
+  outline: none;
+}
+
+.theme-btn-img {
+  height: 1.5rem;
+  width: 1.5rem;
 }
