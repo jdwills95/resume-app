@@ -1,13 +1,15 @@
-@import "src/styles.scss";
+@import "src/styles/styles.scss";
 
 .navItem {
   text-align: center;
   padding-bottom: 0.5em;
   padding-top: 0.5em;
   margin-top: 0.25em;
+  color: black;
 }
 
 .navItem:hover {
   background-color: lightgray;
   cursor: pointer;
+  color: var(--secondary-color);
 }

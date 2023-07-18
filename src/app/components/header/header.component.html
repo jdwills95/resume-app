@@ -4,16 +4,40 @@
   aria-label="Site Header"
   class="header contents"
 >
-  <img
-    id="navIconId"
-    name="navIcon"
-    aria-label="Nav Icon"
-    alt="Nav menu icon"
-    class="image btn-nav"
-    src="assets/icons/hamburger-icon.png"
-    (click)="onNavClicked()"
-  />
-  <div id="headerTitleId" aria-label="Header title">
-    <strong>Joey Wills</strong> - Developer
+  <div id="iconWrapperId" name="iconWrapper" class="icon-wrapper">
+    <img
+      id="navIconId"
+      name="navIcon"
+      aria-label="Nav Icon"
+      alt="Nav menu icon"
+      class="image btn-nav"
+      src="assets/icons/hamburger-icon.png"
+      (click)="onNavClicked()"
+    />
+    <div id="headerTitleId" aria-label="Header title">
+      <strong>Joey Wills</strong> - Developer
+    </div>
+  </div>
+  <div id="btnWrapperId" name="btnWrapper" class="btn-wrapper">
+    <button
+      id="ThemeBtnId"
+      name="ThemeBtn"
+      class="theme-btn"
+      aria-label="Theme Toggle Button"
+      (click)="toggleTheme()"
+    >
+      <img
+        *ngIf="islightTheme"
+        id="lightThemeBtnImg"
+        class="theme-btn-img"
+        src="assets/theme-icons/light-mode.png"
+      />
+      <img
+        *ngIf="!islightTheme"
+        id="darkThemeBtnImg"
+        class="theme-btn-img"
+        src="assets/theme-icons/dark-mode.png"
+      />
+    </button>
   </div>
 </div>

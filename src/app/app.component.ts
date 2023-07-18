@@ -4,6 +4,9 @@ import { CurrentScreenWidthService } from 'src/app/services/current-screen-width
 import { NavBarService } from 'src/app/services/nav-bar/nav-bar.service';
 import { ScrollService } from 'src/app/services/scroll/scroll.service';
 
+import { Theme } from 'src/app/services/theme/theme-toggle.model';
+import { ThemeToggleService } from 'src/app/services/theme/theme.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -14,12 +17,18 @@ export class AppComponent implements AfterViewInit {
   isDesktopOrBigger = true;
   scrollServiceCheckAllowed = false;
   isNavbarOpen = false;
+  currentTheme: Theme = Theme.LIGHT;
 
   constructor(
     private currentScreenWidthService: CurrentScreenWidthService,
     private navBarService: NavBarService,
-    private scrollService: ScrollService
-  ) {}
+    private scrollService: ScrollService,
+    private themeToggleService: ThemeToggleService
+  ) {
+    this.themeToggleService.themeChanged$.subscribe((theme: Theme) => {
+      this.currentTheme = theme;
+    });
+  }
 
   ngAfterViewInit(): void {
     this.scrollServiceCheckAllowed = true;
@@ -27,7 +36,8 @@ export class AppComponent implements AfterViewInit {
 
   @HostListener('window:resize', ['$event'])
   onResize(): void {
-    this.isDesktopOrBigger = this.currentScreenWidthService.isScreenWidthLargeDesktopOrBigger();
+    this.isDesktopOrBigger =
+      this.currentScreenWidthService.isScreenWidthLargeDesktopOrBigger();
   }
 
   navBarButtonClickedRev(): void {

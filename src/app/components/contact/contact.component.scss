@@ -1,4 +1,4 @@
-@import "src/styles.scss";
+@import "src/styles/styles.scss";
 
 .contents {
   padding-bottom: 1.5em;
@@ -19,15 +19,24 @@
 
 .name {
   margin: 0;
+  color: var(--text-color);
+}
+
+.title {
+  color: var(--text-color);
+}
+
+.address {
+  color: var(--text-color);
 }
 
 .phone-email {
-  color: black;
+  color: var(--text-color);
 }
 
 .btn-res {
   position: relative;
-  background-color: $primary-color;
+  background-color: var(--primary-color);
   border: none;
   font-size: 1em;
   color: #ffffff;

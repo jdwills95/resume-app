@@ -5,6 +5,7 @@ import { LayoutComponent } from './layout.component';
 import { CurrentScreenWidthService } from 'src/app/services/current-screen-width/current-screen-width.service';
 import { NavBarService } from 'src/app/services/nav-bar/nav-bar.service';
 import { ScrollService } from 'src/app/services/scroll/scroll.service';
+import { ThemeToggleService } from 'src/app/services/theme/theme.service';
 
 describe('LayoutComponent', () => {
   let component: LayoutComponent;
