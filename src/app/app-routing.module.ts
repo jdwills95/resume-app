@@ -4,13 +4,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from 'src/app/layouts/layout/layout.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/main-page', pathMatch: 'full' },
   {
     path: '',
     component: LayoutComponent,
     children: [
       {
-        path: 'main-page',
+        path: '',
         loadChildren: () =>
           import('src/app/features/main-page/main-page.module').then(
             (m) => m.MainPageModule
@@ -18,6 +17,7 @@ const routes: Routes = [
       },
     ],
   },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
