@@ -1,6 +1,6 @@
 {
-    "languages": ["Typescript", "JavaScript", "C#", "HTML", "CSS", "JAVA"],
-    "frameworks": [".Net Core", "Angular", "Karma", "Bootstrap", "React", "Redux", "REST", "Node.js", "Spring Boot", "Mockito"],
+    "languages": ["Typescript", "JavaScript", "C#", "HTML", "CSS"],
+    "frameworks": [".Net Core", "Angular", "Karma", "Bootstrap", "React", "Redux", "REST", "Node.js"],
     "softwareTools": ["Cygwin", "GIT", "Bitbucket", "PostMan", "Confluence", "JIRA", "Jenkins", "Docker"],
     "methods": [
         "Agile", "Scrum", 
