@@ -4,7 +4,7 @@
         "intermediate": ["PoP!_Os", "VMware", "pfSense"]
     },
     "software": {
-        "advanced": ["Portainer", "Word", "Excel", "PowerPoint", "Outlook", "Access"]
+        "advanced": ["Portainer", "Word", "Excel", "PowerPoint", "Outlook"]
     },
     "certifications": ["Word 2013", "Excel 2013"],
     "businessKnowledge": ["Cyber Business Law", "Communication", "Management"]
