@@ -15,6 +15,10 @@ export class NavBarContentComponent implements OnInit {
       target: 'skills',
     },
     {
+      title: 'CERTIFICATIONS',
+      target: 'certifications',
+    },
+    {
       title: 'ASSIGNMENT HISTORY',
       target: 'assignmentHistory',
     },
