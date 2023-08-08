@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { ParseDataService } from 'src/app/services/parse-data/parse-data.service';
 
 import { IAssignment, IAssignmentJSON } from 'src/app/interfaces/assignment';
+import { ICertification, ICertificationJSON } from 'src/app/interfaces/certification';
 import { ICourseTrainingItem } from 'src/app/interfaces/courseTraining';
 import { IEducation } from 'src/app/interfaces/education';
 import { IEmployerHistory } from 'src/app/interfaces/employerHistory';
@@ -10,6 +11,7 @@ import { IOther } from 'src/app/interfaces/other';
 import { ISkillJson } from 'src/app/interfaces/skills';
 
 import _assignmentsJson from 'src/assets/data/assignments.json';
+import _certificationsJSON from 'src/assets/data/certifications.json';
 import _courseTrainingJSON from 'src/assets/data/courses-training.json';
 import _educationJSON from 'src/assets/data/education.json';
 import _employerHistoryJSON from 'src/assets/data/employer-history.json';
@@ -24,6 +26,10 @@ export class GetDataService {
     return this.parseDataService.setAssignments(
       _assignmentsJson as IAssignmentJSON[]
     );
+  }
+
+  getCertificationsData(): ICertification[] {
+    return _certificationsJSON as ICertificationJSON[];
   }
 
   getCourseTrainingData(): ICourseTrainingItem {

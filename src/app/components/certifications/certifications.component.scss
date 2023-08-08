@@ -1,0 +1,18 @@
+@import "src/styles/styles.scss";
+
+.cert {
+    display: flex;
+    flex-direction: row;
+}
+
+.cert-name {
+    font-weight: bold;
+}
+
+.cert-link {
+    color: var(--text-color);
+}
+
+.cert-img {
+  height: 6.5em;
+}
