@@ -1,0 +1,18 @@
+[
+    {
+        "issuedBy": "Amazon Web Services",
+        "certName": "AWS Certified Cloud Practitioner",
+        "issueDate": "2023-07-16",
+        "expiresDate": "2026-07-16",
+        "certLink": "https://www.credly.com/badges/b62ac32c-b07d-46fb-90df-02d78b5a2e24/public_url",
+        "certImg": "https://images.credly.com/size/340x340/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png"
+    },
+    {
+        "issuedBy": "Microsoft",
+        "certName": "Microsoft Certified: Azure Fundamentals",
+        "issueDate": "2023-07-28",
+        "expiresDate": "2024-07-28",
+        "certLink": "https://learn.microsoft.com/en-us/users/joeywills-9093/credentials/29c402ced7ef778f",
+        "certImg": "https://learn.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-fundamentals-badge.svg"
+    }
+]

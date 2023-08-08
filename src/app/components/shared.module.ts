@@ -28,6 +28,7 @@ import {
   THEME_STORAGE_SERVICE,
   ThemeLocalStorageService,
 } from 'src/app/services/theme/theme-storage-service';
+import { CertificationsComponent } from './certifications/certifications.component';
 
 @NgModule({
   imports: [CommonModule, NgbModule, FontAwesomeModule],
@@ -45,6 +46,7 @@ import {
     OtherInfoComponent,
     NavBarContentComponent,
     RemoveSpacingCapFirstLetterPipe,
+    CertificationsComponent,
   ],
   exports: [
     CommonModule,
@@ -63,6 +65,7 @@ import {
     OtherInfoComponent,
     NavBarContentComponent,
     RemoveSpacingCapFirstLetterPipe,
+    CertificationsComponent,
   ],
   providers: [
     CurrentScreenWidthService,

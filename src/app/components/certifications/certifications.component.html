@@ -1,0 +1,40 @@
+<div class="certifications spacer-scroll"></div>
+<div
+  id="certificationsSecTitleId"
+  name="certificationsSecTitle"
+  aria-label="Certifications Title"
+  class="sec-title"
+>
+  <h5>CERTIFICATIONS</h5>
+</div>
+<hr class="hor" />
+<div *ngFor="let certification of certifications">
+  <div class="card">
+    <div class="container">
+      <div class="cert">
+        <div class="cert-text-img">
+          <img
+            [id]="certification.certName + ' Id'"
+            [name]="certification.certName"
+            [alt]="'Image of ' + certification.certName + ' badge'"
+            class="cert-img"
+            [src]="certification.certImg"
+          />
+        </div>
+        <div class="cert-text-info">
+          <div class="cert-name">
+            <a class="cert-link" [href]="certification.certLink">{{
+              certification.certName
+            }}</a>
+          </div>
+          <div class="cert-issued-date">
+            Issued {{ certification.issueDate }}
+          </div>
+          <div class="cert-expires-date">
+            Expires {{ certification.expiresDate }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

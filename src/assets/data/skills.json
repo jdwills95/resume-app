@@ -1,18 +1,10 @@
 {
-    "languages": ["Typescript", "JavaScript", "C#", "HTML", "CSS", "JAVA"],
-    "frameworks": [".Net Core", "Angular", "Karma", "Bootstrap", "React", "Redux", "REST", "Node.js", "Spring Boot", "Mockito"],
-    "softwareTools": ["Cygwin", "GIT", "Bitbucket", "PostMan", "Confluence", "JIRA", "Jenkins", "Docker"],
+    "languages": ["Typescript", "JavaScript", "C#", "HTML", "CSS"],
+    "frameworks": [".Net Core", "Angular", "Karma", "Bootstrap", "React", "Redux", "REST", "Node.js"],
+    "softwareTools": ["GIT", "PostMan", "Confluence", "JIRA", "Docker", "Azure DevOps", "Asana"],
     "methods": [
-        "Agile", "Scrum", 
-        "Kanban", 
-        "IBM toolchains", 
+        "Agile", "Scrum", "Kanban", 
         "continuous integration/continuous delivery (CI/CD)", 
-        "developing user stories", 
-        "test cases for TDD; Pair programming", 
-        "test driven development (TDD)", 
-        "user personas", 
-        "user empathy maps", 
-        "as is scenario mapping big idea generation & prioritization", 
-        "assumptions and risk mapping defining MVPs and current/future goals"
+        "Pair programming", "test driven development (TDD)"
     ]
 }
