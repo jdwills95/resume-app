@@ -40,7 +40,7 @@
   padding-right: 0.5em;
 }
 
-.theme-btn {
+.icon-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,7 +56,19 @@
   outline: none;
 }
 
-.theme-btn-img {
+.btn-imgs {
   height: 1.5rem;
   width: 1.5rem;
+}
+
+.links {
+  margin: 0 0.5rem 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links:hover {
+  transform: scale(1.1);
+  transition: all ease 500ms;
 }

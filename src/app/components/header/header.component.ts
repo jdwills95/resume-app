@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private navBarService: NavBarService,
-    private themeToggleService: ThemeToggleService
+    private themeToggleService: ThemeToggleService,
   ) {}
 
   get islightTheme(): boolean {
