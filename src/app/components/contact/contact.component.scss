@@ -12,18 +12,30 @@
 }
 
 .profile-pic {
-  max-width: 18em;
-  max-height: 18em;
+  margin: 2rem 0 0 0;
+  max-width: 20em;
+  max-height: 20em;
   border-radius: 50%;
+
+  z-index: 2;
 }
 
 .name {
   margin: 0;
-  color: var(--text-color);
+  color: white;
+  font-size: 6rem;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+  z-index: 2;
 }
 
 .title {
-  color: var(--text-color);
+  color: whitesmoke;
+  z-index: 2;
 }
 
 .address {
@@ -35,6 +47,10 @@
 }
 
 .btn-res {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   position: relative;
   background-color: var(--primary-color);
   border: none;
@@ -48,6 +64,7 @@
   overflow: hidden;
   cursor: pointer;
   border-radius: 12px;
+  width: 12rem;
 }
 
 .btn-res:after {
@@ -72,4 +89,27 @@
 
 .btn-res:hover {
   background: rgb(0, 85, 125);
+}
+
+.semi-circle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  z-index: 1;
+  top: -48vh;
+}
+
+.semi-circle-small {
+  height: 100vh;
+  width: 200vw;
+}
+
+.semi-circle-large {
+  height: 70vh;
+  width: 148vw;
+}
+
+.pdf-icon {
+  margin: 0 0 0 0.5rem;
+  height: 1.5rem;
 }
