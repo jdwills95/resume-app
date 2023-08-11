@@ -9,7 +9,6 @@
 }
 
 .navItem:hover {
-  background-color: lightgray;
+  transform: scale(1.075);
   cursor: pointer;
-  color: var(--secondary-color);
 }
