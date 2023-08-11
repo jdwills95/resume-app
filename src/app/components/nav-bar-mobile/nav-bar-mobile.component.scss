@@ -1,14 +1,16 @@
 @import "src/styles/styles.scss";
 
 .nav-bar-mobile-main {
-  min-height: 100vh;
-  width: 100vw;
+  border-radius: 25px;
+  min-height: 28vh;
+  width: 85vw;
   background: darkgray;
   margin-top: 3em;
   padding-bottom: 3em;
   position: fixed;
-  left: 0;
-  top: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 2;
 }
 
@@ -21,4 +23,20 @@
   background-color: black;
   opacity: 0.75;
   z-index: 1;
+}
+
+.menu-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 2.75rem;
+
+  border-bottom: 1.75px solid darkslategray;
+
+  background: gray;
+
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 25px 25px 0px 0px;
+  border-radius: 25px 25px 0px 0px;
 }
