@@ -1,10 +1,18 @@
 [
     {
-        "endDate": "present",
+        "endDate": "Present",
+        "startDate": "2023-07-31",
+        "title": "React-Redux, .Net, Cosmos Db WebApp Project",
+        "employer": "Liquid Devs",
+        "desc": "Worked remotely with team members to implement and maintain new React-Redux features and .Net API services.",
+        "environments": ["React", "Redux", ".Net Core", "Cosmos Db", "NoSQL", "Azure", "REST", "GIT", "DevOps", "Asana"]
+    },
+    {
+        "endDate": "2023-07-31",
         "startDate": "2021-10-28",
         "title": "Angular-Typescript, .Net, Oracle SQL WebApp Project",
         "employer": "Liquid Devs",
-        "desc": "Angular-Typescript, .Net, Oracle SQL WebApp Project: Worked remotely with team members to implement and maintain new Angular Typescript features and .Net API services. Modified existing database to support new features.",
+        "desc": "Worked remotely with team members to implement and maintain new Angular Typescript features and .Net API services. Modified existing database to support new features.",
         "environments": ["Angular", ".Net Core", "Oracle", "SQL", "REST", "GIT", "GitLab", "JIRA", "Confluence"]
     },
     {

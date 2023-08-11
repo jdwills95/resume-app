@@ -1,6 +1,6 @@
 {
     "languages": ["Typescript", "JavaScript", "C#", "HTML", "CSS"],
-    "frameworks": [".Net Core", "Angular", "Karma", "Bootstrap", "React", "Redux", "REST", "Node.js"],
+    "frameworks": [".Net Core", "Angular", "Karma", "Bootstrap", "React", "Redux", "REST"],
     "softwareTools": ["GIT", "PostMan", "Confluence", "JIRA", "Docker", "Azure DevOps", "Asana"],
     "methods": [
         "Agile", "Scrum", "Kanban", 
