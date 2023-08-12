@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CurrentScreenWidthService } from 'src/app/services/current-screen-width/current-screen-width.service';
 
 @Component({
   selector: 'app-contact',
@@ -6,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
-  constructor() {}
+  constructor(private currentScreenWidthService: CurrentScreenWidthService) {}
 
   ngOnInit(): void {}
+
+  get isSmall(): boolean {
+    if (
+      this.currentScreenWidthService.isScreenWidthTabletOrBigger() ||
+      this.currentScreenWidthService.isScreenWidthDesktopOrBigger() ||
+      this.currentScreenWidthService.isScreenWidthLargeDesktopOrBigger()
+    ) {
+      return false;
+    }
+
+    return true;
+  }
 
   downloadResume(): void {
     const link = document.createElement('a');

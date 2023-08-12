@@ -2,14 +2,13 @@
 
 .header {
   height: 3em;
-  background-color: var(--primary-color);
-  padding-left: 0.5em;
+  padding: 0 0.5em 0 0.5em;
   width: 100%;
   color: white;
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 2;
+  z-index: 10;
 }
 
 .icon-wrapper {
@@ -21,11 +20,27 @@
 }
 
 .btn-wrapper {
-  height: 100%;
-  width: 50%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+
+  border: 0.5px solid white;
+  background-color: lightgray;
+
+  border-radius: 8px;
+  width: 7em;
+  height: 1.75em;
+  padding: 0.3em;
+}
+
+.icon-btn-box {
+  width: 100%;
+
+  margin: 0 0 0 0;
+ 
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 
 .contents {
@@ -35,18 +50,23 @@
 }
 
 .btn-nav {
-  max-width: 1.75em;
-  max-height: 1.75em;
-  padding-right: 0.5em;
+  border: 0.5px solid white;
+  background-color: lightgray;
+
+  border-radius: 8px;
+
+  width: 1.75em;
+  height: 1.75em;
+  padding: 0.3em;
 }
 
-.theme-btn {
+.icon-btn {
   display: flex;
   align-items: center;
   justify-content: center;
 
   height: 1.5em;
-  margin-right: 0.75em;
+  margin: 0 0.25em 0 0.25em;
   width: 1.5em;
 
   background-color: transparent;
@@ -56,7 +76,21 @@
   outline: none;
 }
 
-.theme-btn-img {
+.btn-imgs {
   height: 1.5rem;
   width: 1.5rem;
+}
+
+.links {
+  margin: 0 0.5rem 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 11;
+}
+
+.links:hover {
+  transform: scale(1.1);
+  transition: all ease 500ms;
 }

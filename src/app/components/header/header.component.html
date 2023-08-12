@@ -14,30 +14,62 @@
       src="assets/icons/hamburger-icon.svg"
       (click)="onNavClicked()"
     />
-    <div id="headerTitleId" aria-label="Header title">
-      <strong>Joey Wills</strong> - Developer
-    </div>
   </div>
-  <div id="btnWrapperId" name="btnWrapper" class="btn-wrapper">
-    <button
-      id="ThemeBtnId"
-      name="ThemeBtn"
-      class="theme-btn"
-      aria-label="Theme Toggle Button"
-      (click)="toggleTheme()"
-    >
-      <img
-        *ngIf="islightTheme"
-        id="lightThemeBtnImg"
-        class="theme-btn-img"
-        src="assets/theme-icons/dark-mode.svg"
-      />
-      <img
-        *ngIf="!islightTheme"
-        id="darkThemeBtnImg"
-        class="theme-btn-img"
-        src="assets/theme-icons/light-mode.svg"
-      />
-    </button>
+  <div id="btnWrapperId" name="btnWrapper" class="icon-btn-box">
+    <div id="btn-box" class="btn-wrapper">
+      <a
+        id="linkedinProfileLink"
+        class="links"
+        href="https://www.linkedin.com/in/joey-wills"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          id="linkedInBtnImg"
+          class="btn-imgs"
+          src="assets/icons/linkedin-icon.svg"
+        />
+      </a>
+      <a
+        id="gitProfileLink"
+        class="links"
+        href="https://github.com/jdwills95"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          *ngIf="islightTheme"
+          id="lightThemeGitBtnImg"
+          class="btn-imgs"
+          src="assets/icons/github-mark.svg"
+        />
+        <img
+          *ngIf="!islightTheme"
+          id="darkThemeGitBtnImg"
+          class="btn-imgs"
+          src="assets/icons/github-mark-white.svg"
+        />
+      </a>
+      <button
+        id="ThemeBtnId"
+        name="ThemeBtn"
+        class="icon-btn"
+        aria-label="Theme Toggle Button"
+        (click)="toggleTheme()"
+      >
+        <img
+          *ngIf="islightTheme"
+          id="lightThemeBtnImg"
+          class="btn-imgs"
+          src="assets/theme-icons/dark-mode.svg"
+        />
+        <img
+          *ngIf="!islightTheme"
+          id="darkThemeBtnImg"
+          class="btn-imgs"
+          src="assets/theme-icons/light-mode.svg"
+        />
+      </button>
+    </div>
   </div>
 </div>
