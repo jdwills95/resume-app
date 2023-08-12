@@ -1,6 +1,28 @@
 <div class="contents">
   <div class="row">
     <div class="col-12 center">
+      <div
+        class="semi-circle"
+        [ngClass]="{
+          'semi-circle-small': isSmall,
+          'semi-circle-large': !isSmall
+        }"
+      ></div>
+      <h4
+        id="contactNameId"
+        name="contactName"
+        aria-label="contact name"
+        class="name"
+      >
+        JOEY WILLS
+      </h4>
+    </div>
+    <div class="col-12 center title">
+      <strong id="contactTitleId" aria-label="contact title"
+        >FULL-STACK WEB DEVELOPER</strong
+      >
+    </div>
+    <div class="col-12 center">
       <img
         id="profilePicJoeyWillsId"
         name="profilePicJoeyWills"
@@ -9,35 +31,6 @@
         class="profile-pic"
         src="assets/photos/profile.jpg"
       />
-    </div>
-    <div class="col-12 center">
-      <h4
-        id="contactNameId"
-        name="contactName"
-        aria-label="contact name"
-        class="name"
-      >
-        JOEY DOUGLAS WILLS
-      </h4>
-    </div>
-    <div class="col-12 center title">
-      <strong id="contactTitleId" aria-label="contact title"
-        >Application Developer</strong
-      >
-    </div>
-    <div
-      id="contactAddressLineOneId"
-      aria-label="contact address line street"
-      class="col-12 center address"
-    >
-      14222 Hubbs Acres Rd
-    </div>
-    <div
-      id="contactAddressLineCityStateZipId"
-      aria-label="contact address line city, state, country"
-      class="col-12 center address"
-    >
-      Pride, LA, 70770
     </div>
     <div class="col-12 center">
       <a
@@ -49,22 +42,20 @@
       >
     </div>
     <div class="col-12 center">
-      <a
-        id="contactPhoneId"
-        aria-label="contact mobile phone number"
-        class="phone-email"
-        href="tel:1-225-806-5574"
-        >+1-225-806-5574 (Mobile)</a
-      >
-    </div>
-    <div class="col-12 center">
       <button
         id="downloadResPDFId"
         aria-label="Download Resume Button"
         class="btn-res"
         (click)="downloadResume()"
       >
-        Download Resume PDF
+        Download Resume
+        <img
+          id="pdficonId"
+          name="pdficon"
+          alt="PDF Icon"
+          class="pdf-icon"
+          src="assets/icons/pdf-file-icon.svg"
+        />
       </button>
     </div>
   </div>
