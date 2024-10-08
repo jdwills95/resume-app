@@ -7,6 +7,8 @@ import { CurrentScreenWidthService } from 'src/app/services/current-screen-width
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit {
+  emailString: string = 'jdwills95@gmail.com';
+
   constructor(private currentScreenWidthService: CurrentScreenWidthService) {}
 
   ngOnInit(): void {}

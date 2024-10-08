@@ -81,6 +81,5 @@ import { CertificationsComponent } from './certifications/certifications.compone
       useClass: ThemeLocalStorageService,
     },
   ],
-  entryComponents: [],
 })
 export class SharedModule {}
