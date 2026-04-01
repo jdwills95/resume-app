@@ -1,37 +1,37 @@
-import { NavBarService } from 'src/app/services/nav-bar/nav-bar.service';
+import { TestBed } from '@angular/core/testing';
+
+import { NavBarService } from './nav-bar.service';
 
 describe('NavBarService', () => {
-  let service = new NavBarService();
+  let service: NavBarService;
 
   beforeEach(() => {
-    service = new NavBarService();
+    TestBed.configureTestingModule({
+      providers: [NavBarService],
+    });
+
+    service = TestBed.inject(NavBarService);
   });
 
-  it('should create', () => {
+  it('should be created', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should be false be default', () => {
+  it('should toggle nav bar state when button is clicked', () => {
     expect(service.getIsNavbarOpen()).toBeFalse();
-  });
 
-  it('should be true when onNavBarButtonClicked called once', () => {
     service.onNavBarButtonClicked();
-
     expect(service.getIsNavbarOpen()).toBeTrue();
-  });
 
-  it('should be true when onNavBarButtonClicked called twice', () => {
     service.onNavBarButtonClicked();
-    service.onNavBarButtonClicked();
-
     expect(service.getIsNavbarOpen()).toBeFalse();
   });
 
-  it('should be false when onNavBarButtonClicked called then closeNavBar is called', () => {
+  it('should close nav bar', () => {
     service.onNavBarButtonClicked();
-    service.closeNavBar();
+    expect(service.getIsNavbarOpen()).toBeTrue();
 
+    service.closeNavBar();
     expect(service.getIsNavbarOpen()).toBeFalse();
   });
 });

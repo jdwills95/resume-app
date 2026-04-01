@@ -1,17 +1,21 @@
-import { RemoveSpacingCapFirstLetterPipe } from 'src/app/pipes/remove-spacing-cap-first-letter/remove-spacing-cap-first-letter.pipe';
+import { RemoveSpacingCapFirstLetterPipe } from './remove-spacing-cap-first-letter.pipe';
 
 describe('RemoveSpacingCapFirstLetterPipe', () => {
-  const pipe = new RemoveSpacingCapFirstLetterPipe();
+  let pipe: RemoveSpacingCapFirstLetterPipe;
 
-  it('should create', () => {
+  beforeEach(() => {
+    pipe = new RemoveSpacingCapFirstLetterPipe();
+  });
+
+  it('should be created', () => {
     expect(pipe).toBeTruthy();
   });
 
-  it('transforms "test" to "Test"', () => {
-    expect(pipe.transform('test')).toBe('Test');
+  it('should remove spaces and capitalize each word', () => {
+    expect(pipe.transform('hello angular world')).toBe('HelloAngularWorld');
   });
 
-  it('transforms "test Test" to "TestTest"', () => {
-    expect(pipe.transform('test Test')).toBe('TestTest');
+  it('should normalize mixed-case input', () => {
+    expect(pipe.transform('aNgUlAr tEsTiNg')).toBe('AngularTesting');
   });
 });

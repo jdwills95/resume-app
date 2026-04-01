@@ -1,53 +1,88 @@
-import { ParseDataService } from 'src/app/services/parse-data/parse-data.service';
+import { TestBed } from '@angular/core/testing';
 
-import { ArrayToStringService } from 'src/app/services//array-to-string/array-to-string.service';
+import { IAssignmentJSON } from 'src/app/interfaces/assignment';
+import { IOther } from 'src/app/interfaces/other';
+import { ISkillJson } from 'src/app/interfaces/skills';
+import { ArrayToStringService } from 'src/app/services/array-to-string/array-to-string.service';
+import { ParseDataService } from './parse-data.service';
 
 describe('ParseDataService', () => {
-  const mockAssignmentData = [
-    {
-      endDate: 'test01EndDate',
-      startDate: 'test01StartDate',
-      title: 'test01Title',
-      employer: 'test01Employer',
-      desc: 'test01Desc',
-      environments: ['test01Evn01', 'test01Evn02'],
-    },
-    {
-      endDate: 'test02EndDate',
-      startDate: 'test02StartDate',
-      title: 'test02Title',
-      employer: 'test02Employer',
-      desc: 'test02Desc',
-      environments: ['test02Evn01', 'test02Evn02'],
-    },
-  ];
-
-  const arrayToStringService = new ArrayToStringService();
-  let service = new ParseDataService(
-    arrayToStringService as ArrayToStringService
-  );
+  let service: ParseDataService;
+  let arrayToStringServiceSpy: jasmine.SpyObj<ArrayToStringService>;
 
   beforeEach(() => {
-    service = new ParseDataService(
-      arrayToStringService as ArrayToStringService
+    arrayToStringServiceSpy = jasmine.createSpyObj<ArrayToStringService>(
+      'ArrayToStringService',
+      ['arrayToString']
     );
+    arrayToStringServiceSpy.arrayToString.and.callFake((value: string[]) =>
+      value.join(', ')
+    );
+
+    TestBed.configureTestingModule({
+      providers: [
+        ParseDataService,
+        { provide: ArrayToStringService, useValue: arrayToStringServiceSpy },
+      ],
+    });
+
+    service = TestBed.inject(ParseDataService);
   });
 
-  it('should create', () => {
-    const results = service.setAssignments(mockAssignmentData);
+  it('should be created', () => {
+    expect(service).toBeTruthy();
+  });
 
-    expect(results[0].endDate).toBe('test01EndDate');
-    expect(results[0].startDate).toBe('test01StartDate');
-    expect(results[0].title).toBe('test01Title');
-    expect(results[0].employer).toBe('test01Employer');
-    expect(results[0].desc).toBe('test01Desc');
-    expect(results[0].environments).toBe('test01Evn01, test01Evn02');
+  it('should map assignments and format environments as a string', () => {
+    const assignments: IAssignmentJSON[] = [
+      {
+        startDate: '2024-01',
+        endDate: '2024-12',
+        title: 'Engineer',
+        employer: 'Example Co',
+        desc: 'Built features',
+        environments: ['Angular', 'TypeScript'],
+      },
+    ];
 
-    expect(results[1].endDate).toBe('test02EndDate');
-    expect(results[1].startDate).toBe('test02StartDate');
-    expect(results[1].title).toBe('test02Title');
-    expect(results[1].employer).toBe('test02Employer');
-    expect(results[1].desc).toBe('test02Desc');
-    expect(results[1].environments).toBe('test02Evn01, test02Evn02');
+    const result = service.setAssignments(assignments);
+
+    expect(arrayToStringServiceSpy.arrayToString).toHaveBeenCalledWith([
+      'Angular',
+      'TypeScript',
+    ]);
+    expect(result[0].environments).toBe('Angular, TypeScript');
+    expect(result[0].title).toBe('Engineer');
+  });
+
+  it('should return undefined in existCheck when nested field is missing', () => {
+    const other: IOther = {
+      operatingSystems: {},
+      software: {},
+      certifications: [],
+      businessKnowledge: [],
+    };
+
+    const result = service.existCheck(other, 'operatingSystems', 'advanced');
+
+    expect(result).toBeUndefined();
+  });
+
+  it('should map skills and keep both string and array forms', () => {
+    const skills: ISkillJson = {
+      languages: ['TypeScript', 'JavaScript'],
+      frameworks: ['Angular'],
+      softwareTools: ['Git'],
+      methods: ['Agile'],
+    };
+
+    const result = service.setSkills(skills);
+
+    expect(arrayToStringServiceSpy.arrayToString).toHaveBeenCalledTimes(4);
+    expect(result.languages).toBe('TypeScript, JavaScript');
+    expect(result.languagesAry).toEqual(['TypeScript', 'JavaScript']);
+    expect(result.frameworks).toBe('Angular');
+    expect(result.softwareTools).toBe('Git');
+    expect(result.methods).toBe('Agile');
   });
 });

@@ -7,16 +7,19 @@ import {
   platformBrowserDynamicTesting,
 } from '@angular/platform-browser-dynamic/testing';
 
-declare const require: {
-  context(
-    path: string,
-    deep?: boolean,
-    filter?: RegExp
-  ): {
+declare global {
+  interface WebpackContext {
     keys(): string[];
     <T>(id: string): T;
-  };
-};
+  }
+
+  interface ImportMeta {
+    webpackContext(
+      path: string,
+      options: { recursive: boolean; regExp: RegExp }
+    ): WebpackContext;
+  }
+}
 
 // First, initialize the Angular testing environment.
 getTestBed().initTestEnvironment(
@@ -24,6 +27,11 @@ getTestBed().initTestEnvironment(
   platformBrowserDynamicTesting()
 );
 // Then we find all the tests.
-const context = require.context('./', true, /\.spec\.ts$/);
+const context = import.meta.webpackContext('./', {
+  recursive: true,
+  regExp: /\.spec\.ts$/,
+});
 // And load the modules.
-context.keys().map(context);
+context.keys().forEach(context);
+
+export {};
