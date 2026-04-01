@@ -1,27 +1,81 @@
-# ResumeApp
+# Resume App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.10.
+Single-page Angular application for a personal resume and contact page.
 
-## Development server
+## Tech stack
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Angular `21`
+- TypeScript `5.9`
+- SCSS + Bootstrap `5`
+- Jasmine + Karma for unit tests
+- Protractor (legacy) for e2e tests
 
-## Code scaffolding
+## Prerequisites
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Node.js `20+` (even-numbered LTS only; Node `22` LTS recommended)
+- npm `10+`
 
-## Build
+## Getting started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+1. Install dependencies:
 
-## Running unit tests
+```bash
+npm install
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Start the development server:
 
-## Running end-to-end tests
+```bash
+npm start
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+3. Open `http://localhost:4200/`.
 
-## Further help
+## Available scripts
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- `npm start`: Run dev server (`ng serve`)
+- `npm run build`: Build app into `dist/resume-app`
+- `npm test`: Run unit tests with Karma
+- `npm run lint`: Run TSLint
+- `npm run e2e`: Run end-to-end tests with Protractor
+
+## Project structure
+
+- `src/app/components`: Reusable resume/contact UI components
+- `src/app/features/main-page`: Main route and page composition
+- `src/app/services`: Data parsing, theme, nav, and utility services
+- `src/assets/data`: Resume content JSON files used by the app
+- `src/assets/resume`: Downloadable PDF resume
+
+## Updating resume content
+
+Most displayed resume data is sourced from JSON files in `src/assets/data`:
+
+- `assignments.json`
+- `certifications.json`
+- `courses-training.json`
+- `education.json`
+- `employer-history.json`
+- `other.json`
+- `skills.json`
+
+Resume PDF download is served from:
+
+- `src/assets/resume/Resume_Wills_Joey.pdf`
+
+## Testing notes
+
+- Unit tests are configured to run in headless Chrome via Puppeteer.
+- e2e tests use Protractor, which is deprecated in the Angular ecosystem. Keep this in mind for future test tooling migrations.
+
+## Build notes
+
+Production build command:
+
+```bash
+npm run build -- --configuration production
+```
+
+Output directory:
+
+- `dist/resume-app`
