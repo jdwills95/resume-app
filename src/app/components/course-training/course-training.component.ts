@@ -15,7 +15,9 @@ export class CourseTrainingComponent implements OnInit {
   constructor(private getDataService: GetDataService) {}
 
   ngOnInit(): void {
-    this.setCoursesTraining(this.getDataService.getCourseTrainingData());
+    this.getDataService.getCourseTrainingData().subscribe((courseTraining) => {
+      this.setCoursesTraining(courseTraining);
+    });
   }
 
   setCoursesTraining(courseTrainingJSON: ICourseTrainingItem): void {

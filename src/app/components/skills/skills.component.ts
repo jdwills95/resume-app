@@ -31,7 +31,9 @@ export class SkillsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.setSkills(this.getDataService.getSkillsData());
+    this.getDataService.getSkillsData().subscribe((skills) => {
+      this.setSkills(skills);
+    });
   }
 
   @HostListener('window:resize')

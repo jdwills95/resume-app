@@ -1,9 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
 import { AssignmentComponent } from 'src/app/components/assignment/assignment.component';
 import { FooterComponent } from 'src/app/components/footer/footer.component';
 import { HeaderComponent } from 'src/app/components/header/header.component';
@@ -31,7 +28,7 @@ import {
 import { CertificationsComponent } from './certifications/certifications.component';
 
 @NgModule({
-  imports: [CommonModule, NgbModule, FontAwesomeModule],
+  imports: [CommonModule],
   declarations: [
     AssignmentComponent,
     FooterComponent,
@@ -50,8 +47,6 @@ import { CertificationsComponent } from './certifications/certifications.compone
   ],
   exports: [
     CommonModule,
-    NgbModule,
-    FontAwesomeModule,
     AssignmentComponent,
     FooterComponent,
     HeaderComponent,

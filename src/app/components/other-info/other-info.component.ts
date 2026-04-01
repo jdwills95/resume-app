@@ -23,7 +23,9 @@ export class OtherInfoComponent implements OnInit {
   constructor(private getDataService: GetDataService) {}
 
   ngOnInit(): void {
-    this.setOtherInfoSkills(this.getDataService.getOtherData());
+    this.getDataService.getOtherData().subscribe((otherInfo) => {
+      this.setOtherInfoSkills(otherInfo);
+    });
   }
 
   setOtherInfoSkills(otherJson: IOther): void {

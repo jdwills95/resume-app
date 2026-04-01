@@ -15,7 +15,9 @@ export class EmployerHistoryComponent implements OnInit {
   constructor(private getDataService: GetDataService) {}
 
   ngOnInit(): void {
-    this.setEmployers(this.getDataService.getEmployerHistoryData());
+    this.getDataService.getEmployerHistoryData().subscribe((employers) => {
+      this.setEmployers(employers);
+    });
   }
 
   setEmployers(employerHistoryJson: IEmployerHistory[]): void {

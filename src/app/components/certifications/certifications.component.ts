@@ -15,7 +15,9 @@ export class CertificationsComponent implements OnInit {
   constructor(private getDataService: GetDataService) {}
 
   ngOnInit(): void {
-    this.setCertifications(this.getDataService.getCertificationsData());
+    this.getDataService.getCertificationsData().subscribe((certifications) => {
+      this.setCertifications(certifications);
+    });
   }
 
   setCertifications(certificationsJson: ICertification[]): void {

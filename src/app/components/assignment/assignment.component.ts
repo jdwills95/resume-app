@@ -19,7 +19,9 @@ export class AssignmentComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.assignments = this.getDataService.getAssignmentData();
+    this.getDataService.getAssignmentData().subscribe((assignments) => {
+      this.assignments = assignments;
+    });
   }
 
   removeSpacingCapEachLetter(str: string): string {
