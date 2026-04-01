@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { CurrentScreenWidthService } from 'src/app/services/current-screen-width/current-screen-width.service';
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss'],
+    selector: 'app-contact',
+    templateUrl: './contact.component.html',
+    styleUrls: ['./contact.component.scss'],
+    standalone: false
 })
 export class ContactComponent implements OnInit {
   emailString: string = 'jdwills95@gmail.com';

@@ -4,7 +4,7 @@
     name="otherInfoSkillsSecTitle"
     aria-label="Section Title"
     class="sec-title"
-  >
+    >
     OTHER INFORMATION AND SKILLS
   </h5>
 </div>
@@ -18,183 +18,199 @@
           name="oSSubSecTitle"
           aria-label="Sub Section Title"
           >Operating Systems</strong
-        >
-        <br />
-        <div class="row">
-          <div
-            *ngIf="otherInfoSkills.operatingSystems.advanced"
-            class="col col-sm-12 skill-sec"
           >
-            <div
-              id="oSSubSecAdvTitleId"
-              name="oSSubSecAdvTitle"
-              aria-label="Skill level"
-              class="adv"
-            >
-              ADVANCED
-              <hr class="divider" />
-            </div>
-            <div
-              [id]="'skill' + 'OS' + advSkillOS + 'Id'"
-              name="'skill' + 'OS' + advSkillOS"
-              aria-label="Operating System"
-              *ngFor="
-                let advSkillOS of otherInfoSkills.operatingSystems.advanced
-              "
-            >
-              {{ advSkillOS }}
-            </div>
-          </div>
-          <div
-            *ngIf="otherInfoSkills.operatingSystems.intermediate"
-            class="col col-sm-12 skill-sec"
-          >
-            <div
-              id="oSSubSecIntTitleId"
-              name="oSSubSecIntTitle"
-              aria-label="Skill level"
-              class="int"
-            >
-              INTERMEDIATE
-              <hr class="divider" />
-            </div>
-            <div
-              [id]="'skill' + 'OS' + intSkillOS + 'Id'"
-              name="'skill' + 'OS' + intSkillOS"
-              aria-label="Operating System"
-              *ngFor="
-                let intSkillOS of otherInfoSkills.operatingSystems.intermediate
-              "
-            >
-              {{ intSkillOS }}
-            </div>
-          </div>
-          <div
-            *ngIf="otherInfoSkills.operatingSystems.beginner"
-            class="col col-sm-12 skill-sec"
-          >
-            <div
-              id="oSSubSecBegTitleId"
-              name="oSSubSecBegTitle"
-              aria-label="Skill level"
-              class="beg"
-            >
-              BEGINNER
-              <hr class="divider" />
-            </div>
-            <div
-              [id]="'skill' + 'OS' + begSkillOS + 'Id'"
-              name="'skill' + 'OS' + begSkillOS"
-              aria-label="Operating System"
-              *ngFor="
-                let begSkillOS of otherInfoSkills.operatingSystems.beginner
-              "
-            >
-              {{ begSkillOS }}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="col-12 col-sm-4 sub-title">
-    <div class="card">
-      <div class="container">
-        <strong
-          id="softwareSubSecTitleId"
-          name="softwareSubSecTitle"
-          aria-label="Sub Section Title"
-          >Software</strong
-        >
-        <div class="row">
-          <div
-            *ngIf="otherInfoSkills.software.advanced"
-            class="col col-sm-12 skill-sec"
-          >
-            <div
-              id="softwareSubSecAdvTitleId"
-              name="softwareSubSecAdvTitle"
-              aria-label="Skill level"
-              class="adv"
-            >
-              ADVANCED
-              <hr class="divider" />
-            </div>
-            <div
-              [id]="'skill' + 'Software' + advSkillSoft + 'Id'"
-              name="'skill' + 'Software' + advSkillSoft"
-              aria-label="Operating System"
-              *ngFor="let advSkillSoft of otherInfoSkills.software.advanced"
-            >
-              {{ advSkillSoft }}
-            </div>
-          </div>
-          <div
-            *ngIf="otherInfoSkills.software.intermediate"
-            class="col col-sm-12 skill-sec"
-          >
-            <div
-              id="softwareSubSecIntTitleId"
-              name="softwareSubSecIntTitle"
-              aria-label="Skill level"
-              class="int"
-            >
-              INTERMEDIATE
-              <hr class="divider" />
-            </div>
-            <div
-              [id]="'skill' + 'Software' + intSkillSoft + 'Id'"
-              name="'skill' + 'Software' + intSkillSoft"
-              aria-label="Operating System"
-              *ngFor="let intSkillSoft of otherInfoSkills.software.intermediate"
-            >
-              {{ intSkillSoft }}
-            </div>
-          </div>
-          <div
-            *ngIf="otherInfoSkills.software.beginner"
-            class="col col-sm-12 skill-sec"
-          >
-            <div
-              id="softwareSubSecBegTitleId"
-              name="softwareSubSecBegTitle"
-              aria-label="Skill level"
-              class="beg"
-            >
-              BEGINNER
-              <hr class="divider" />
-            </div>
-            <div
-              [id]="'skill' + 'Software' + begSkillSoft + 'Id'"
-              name="'skill' + 'Software' + begSkillSoft"
-              aria-label="Operating System"
-              *ngFor="let begSkillSoft of otherInfoSkills.software.beginner"
-            >
-              {{ begSkillSoft }}
-            </div>
+          <br />
+          <div class="row">
+            @if (otherInfoSkills.operatingSystems.advanced) {
+              <div
+                class="col col-sm-12 skill-sec"
+                >
+                <div
+                  id="oSSubSecAdvTitleId"
+                  name="oSSubSecAdvTitle"
+                  aria-label="Skill level"
+                  class="adv"
+                  >
+                  ADVANCED
+                  <hr class="divider" />
+                </div>
+                @for (
+                  advSkillOS of otherInfoSkills.operatingSystems.advanced
+                  ; track
+                  advSkillOS) {
+                  <div
+                    [id]="'skill' + 'OS' + advSkillOS + 'Id'"
+                    name="'skill' + 'OS' + advSkillOS"
+                    aria-label="Operating System"
+                    >
+                    {{ advSkillOS }}
+                  </div>
+                }
+              </div>
+            }
+            @if (otherInfoSkills.operatingSystems.intermediate) {
+              <div
+                class="col col-sm-12 skill-sec"
+                >
+                <div
+                  id="oSSubSecIntTitleId"
+                  name="oSSubSecIntTitle"
+                  aria-label="Skill level"
+                  class="int"
+                  >
+                  INTERMEDIATE
+                  <hr class="divider" />
+                </div>
+                @for (
+                  intSkillOS of otherInfoSkills.operatingSystems.intermediate
+                  ; track
+                  intSkillOS) {
+                  <div
+                    [id]="'skill' + 'OS' + intSkillOS + 'Id'"
+                    name="'skill' + 'OS' + intSkillOS"
+                    aria-label="Operating System"
+                    >
+                    {{ intSkillOS }}
+                  </div>
+                }
+              </div>
+            }
+            @if (otherInfoSkills.operatingSystems.beginner) {
+              <div
+                class="col col-sm-12 skill-sec"
+                >
+                <div
+                  id="oSSubSecBegTitleId"
+                  name="oSSubSecBegTitle"
+                  aria-label="Skill level"
+                  class="beg"
+                  >
+                  BEGINNER
+                  <hr class="divider" />
+                </div>
+                @for (
+                  begSkillOS of otherInfoSkills.operatingSystems.beginner
+                  ; track
+                  begSkillOS) {
+                  <div
+                    [id]="'skill' + 'OS' + begSkillOS + 'Id'"
+                    name="'skill' + 'OS' + begSkillOS"
+                    aria-label="Operating System"
+                    >
+                    {{ begSkillOS }}
+                  </div>
+                }
+              </div>
+            }
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="col-12 col-sm-4 sub-title">
-    <div class="card">
-      <div class="container">
-        <strong
-          id="busKnowSubSecTitleId"
-          name="busKnowSubSecTitle"
-          aria-label="Sub Section Title"
-          >Business Knowledge</strong
-        >
-        <div
-          [id]="'skill' + 'Business' + knowledge + 'Id'"
-          name="'skill' + 'Business' + knowledge"
-          aria-label="Business Knowledge"
-          *ngFor="let knowledge of otherInfoSkills.businessKnowledge"
-        >
-          {{ knowledge }}
+    <div class="col-12 col-sm-4 sub-title">
+      <div class="card">
+        <div class="container">
+          <strong
+            id="softwareSubSecTitleId"
+            name="softwareSubSecTitle"
+            aria-label="Sub Section Title"
+            >Software</strong
+            >
+            <div class="row">
+              @if (otherInfoSkills.software.advanced) {
+                <div
+                  class="col col-sm-12 skill-sec"
+                  >
+                  <div
+                    id="softwareSubSecAdvTitleId"
+                    name="softwareSubSecAdvTitle"
+                    aria-label="Skill level"
+                    class="adv"
+                    >
+                    ADVANCED
+                    <hr class="divider" />
+                  </div>
+                  @for (advSkillSoft of otherInfoSkills.software.advanced; track advSkillSoft) {
+                    <div
+                      [id]="'skill' + 'Software' + advSkillSoft + 'Id'"
+                      name="'skill' + 'Software' + advSkillSoft"
+                      aria-label="Operating System"
+                      >
+                      {{ advSkillSoft }}
+                    </div>
+                  }
+                </div>
+              }
+              @if (otherInfoSkills.software.intermediate) {
+                <div
+                  class="col col-sm-12 skill-sec"
+                  >
+                  <div
+                    id="softwareSubSecIntTitleId"
+                    name="softwareSubSecIntTitle"
+                    aria-label="Skill level"
+                    class="int"
+                    >
+                    INTERMEDIATE
+                    <hr class="divider" />
+                  </div>
+                  @for (intSkillSoft of otherInfoSkills.software.intermediate; track intSkillSoft) {
+                    <div
+                      [id]="'skill' + 'Software' + intSkillSoft + 'Id'"
+                      name="'skill' + 'Software' + intSkillSoft"
+                      aria-label="Operating System"
+                      >
+                      {{ intSkillSoft }}
+                    </div>
+                  }
+                </div>
+              }
+              @if (otherInfoSkills.software.beginner) {
+                <div
+                  class="col col-sm-12 skill-sec"
+                  >
+                  <div
+                    id="softwareSubSecBegTitleId"
+                    name="softwareSubSecBegTitle"
+                    aria-label="Skill level"
+                    class="beg"
+                    >
+                    BEGINNER
+                    <hr class="divider" />
+                  </div>
+                  @for (begSkillSoft of otherInfoSkills.software.beginner; track begSkillSoft) {
+                    <div
+                      [id]="'skill' + 'Software' + begSkillSoft + 'Id'"
+                      name="'skill' + 'Software' + begSkillSoft"
+                      aria-label="Operating System"
+                      >
+                      {{ begSkillSoft }}
+                    </div>
+                  }
+                </div>
+              }
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
+      <div class="col-12 col-sm-4 sub-title">
+        <div class="card">
+          <div class="container">
+            <strong
+              id="busKnowSubSecTitleId"
+              name="busKnowSubSecTitle"
+              aria-label="Sub Section Title"
+              >Business Knowledge</strong
+              >
+              @for (knowledge of otherInfoSkills.businessKnowledge; track knowledge) {
+                <div
+                  [id]="'skill' + 'Business' + knowledge + 'Id'"
+                  name="'skill' + 'Business' + knowledge"
+                  aria-label="Business Knowledge"
+                  >
+                  {{ knowledge }}
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+      </div>

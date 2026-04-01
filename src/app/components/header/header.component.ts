@@ -3,9 +3,10 @@ import { NavBarService } from 'src/app/services/nav-bar/nav-bar.service';
 import { ThemeToggleService } from 'src/app/services/theme/theme.service';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss'],
+    standalone: false
 })
 export class HeaderComponent implements OnInit {
   @Output() navBarButtonClicked = new EventEmitter();

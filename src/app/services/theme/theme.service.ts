@@ -1,5 +1,5 @@
-import { DOCUMENT } from '@angular/common';
-import { Inject, Injectable } from '@angular/core';
+
+import { Inject, Injectable, DOCUMENT } from '@angular/core';
 import { Theme } from './theme-toggle.model';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { ThemeStorage, THEME_STORAGE_SERVICE } from './theme-storage-service';

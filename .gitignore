@@ -14,6 +14,8 @@ month.txt
 pubspec.lock
 .c9
 .idea/
+.idea/**
+*.iml
 .devcontainer/*
 !.devcontainer/README.md
 !.devcontainer/recommended-devcontainer.json

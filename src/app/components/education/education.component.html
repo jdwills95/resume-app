@@ -3,23 +3,24 @@
   name="educationSecTitle"
   aria-label="Section Title"
   class="sec-title"
->
+  >
   <h5>EDUCATION</h5>
 </div>
 <hr class="hor" />
 <div>
   <div class="card">
     <div class="container">
-      <div
-        [id]="'degree' + degree.degree + degree.field + 'Id'"
-        aria-label="degree"
-        class="degree"
-        *ngFor="let degree of education"
-      >
-        <strong>{{ degree.degree }} - {{ degree.field }}</strong>
-        <br />
-        {{ degree.school.name }} - {{ degree.school.location }}
-      </div>
+      @for (degree of education; track degree) {
+        <div
+          [id]="'degree' + degree.degree + degree.field + 'Id'"
+          aria-label="degree"
+          class="degree"
+          >
+          <strong>{{ degree.degree }} - {{ degree.field }}</strong>
+          <br />
+          {{ degree.school.name }} - {{ degree.school.location }}
+        </div>
+      }
     </div>
   </div>
 </div>

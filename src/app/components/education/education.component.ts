@@ -4,9 +4,10 @@ import { IEducation } from 'src/app/interfaces/education';
 import { GetDataService } from 'src/app/services/get-data/get-data.service';
 
 @Component({
-  selector: 'app-education',
-  templateUrl: './education.component.html',
-  styleUrls: ['./education.component.scss'],
+    selector: 'app-education',
+    templateUrl: './education.component.html',
+    styleUrls: ['./education.component.scss'],
+    standalone: false
 })
 export class EducationComponent implements OnInit {
   education: IEducation[] = [];

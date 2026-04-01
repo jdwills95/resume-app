@@ -4,36 +4,37 @@
   name="assignmentHistorySecTitle"
   aria-label="Section Title"
   class="sec-title"
->
+  >
   <h5>ASSIGNMENT HISTORY</h5>
 </div>
 <hr class="hor" />
-<div *ngFor="let assignment of assignments">
-  <div class="card">
-    <div class="container">
-      <strong
+@for (assignment of assignments; track assignment) {
+  <div>
+    <div class="card">
+      <div class="container">
+        <strong
         [id]="
           'assignmenttitle' +
           removeSpacingCapEachLetter(assignment.title) +
           'Id'
         "
-        aria-label="Assignment Title"
-        >{{ assignment.title }}</strong
-      >
-      <br />
-      <strong
+          aria-label="Assignment Title"
+          >{{ assignment.title }}</strong
+          >
+          <br />
+          <strong
         [id]="
           'assignment' +
           removeSpacingCapEachLetter(assignment.title) +
           removeSpacingCapEachLetter(assignment.employer) +
           'Id'
         "
-        aria-label="Assignment Employer"
-        class="date-loc"
-        >{{ assignment.employer }}
-      </strong>
-      <br />
-      <strong
+            aria-label="Assignment Employer"
+            class="date-loc"
+            >{{ assignment.employer }}
+          </strong>
+          <br />
+          <strong
         [id]="
           'assignment' +
           removeSpacingCapEachLetter(assignment.title) +
@@ -41,12 +42,12 @@
           'Dates' +
           'Id'
         "
-        aria-label="Dates Assigned"
-        class="date-loc"
-      >
-        {{ assignment.startDate }} - {{ assignment.endDate }}
-      </strong>
-      <p
+            aria-label="Dates Assigned"
+            class="date-loc"
+            >
+            {{ assignment.startDate }} - {{ assignment.endDate }}
+          </strong>
+          <p
         [id]="
           'assignment' +
           removeSpacingCapEachLetter(assignment.title) +
@@ -54,11 +55,11 @@
           'Desc' +
           'Id'
         "
-        aria-label="Assignment Description"
-      >
-        {{ assignment.desc }}
-      </p>
-      <p
+            aria-label="Assignment Description"
+            >
+            {{ assignment.desc }}
+          </p>
+          <p
         [id]="
           'assignment' +
           removeSpacingCapEachLetter(assignment.title) +
@@ -66,8 +67,8 @@
           'Environments' +
           'Id'
         "
-      >
-        <strong
+            >
+            <strong
           [id]="
             'assignment' +
             removeSpacingCapEachLetter(assignment.title) +
@@ -75,12 +76,13 @@
             'EnvironmentsLabel' +
             'Id'
           "
-          aria-label="Environments used during assignment"
-          class="sub-title"
-          >Environments:
-        </strong>
-        {{ assignment.environments }}
-      </p>
+              aria-label="Environments used during assignment"
+              class="sub-title"
+              >Environments:
+            </strong>
+            {{ assignment.environments }}
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+  }

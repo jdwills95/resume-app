@@ -4,9 +4,10 @@ import { IEmployerHistory } from 'src/app/interfaces/employerHistory';
 import { GetDataService } from 'src/app/services/get-data/get-data.service';
 
 @Component({
-  selector: 'app-employer-history',
-  templateUrl: './employer-history.component.html',
-  styleUrls: ['./employer-history.component.scss'],
+    selector: 'app-employer-history',
+    templateUrl: './employer-history.component.html',
+    styleUrls: ['./employer-history.component.scss'],
+    standalone: false
 })
 export class EmployerHistoryComponent implements OnInit {
   employers: IEmployerHistory[] = [];

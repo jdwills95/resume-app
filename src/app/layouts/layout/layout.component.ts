@@ -5,9 +5,10 @@ import { NavBarService } from 'src/app/services/nav-bar/nav-bar.service';
 import { ScrollService } from 'src/app/services/scroll/scroll.service';
 
 @Component({
-  selector: 'app-layout',
-  templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.scss'],
+    selector: 'app-layout',
+    templateUrl: './layout.component.html',
+    styleUrls: ['./layout.component.scss'],
+    standalone: false
 })
 export class LayoutComponent implements AfterViewInit {
   title = 'resume-app';
@@ -25,7 +26,7 @@ export class LayoutComponent implements AfterViewInit {
     this.scrollServiceCheckAllowed = true;
   }
 
-  @HostListener('window:resize', ['$event'])
+  @HostListener('window:resize')
   onResize(): void {
     this.isDesktopOrBigger = this.currentScreenWidthService.isScreenWidthLargeDesktopOrBigger();
   }

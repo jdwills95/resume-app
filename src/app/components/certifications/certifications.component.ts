@@ -4,9 +4,10 @@ import { ICertification } from 'src/app/interfaces/certification';
 import { GetDataService } from 'src/app/services/get-data/get-data.service';
 
 @Component({
-  selector: 'app-certifications',
-  templateUrl: './certifications.component.html',
-  styleUrls: ['./certifications.component.scss'],
+    selector: 'app-certifications',
+    templateUrl: './certifications.component.html',
+    styleUrls: ['./certifications.component.scss'],
+    standalone: false
 })
 export class CertificationsComponent implements OnInit {
   certifications: ICertification[] = [];

@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'removeSpacingCapFirstLetter',
+    name: 'removeSpacingCapFirstLetter',
+    standalone: false
 })
 export class RemoveSpacingCapFirstLetterPipe implements PipeTransform {
   transform(value: string): string {

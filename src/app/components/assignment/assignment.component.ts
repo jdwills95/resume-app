@@ -5,9 +5,10 @@ import { GetDataService } from 'src/app/services/get-data/get-data.service';
 import { RemoveSpacingCapFirstLetterPipe } from 'src/app/pipes/remove-spacing-cap-first-letter/remove-spacing-cap-first-letter.pipe';
 
 @Component({
-  selector: 'app-assignment',
-  templateUrl: './assignment.component.html',
-  styleUrls: ['./assignment.component.scss'],
+    selector: 'app-assignment',
+    templateUrl: './assignment.component.html',
+    styleUrls: ['./assignment.component.scss'],
+    standalone: false
 })
 export class AssignmentComponent implements OnInit {
   assignments: IAssignment[] = [];

@@ -3,7 +3,7 @@
   name="coursesAndTrainingSecTitle"
   aria-label="Section Title"
   class="sec-title"
->
+  >
   <h5>COURSES AND TRAINING</h5>
 </div>
 <hr class="hor" />
@@ -14,36 +14,38 @@
         <div class="train-badge">
           <strong id="trainingSecTitleId" aria-label="Training List Title"
             >TRAINING</strong
-          >
-          <br />
-          <div
-            [id]="'trainingItem' + trainingItem + 'Id'"
-            aria-label="Training Item"
-            *ngFor="let trainingItem of courseTraining.training"
-          >
-            {{ trainingItem }}
+            >
+            <br />
+            @for (trainingItem of courseTraining.training; track trainingItem) {
+              <div
+                [id]="'trainingItem' + trainingItem + 'Id'"
+                aria-label="Training Item"
+                >
+                {{ trainingItem }}
+              </div>
+            }
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="col-12 col-sm-6 colum">
-    <div class="card">
-      <div class="container">
-        <div class="train-badge">
-          <strong id="badgesSecTitleId" aria-label="Badges List Title"
-            >BADGES</strong
-          >
-          <br />
-          <div
-            [id]="'badge' + badge + 'Id'"
-            aria-label="Badge"
-            *ngFor="let badge of courseTraining.badges"
-          >
-            {{ badge }}
+    <div class="col-12 col-sm-6 colum">
+      <div class="card">
+        <div class="container">
+          <div class="train-badge">
+            <strong id="badgesSecTitleId" aria-label="Badges List Title"
+              >BADGES</strong
+              >
+              <br />
+              @for (badge of courseTraining.badges; track badge) {
+                <div
+                  [id]="'badge' + badge + 'Id'"
+                  aria-label="Badge"
+                  >
+                  {{ badge }}
+                </div>
+              }
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>

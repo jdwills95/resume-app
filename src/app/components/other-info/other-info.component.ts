@@ -7,9 +7,10 @@ export type otherFields = 'operatingSystems' | 'software';
 export type otherFieldsSecondary = 'advanced' | 'intermediate' | 'beginner';
 
 @Component({
-  selector: 'app-other-info',
-  templateUrl: './other-info.component.html',
-  styleUrls: ['./other-info.component.scss'],
+    selector: 'app-other-info',
+    templateUrl: './other-info.component.html',
+    styleUrls: ['./other-info.component.scss'],
+    standalone: false
 })
 export class OtherInfoComponent implements OnInit {
   otherInfoSkills: IOther = {

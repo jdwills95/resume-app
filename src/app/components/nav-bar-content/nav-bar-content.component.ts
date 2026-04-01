@@ -2,9 +2,10 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { INavItem } from 'src/app/interfaces/nav-item';
 
 @Component({
-  selector: 'app-nav-bar-content',
-  templateUrl: './nav-bar-content.component.html',
-  styleUrls: ['./nav-bar-content.component.scss'],
+    selector: 'app-nav-bar-content',
+    templateUrl: './nav-bar-content.component.html',
+    styleUrls: ['./nav-bar-content.component.scss'],
+    standalone: false
 })
 export class NavBarContentComponent implements OnInit {
   @Output() navItemClicked = new EventEmitter();

@@ -8,9 +8,10 @@ import { Theme } from 'src/app/services/theme/theme-toggle.model';
 import { ThemeToggleService } from 'src/app/services/theme/theme.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    standalone: false
 })
 export class AppComponent implements AfterViewInit {
   title = 'resume-app';
@@ -34,7 +35,7 @@ export class AppComponent implements AfterViewInit {
     this.scrollServiceCheckAllowed = true;
   }
 
-  @HostListener('window:resize', ['$event'])
+  @HostListener('window:resize')
   onResize(): void {
     this.isDesktopOrBigger =
       this.currentScreenWidthService.isScreenWidthLargeDesktopOrBigger();

@@ -6,9 +6,10 @@ import { CurrentScreenWidthService } from 'src/app/services/current-screen-width
 import { GetDataService } from 'src/app/services/get-data/get-data.service';
 
 @Component({
-  selector: 'app-skills',
-  templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.scss'],
+    selector: 'app-skills',
+    templateUrl: './skills.component.html',
+    styleUrls: ['./skills.component.scss'],
+    standalone: false
 })
 export class SkillsComponent implements OnInit {
   isDesktopOrBigger = true;
@@ -33,7 +34,7 @@ export class SkillsComponent implements OnInit {
     this.setSkills(this.getDataService.getSkillsData());
   }
 
-  @HostListener('window:resize', ['$event'])
+  @HostListener('window:resize')
   onResize(): void {
     this.isDesktopOrBigger = this.currentScreenWidthService.isScreenWidthLargeDesktopOrBigger();
   }
