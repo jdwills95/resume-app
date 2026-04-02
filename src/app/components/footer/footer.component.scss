@@ -4,10 +4,17 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  color: white;
-  text-align: center;
+  color: var(--text-color);
   position: absolute;
   padding-left: 0.5em;
   padding-right: 0.5em;
   z-index: 2;
+}
+
+.version-label {
+  position: absolute;
+  right: 0.75em;
+  bottom: 0.5em;
+  font-size: 0.8rem;
+  opacity: 0.8;
 }
