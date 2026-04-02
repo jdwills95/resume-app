@@ -1,8 +1,10 @@
 {
   "name": "resume-app",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "scripts": {
     "ng": "ng",
+    "setup-hooks": "git config core.hooksPath .githooks",
+    "check:version-bump": "node scripts/check-version-bump.mjs",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",

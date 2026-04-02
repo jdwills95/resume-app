@@ -23,13 +23,19 @@ Single-page Angular application for a personal resume and contact page.
 npm install
 ```
 
-2. Start the development server:
+2. Enable repository Git hooks (required once per clone):
+
+```bash
+npm run setup-hooks
+```
+
+3. Start the development server:
 
 ```bash
 npm start
 ```
 
-3. Open `http://localhost:4200/`.
+4. Open `http://localhost:4200/`.
 
 ## Available scripts
 
@@ -38,6 +44,19 @@ npm start
 - `npm test`: Run unit tests with Karma
 - `npm run lint`: Run TSLint
 - `npm run e2e`: Run end-to-end tests with Protractor
+- `npm run setup-hooks`: Configure Git to use project hooks in `.githooks`
+- `npm run check:version-bump`: Validate that `package.json` version is bumped in staged changes
+
+## Commit versioning policy
+
+Each commit must include a `package.json` version bump.
+
+The pre-commit hook enforces the rule by blocking commits unless:
+
+- `package.json` is staged
+- `version` in staged `package.json` differs from `HEAD`
+
+If a commit is blocked, bump the version and stage `package.json` before committing again.
 
 ## Project structure
 
