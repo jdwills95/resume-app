@@ -117,7 +117,7 @@ Configure the following secrets in your GitHub repository:
 |---|---|---|
 | `AWS_ACCESS_KEY_ID` | IAM User Access Key ID with S3 & CloudFront permissions | `AKIAIOSFODNN7EXAMPLE` |
 | `AWS_SECRET_ACCESS_KEY` | IAM User Secret Access Key | `wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY` |
-| `AWS_REGION` | AWS Region where the S3 bucket is hosted | `us-east-1` |
+| `AWS_REGION` | AWS Region code (do NOT use display name like `US East (Ohio)`) | `us-east-2` (or `us-east-1`) |
 | `AWS_S3_BUCKET` | Target AWS S3 bucket name | `my-resume-bucket-name` |
 | `CLOUDFRONT_DISTRIBUTION_ID` | AWS CloudFront Distribution ID | `E1A2B3C4D5E6F7` |
 
@@ -128,7 +128,7 @@ Configure the following secrets in your GitHub repository:
 2. Search for **S3** and select **Buckets** in the left sidebar.
 3. Find your target bucket:
    - Note the **Name** &rarr; use for `AWS_S3_BUCKET`.
-   - Note the **AWS Region** (e.g. `us-east-1`, `eu-west-1`) &rarr; use for `AWS_REGION`.
+   - Note the **AWS Region** code (e.g. `us-east-2`, `us-east-1`, `eu-west-1` — use only the code identifier, not the display name like `US East (Ohio)`) &rarr; use for `AWS_REGION`.
 
 #### 2. Locate CloudFront Distribution ID
 1. Search for **CloudFront** in the AWS Console.
