@@ -22,6 +22,7 @@ export class GetDataService {
   private employerHistory$?: Observable<IEmployerHistory[]>;
   private other$?: Observable<IOther>;
   private skills$?: Observable<ISkillJson>;
+  private summary$?: Observable<string>;
 
   constructor(
     private parseDataService: ParseDataService,
@@ -92,5 +93,17 @@ export class GetDataService {
         .pipe(shareReplay(1));
     }
     return this.skills$;
+  }
+
+  getSummaryData(): Observable<string> {
+    if (!this.summary$) {
+      this.summary$ = this.http
+        .get<{ summary: string }>('assets/data/summary.json')
+        .pipe(
+          map((res) => res.summary),
+          shareReplay(1)
+        );
+    }
+    return this.summary$;
   }
 }

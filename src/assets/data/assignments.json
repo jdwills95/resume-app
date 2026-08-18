@@ -1,6 +1,14 @@
 [
     {
         "endDate": "Present",
+        "startDate": "2023-11-01",
+        "title": ".NET C#, ASP.NET MVC, AureliaJS Web Platform Project",
+        "employer": "BiBERK",
+        "desc": "Developed and delivered feature upgrades for customer-facing existing purchase platforms utilizing .NET C#, ASP.NET MVC, and AureliaJS. Built and maintained REST API endpoints integrated with SQL databases, modifying stored procedures and entity schemas while utilizing Entity Framework. Partnered with DevOps team in an Azure and Azure DevOps environment.",
+        "environments": [".NET C#", "ASP.NET MVC", "AureliaJS", "SQL", "Entity Framework", "Azure", "Azure DevOps", "REST"]
+    },
+    {
+        "endDate": "2023-11-01",
         "startDate": "2023-07-31",
         "title": "React-Redux, .Net, Cosmos Db WebApp Project",
         "employer": "Liquid Devs",
