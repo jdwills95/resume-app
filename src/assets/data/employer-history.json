@@ -1,50 +1,71 @@
 [
     {
-        "employer": "Liquid Devs",
+        "employer": "BiBERK",
         "jobTitle": "Software Developer",
-        "location": "Lufkin, TX",
-        "desc":
-            {
-                "desct": "Work as a team to implement and maintain new webapp features.",
-                "task": ["Full-Stack Developer-Angular/.Net/ Oracle-SQL"]
-            },
-        "startDate": "2021-10-28",
-        "endDate": "present"
+        "location": "Pittson, PA (Remote)",
+        "desc": {
+            "desct": "Technologies Used: .NET C#, ASP.NET MVC, AureliaJS, SQL, Entity Framework, Azure, and Azure DevOps.",
+            "task": [
+                "Developed and delivered feature upgrades for customer-facing existing purchase platforms utilizing .NET C#, ASP.NET MVC, and AureliaJS.",
+                "Built and maintained REST API endpoints integrated with SQL databases, modifying stored procedures and entity schemas, while utilizing Entity Framework.",
+                "Partnered with the DevOps team in an Azure and Azure DevOps environment to deploy applications, manage ticketing workflows, and handle production support.",
+                "Collaborated continuously to identify system performance drops and implemented targeted performance improvements.",
+                "Authored extensive technical and process documentation from scratch, including guides for custom version control software."
+            ]
+        },
+        "startDate": "November 2023",
+        "endDate": "Present"
+    },
+    {
+        "employer": "LIQUIDDEVS",
+        "jobTitle": "Software Developer",
+        "location": "Lufkin, TX (Remote)",
+        "desc": {
+            "desct": "Technologies Used: .NET C#, Angular, React, SQL, Entity Framework, AWS, ASP.NET MVC, and Jira.",
+            "task": [
+                "Delivered feature upgrades for customer-facing purchase platforms using .NET C#, ASP.NET MVC, and AureliaJS.",
+                "Developed and maintained REST API endpoints backed by SQL databases, including modifying stored procedures, updating entity schemas, and utilizing Entity Framework.",
+                "Collaborated with cross-functional teams in an Azure and Azure DevOps environment to manage deployment workflows, track ticketing, and handle production support.",
+                "Monitored applications to identify system performance bottlenecks and implemented targeted performance improvements.",
+                "Authored comprehensive technical documentation and internal process guides from scratch, including instructions for custom version control software."
+            ]
+        },
+        "startDate": "October 2021",
+        "endDate": "November 2023"
     },
     {
         "employer": "CGI Federal",
-        "jobTitle": "Application Development Specialist",
-        "location": "Lafayette, LA",
-        "desc":
-            {
-                "desct": "Work as a team to translate business requirements into workable programming code.",
-                "task": ["Frontend Developer-Angular/React", "Application Developer-Java Core"]
-            },
-        "startDate": "2019-08-12",
-        "endDate": "2021-10-28"
+        "jobTitle": "Application Developer",
+        "location": "Lafayette, LA (Remote)",
+        "desc": {
+            "desct": "Technologies Used: Java, Springboot, Angular, SQL, and Jira",
+            "task": [
+                "Developed Angular UI features for asset management software used by 75+ government agencies to track and maintain 4.2 million client assets, with a value of over $80 trillion.",
+                "Enabled better management and utilization of multi-cloud environments by contributing new Angular code to a cloud hybrid orchestration platform project.",
+                "Greatly enhanced usability by taking a mobile first approach to UI development.",
+                "Worked directly with stake holders and product owners to deliver features most needed by end users.",
+                "Utilized tools and principles such as Jira and Agile to collaborate with a team of 25+ application developers and software engineers.",
+                "Helped convert an existing React project to a new Angular project to better match company’s current tech stack.",
+                "Connected microservice environment to Angular UI.",
+                "Used unit testing tools such as Karama to ensure code quality."
+            ]
+        },
+        "startDate": "August 2019",
+        "endDate": "October 2021"
     },
     {
-        "employer": "IBM CIC",
+        "employer": "IBM",
         "jobTitle": "Application Development Specialist",
         "location": "Baton Rouge, LA",
-        "desc":
-            {
-                "desct": "Work as a team to solve challenging project work designing, building, testing and supporting technical solutions.",
-                "task": ["Application Developer-Java & Web Technologies", "Application Developer-Java Core"]
-            },
-        "startDate": "2019-02-01",
-        "endDate": "2019-08-12"
-    },
-    {
-        "employer": "Cyber Innovation Center",
-        "jobTitle": "Intern",
-        "location": "Bossier City, LA",
-        "desc":
-            {
-                "desct": "Conducted cyber security related policy review research. Worked in small teams. Presented findings in both oral and written form.",
-                "task": ["Studied title authorities and government policy effecting cybersecurity", "Authored 4, 8 to 13-page short topical papers.", "Worked as a team of 4 to produce and summarize our findings in a 10-page document."]
-            },
-        "startDate": "2017-05-01",
-        "endDate": "2017-08-01"
+        "desc": {
+            "desct": "Technologies Used: Java, Springboot, Angular, React , NodeJS, SQL, and IBM Cloud",
+            "task": [
+                "Coordinated with a small team to design full stack proof of work projects using technologies such as Angular, React, NodeJS, and SQL.",
+                "Participated in over 6+ classes taught by IBM and ex-Intel employees from topics ranging from Garage Bootcamp and IBM’s approach to Agile methodology.",
+                "Earned over 10+ badges for topics such as Cognitive Practitioner, IBM Agile Explorer, and IBM Cloud Innovate Method Explorer."
+            ]
+        },
+        "startDate": "February 2019",
+        "endDate": "August 2019"
     }
 ]

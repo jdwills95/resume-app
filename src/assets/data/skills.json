@@ -1,10 +1,8 @@
 {
-    "languages": ["Typescript", "JavaScript", "C#", "HTML", "CSS"],
-    "frameworks": [".Net Core", "Angular", "Karma", "Bootstrap", "React", "Redux", "REST"],
-    "softwareTools": ["GIT", "PostMan", "Confluence", "JIRA", "Docker", "Azure DevOps", "Asana"],
+    "languages": ["TypeScript", "SQL", "HTML/CSS", "C#", "JavaScript"],
+    "frameworks": [".NET", "Angular", "React", "REST", "ASP.NET MVC", "Entity Framework", "AureliaJS"],
+    "softwareTools": ["Azure/Azure DevOps", "AWS", "Jira", "Git", "Docker", "Postman"],
     "methods": [
-        "Agile", "Scrum", "Kanban", 
-        "continuous integration/continuous delivery (CI/CD)", 
-        "Pair programming", "test driven development (TDD)"
+        "Agile", "Scrum", "CI/CD"
     ]
 }

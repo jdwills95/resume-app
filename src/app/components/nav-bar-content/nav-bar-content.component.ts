@@ -12,6 +12,10 @@ export class NavBarContentComponent implements OnInit {
 
   navItems: INavItem[] = [
     {
+      title: 'SUMMARY',
+      target: 'summary',
+    },
+    {
       title: 'KEY SKILLS',
       target: 'skills',
     },

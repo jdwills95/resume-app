@@ -1,6 +1,6 @@
 {
   "name": "resume-app",
-  "version": "0.2.5",
+  "version": "0.2.11",
   "scripts": {
     "ng": "ng",
     "setup-hooks": "git config core.hooksPath .githooks",
@@ -43,6 +43,7 @@
     "typescript": "5.9.3"
   },
   "overrides": {
+    "less": "^4.9.0",
     "postcss": "^8.5.25",
     "esbuild": "^0.28.1",
     "http-proxy-middleware": "^4.2.0",
